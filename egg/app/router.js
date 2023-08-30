@@ -12,6 +12,7 @@ module.exports = app => {
     require('./router/menu')(app);
     require('./router/upload')(app);
     require('./router/btns')(app);
+    require('./router/system')(app);
     // require('./router/socket')(app); // 开启之后需要连接 有超时阻塞
     require('./router/web/article')(app);
     require('./router/web/channel')(app);

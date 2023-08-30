@@ -1,6 +1,7 @@
 module.exports = options => {
     // 验证是否在登录状态下
-    return async function verify(ctx, next) {
+    async function verify(ctx, next) {
+        console.log(ctx,'这里是中间件。')
         try {
             // const sign = ctx.get('sign')
             // let decodeData = await ctx.nodersa.rsaDecrypt(sign)
@@ -21,4 +22,6 @@ module.exports = options => {
             ctx.body = { code: 9999, data: '', message: '系统异常' }
         }
     }
+
+    return verify;
 }

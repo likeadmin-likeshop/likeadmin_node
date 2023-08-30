@@ -11,131 +11,117 @@ module.exports = app => {
             autoIncrement: true,
             allowNull: false,
             primaryKey: true,
-            comment: '主键',
         },
-        dept_id: {
+        sn: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
-            comment: '部门ID',
-        },
-        post_id: {
-            type: INTEGER.UNSIGNED,
-            allowNull: false,
-            defaultValue: 0,
-            comment: '岗位ID',
-        },
-        username: {
-            type: STRING(32),
-            charset: 'utf8mb4',
-            collation: 'utf8mb4_general_ci',
-            allowNull: false,
-            defaultValue: '',
-            comment: '用户账号',
-        },
-        nickname: {
-            type: STRING(32),
-            charset: 'utf8mb4',
-            collation: 'utf8mb4_general_ci',
-            allowNull: false,
-            defaultValue: '',
-            comment: '用户昵称',
-        },
-        password: {
-            type: STRING(200),
-            charset: 'utf8mb4',
-            collation: 'utf8mb4_general_ci',
-            allowNull: false,
-            defaultValue: '',
-            comment: '用户密码',
         },
         avatar: {
             type: STRING(200),
-            charset: 'utf8mb4',
+            characterSet: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
-            comment: '用户头像',
         },
-        role: {
-            type: STRING(200),
-            charset: 'utf8mb4',
+        realName: {
+            type: STRING(32),
+            characterSet: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
-            comment: '角色主键',
+        },
+        nickname: {
+            type: STRING(32),
+            characterSet: 'utf8mb4',
+            collation: 'utf8mb4_general_ci',
+            allowNull: false,
+            defaultValue: '',
+        },
+        username: {
+            type: STRING(32),
+            characterSet: 'utf8mb4',
+            collation: 'utf8mb4_general_ci',
+            allowNull: false,
+            defaultValue: '',
+        },
+        password: {
+            type: STRING(32),
+            characterSet: 'utf8mb4',
+            collation: 'utf8mb4_general_ci',
+            allowNull: false,
+            defaultValue: '',
+        },
+        mobile: {
+            type: STRING(32),
+            characterSet: 'utf8mb4',
+            collation: 'utf8mb4_general_ci',
+            allowNull: false,
+            defaultValue: '',
         },
         salt: {
-            type: STRING(20),
-            charset: 'utf8mb4',
+            type: STRING(32),
+            characterSet: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
-            comment: '加密盐巴',
         },
-        sort: {
-            type: SMALLINT.UNSIGNED,
+        sex: {
+            type: SMALLINT,
+            unsigned: true,
             allowNull: false,
             defaultValue: 0,
-            comment: '排序编号',
         },
-        is_multipoint: {
-            type: SMALLINT.UNSIGNED,
+        channel: {
+            type: SMALLINT,
+            unsigned: true,
             allowNull: false,
             defaultValue: 0,
-            comment: '多端登录: 0=否, 1=是',
         },
-        is_disable: {
-            type: SMALLINT.UNSIGNED,
+        isDisable: {
+            type: SMALLINT,
+            unsigned: true,
             allowNull: false,
             defaultValue: 0,
-            comment: '是否禁用: 0=否, 1=是',
         },
-        is_delete: {
-            type: SMALLINT.UNSIGNED,
+        isDelete: {
+            type: SMALLINT,
+            unsigned: true,
             allowNull: false,
             defaultValue: 0,
-            comment: '是否删除: 0=否, 1=是',
         },
-        last_login_ip: {
-            type: STRING(20),
-            charset: 'utf8mb4',
+        lastLoginIp: {
+            type: STRING(30),
+            characterSet: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
-            comment: '最后登录IP',
         },
-        last_login_time: {
+        lastLoginTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
-            comment: '最后登录',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
-            comment: '创建时间',
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
-            comment: '更新时间',
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
-            comment: '删除时间',
         },
     };
-    const SystemAuthAdmin = app.model.define('SystemAuthAdmin', modelDefinition, {
-        createdAt: 'create_time', // 指定名字
-        updatedAt: false,
-        tableName: 'la_system_auth_admin', // 定义实际表名
+    const User = app.model.define('User', modelDefinition, {
+        tableName: 'la_user', // 定义实际表名
     })
 
-    return SystemAuthAdmin
+    return User
 }
 

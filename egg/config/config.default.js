@@ -63,6 +63,15 @@ module.exports = appInfo => {
         encrypt: true,
     }
 
+    config.redis = {
+        client: {
+            port: 6379,
+            host: '127.0.0.1',
+            password: '',
+            db: 0
+        }
+    }
+
     // 设置静态目录
     config.static = {
         prefix: '/public',
@@ -87,6 +96,18 @@ module.exports = appInfo => {
         files: 10,
         whitelist: ['.txt', '.png', '.jpeg', '.jpg', '.zip', '.xls', '.ppt', '.doc', '.docx', '.pdf', '.xls', '.xlsx'],
     }
+
+    config.security = {
+        csrf: {
+            enable: false,
+            ignoreJSON: true
+        },
+        domainWhiteList: []
+    };
+    config.cors = {
+        origin: '*',
+        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    };
 
     return {
         ...config,
