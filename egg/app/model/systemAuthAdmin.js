@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT } = app.Sequelize
@@ -13,17 +14,19 @@ module.exports = app => {
             primaryKey: true,
             comment: '主键',
         },
-        dept_id: {
+        deptId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '部门ID',
+            field: 'dept_id',
         },
-        post_id: {
+        postId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '岗位ID',
+            field: 'post_id',
         },
         username: {
             type: STRING(32),
@@ -79,59 +82,83 @@ module.exports = app => {
             defaultValue: 0,
             comment: '排序编号',
         },
-        is_multipoint: {
+        isMultipoint: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '多端登录: 0=否, 1=是',
+            field: 'is_multipoint',
         },
-        is_disable: {
+        isDisable: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否禁用: 0=否, 1=是',
+            field: 'is_disable',
         },
-        is_delete: {
+        isDelete: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否删除: 0=否, 1=是',
+            field: 'is_delete',
         },
-        last_login_ip: {
+        lastLoginIp: {
             type: STRING(20),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '最后登录IP',
+            field: 'last_login_ip',
         },
-        last_login_time: {
+        lastLoginTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '最后登录',
+            field: 'last_login_time',
+            get() {
+                const timestamp = this.getDataValue('lastLoginTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '删除时间',
+            field: 'delete_time',
+            get() {
+                const timestamp = this.getDataValue('deleteTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
     };
     const SystemAuthAdmin = app.model.define('SystemAuthAdmin', modelDefinition, {
-        createdAt: 'create_time', // 指定名字
+        createdAt: 'createTime', // 指定名字
         updatedAt: false,
         tableName: 'la_system_auth_admin', // 定义实际表名
     })

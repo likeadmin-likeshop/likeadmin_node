@@ -14,23 +14,27 @@ module.exports = app => {
             primaryKey: true,
             defaultValue: '',
         },
-        role_id: {
+        roleId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '角色ID',
+            field: 'role_id',
         },
-        menu_id: {
+        menuId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '菜单ID',
+            field: 'menu_id',
         },
     };
-    const SystemAuthMenu = app.model.define('SystemAuthMenu', modelDefinition, {
-        tableName: 'la_system_auth_menu', // 定义实际表名
+    const SystemAuthPerm = app.model.define('SystemAuthPerm', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
+        tableName: 'la_system_auth_perm', // 定义实际表名
     })
 
-    return SystemAuthMenu
+    return SystemAuthPerm
 }
 

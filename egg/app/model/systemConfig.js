@@ -35,15 +35,19 @@ module.exports = app => {
             allowNull: true,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
         },
         updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: true,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
         },
     };
     const SystemConfig = app.model.define('SystemConfig', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_config', // 定义实际表名
     })
 

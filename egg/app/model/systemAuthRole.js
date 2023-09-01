@@ -56,6 +56,8 @@ module.exports = app => {
         },
     };
     const SystemAuthRole = app.model.define('SystemAuthRole', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_auth_role', // 定义实际表名
     })
 

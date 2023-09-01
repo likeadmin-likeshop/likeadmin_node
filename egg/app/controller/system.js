@@ -2,7 +2,17 @@
 
 const baseController = require('./baseController')
 const md5 = require('md5')
-const { backstageTokenSet, backstageTokenKey } = require('../extend/config')
+const {
+    backstageTokenSet,
+    backstageTokenKey,
+    reqAdminIdKey,
+    reqRoleIdKey,
+    reqUsernameKey,
+    reqNicknameKey
+} = require('../extend/config')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
+const urlUtil = require('../util/urlUtil')
 
 class SystemController extends baseController {
     async login() {
@@ -37,7 +47,7 @@ class SystemController extends baseController {
             }
             const token = ctx.setToken({ password: body.password, username: body.username });
             const adminIdStr = String(sysAdmin.id);
-            
+
             //非多次登录
             if (sysAdmin.is_multipoint === 0) {
                 const sysAdminSetKey = backstageTokenSet + adminIdStr;
@@ -56,7 +66,7 @@ class SystemController extends baseController {
             // 缓存登录信息
             ctx.service.redis.set(backstageTokenKey + token, adminIdStr, 7200);
             ctx.service.authAdmin.cacheAdminUserByUid(sysAdmin.id);
-            
+
             // 更新登录信息
             const dateTime = Math.floor(Date.now() / 1000);
             await ctx.model.SystemAuthAdmin.update({
@@ -71,7 +81,7 @@ class SystemController extends baseController {
 
             // 记录登录日志
             const resultLog = await ctx.service.authAdmin.recordLoginLog(sysAdmin.id, body.username, '');
-            if(!resultLog) {
+            if (!resultLog) {
                 this.result({ data: '', message: '请求错误', code: 1002 })
                 return;
             }
@@ -89,17 +99,98 @@ class SystemController extends baseController {
 
     async self() {
         const { ctx } = this
-        console.log(ctx.request,'ctx.request....')
-        const body = ctx.request.body
+        const SystemAuthAdmin = ctx.model.SystemAuthAdmin;
+        const SystemAuthMenu = ctx.model.SystemAuthMenu;
+        const authAdminService = ctx.service.authAdmin;
+        const adminId = ctx.session[reqAdminIdKey]
 
-        const adminId = body.adminId
+        try {
+            const sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    id: adminId,
+                    isDelete: 0,
+                },
+                attributes: ['id', 'nickname', 'nickname', 'avatar', 'role', 'deptId', 'isMultipoint', 'isDisable', 'lastLoginIp', 'lastLoginTime', 'createTime', 'updateTime']
+            });
 
-        const sysAdmin = await ctx.model.SystemAuthAdmin.findOne({
-            where: {
-                id: adminId,
-                is_delete: 0
+            if (!sysAdmin) {
+                return null;
             }
+
+            let auths = [];
+            if (adminId > 1) {
+                const roleId = parseInt(sysAdmin.role, 10);
+                const menuIds = await authAdminService.selectMenuIdsByRoleId(roleId);
+
+                if (menuIds.length > 0) {
+                    const menus = await SystemAuthMenu.findAll({
+                        where: {
+                            id: {
+                                [Op.in]: menuIds,
+                            },
+                            isDisable: 0,
+                            menuType: ['C', 'A'],
+                        },
+                        order: [['menuSort', 'ASC'], ['id', 'ASC']],
+                    });
+
+                    if (menus.length > 0) {
+                        auths = menus.map((menu) => menu.perms.trim());
+                    }
+                }
+            } else {
+                auths = ['*'];
+            }
+
+            const admin = {
+                user: {
+                    ...sysAdmin.toJSON(),
+                    dept: sysAdmin.deptId.toString(),
+                    avatar: urlUtil.toAbsoluteUrl(sysAdmin.avatar),
+                },
+                permissions: auths,
+            };
+
+            this.result({
+                data: admin
+            })
+        } catch (err) {
+            console.error('GetAdminInfo error:', err);
+            return null;
+        }
+    }
+
+    async menusRoute() {
+        const { ctx } = this;
+        const roleId = ctx.session[reqRoleIdKey];
+        const data = await ctx.service.authAdmin.selectMenuByRoleId(roleId);
+        this.result({
+            data
         })
+    }
+
+    async console() {
+        const { ctx } = this;
+        try {
+            const data = await ctx.service.common.getConsole();
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`systemController.console error: ${err}`);
+        }
+    }
+
+    async configInfo() {
+        const { ctx } = this;
+        try {
+            const data = await ctx.service.common.getConfig();
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`systemController.config error: ${err}`);
+        }
     }
 
     async logout() {

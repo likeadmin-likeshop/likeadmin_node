@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT, CHAR } = app.Sequelize
@@ -17,25 +18,29 @@ module.exports = app => {
             allowNull: false,
             defaultValue: 0,
         },
-        menu_type: {
+        menuType: {
             type: CHAR(2),
             allowNull: false,
             defaultValue: '',
+            field: 'menu_type'
         },
-        menu_name: {
+        menuName: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'menu_name'
         },
-        menu_icon: {
+        menuIcon: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'menu_icon'
         },
-        menu_sort: {
+        menuSort: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'menu_sort'
         },
         perms: {
             type: STRING(100),
@@ -62,33 +67,48 @@ module.exports = app => {
             allowNull: false,
             defaultValue: '',
         },
-        is_cache: {
+        isCache: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'is_cache',
         },
-        is_show: {
+        isShow: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 1,
+            field: 'is_show',
         },
-        is_disable: {
+        isDisable: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'is_disable',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
     };
     const SystemAuthMenu = app.model.define('SystemAuthMenu', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_auth_menu', // 定义实际表名
     })
 
