@@ -1,0 +1,1097 @@
+2023-08-29 09:41:16,679 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 09:41:16,683 INFO 48696 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,691 INFO 48696 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,697 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,706 INFO 48696 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,720 INFO 48696 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,724 INFO 48696 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,728 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,733 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,742 INFO 48696 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,747 INFO 48696 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,753 INFO 48696 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,758 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,766 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,771 INFO 48696 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,779 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,787 INFO 48696 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,790 INFO 48696 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,809 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,815 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,822 INFO 48696 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,827 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,835 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,838 INFO 48696 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,847 INFO 48696 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,853 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,859 INFO 48696 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,866 INFO 48696 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,871 INFO 48696 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,879 INFO 48696 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,887 INFO 48696 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,890 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,901 INFO 48696 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,909 INFO 48696 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,917 INFO 48696 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,929 INFO 48696 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,951 INFO 48696 [egg-sequelize](19ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,969 INFO 48696 [egg-sequelize](17ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:16,984 INFO 48696 [egg-sequelize](15ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 09:41:16,992 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,001 INFO 48696 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 09:41:17,006 INFO 48696 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,015 INFO 48696 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 09:41:17,021 INFO 48696 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,026 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 09:41:17,037 INFO 48696 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,040 INFO 48696 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 09:41:17,050 INFO 48696 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,055 INFO 48696 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 09:41:17,061 INFO 48696 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 09:41:17,069 INFO 48696 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 11:15:54,762 ERROR 54429 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 54429
+hostname: MacBook-Pro-6.local
+
+2023-08-29 11:16:20,711 ERROR 54495 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 54495
+hostname: MacBook-Pro-6.local
+
+2023-08-29 11:24:26,255 ERROR 55013 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 55013
+hostname: MacBook-Pro-6.local
+
+2023-08-29 11:24:33,932 ERROR 55025 [-/127.0.0.1/-/1ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 55025
+hostname: MacBook-Pro-6.local
+
+2023-08-29 11:26:01,665 ERROR 55120 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 55120
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:44:20,877 ERROR 63429 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 63429
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:49:31,405 ERROR 63741 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 63741
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:49:46,116 ERROR 63770 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 63770
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:49:53,656 ERROR 63790 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 63790
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:50:24,491 ERROR 63894 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 63894
+hostname: MacBook-Pro-6.local
+
+2023-08-29 13:52:49,756 ERROR 64105 [-/127.0.0.1/-/1ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 64105
+hostname: MacBook-Pro-6.local
+
+2023-08-29 16:54:27,772 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 16:54:27,774 INFO 1010 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:27,782 INFO 1010 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 16:54:27,799 INFO 1010 [egg-sequelize](15ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:27,921 INFO 1010 [egg-sequelize](120ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,030 INFO 1010 [egg-sequelize](57ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,035 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,039 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,043 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,046 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,055 INFO 1010 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,060 INFO 1010 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,067 INFO 1010 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,070 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,074 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,079 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,081 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,084 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,088 INFO 1010 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,092 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,095 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,098 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,103 INFO 1010 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,107 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,113 INFO 1010 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,120 INFO 1010 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,125 INFO 1010 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,129 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,137 INFO 1010 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,141 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,145 INFO 1010 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,148 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,153 INFO 1010 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,157 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,160 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,162 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,165 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,180 INFO 1010 [egg-sequelize](14ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,187 INFO 1010 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,190 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,200 INFO 1010 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,205 INFO 1010 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,209 INFO 1010 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,211 INFO 1010 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,227 INFO 1010 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,233 INFO 1010 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,253 INFO 1010 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,256 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,260 INFO 1010 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 16:54:28,262 INFO 1010 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:54:28,266 INFO 1010 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,533 INFO 1279 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 16:58:23,535 INFO 1279 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,542 INFO 1279 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,547 INFO 1279 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,549 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,554 INFO 1279 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,559 INFO 1279 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,567 INFO 1279 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,570 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,576 INFO 1279 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,582 INFO 1279 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,585 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,589 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,594 INFO 1279 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,599 INFO 1279 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,602 INFO 1279 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,606 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,613 INFO 1279 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,619 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,624 INFO 1279 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,630 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,634 INFO 1279 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,637 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,648 INFO 1279 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,652 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,664 INFO 1279 [egg-sequelize](9ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,667 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,670 INFO 1279 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,673 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,676 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,682 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,686 INFO 1279 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,695 INFO 1279 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,701 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,704 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,712 INFO 1279 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,717 INFO 1279 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,720 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,730 INFO 1279 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,736 INFO 1279 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,740 INFO 1279 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,745 INFO 1279 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,749 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,752 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,756 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,760 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,764 INFO 1279 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,767 INFO 1279 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,769 INFO 1279 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 16:58:23,779 INFO 1279 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 16:58:23,817 INFO 1279 [egg-sequelize](33ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:01:08,977 INFO 1279 [egg-sequelize](8ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:01:41,090 INFO 1543 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:01:41,094 INFO 1543 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,102 INFO 1543 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,106 INFO 1543 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,114 INFO 1543 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,117 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,121 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,131 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,134 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,137 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,146 INFO 1543 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,150 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,153 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,156 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,165 INFO 1543 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,168 INFO 1543 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,172 INFO 1543 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,182 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,186 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,190 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,200 INFO 1543 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,203 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,206 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,213 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,216 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,219 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,222 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,230 INFO 1543 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,232 INFO 1543 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,235 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,237 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,243 INFO 1543 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,248 INFO 1543 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,250 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,254 INFO 1543 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,259 INFO 1543 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,264 INFO 1543 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,266 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,269 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,271 INFO 1543 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,288 INFO 1543 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,302 INFO 1543 [egg-sequelize](9ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,304 INFO 1543 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,312 INFO 1543 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,320 INFO 1543 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,337 INFO 1543 [egg-sequelize](16ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,364 INFO 1543 [egg-sequelize](20ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,371 INFO 1543 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,379 INFO 1543 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:01:41,402 INFO 1543 [egg-sequelize](18ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:01:41,406 INFO 1543 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:01:46,066 INFO 1543 [egg-sequelize](5ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:02:01,465 INFO 1599 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:02:01,467 INFO 1599 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,474 INFO 1599 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,482 INFO 1599 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,486 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,494 INFO 1599 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,499 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,501 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,511 INFO 1599 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,515 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,517 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,521 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,528 INFO 1599 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,530 INFO 1599 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,533 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,536 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,540 INFO 1599 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,545 INFO 1599 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,548 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,550 INFO 1599 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,553 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,558 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,564 INFO 1599 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,566 INFO 1599 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,569 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,577 INFO 1599 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,582 INFO 1599 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,586 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,590 INFO 1599 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,596 INFO 1599 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,599 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,603 INFO 1599 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,607 INFO 1599 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,613 INFO 1599 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,616 INFO 1599 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,619 INFO 1599 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,621 INFO 1599 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,631 INFO 1599 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,635 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,637 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,650 INFO 1599 [egg-sequelize](10ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,654 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,660 INFO 1599 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,664 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,667 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,671 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,677 INFO 1599 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,680 INFO 1599 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,683 INFO 1599 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:02:01,686 INFO 1599 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:01,691 INFO 1599 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:02:05,256 INFO 1599 [egg-sequelize](5ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:02:23,879 INFO 1628 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:02:23,894 INFO 1628 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,899 INFO 1628 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,903 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,911 INFO 1628 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,914 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,917 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,921 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,927 INFO 1628 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,931 INFO 1628 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,935 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,938 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,941 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,945 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,949 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,952 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,956 INFO 1628 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,959 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,963 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,965 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,968 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,973 INFO 1628 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,976 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,979 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,982 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,985 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,989 INFO 1628 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,991 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:23,995 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:02:23,997 INFO 1628 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,000 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,003 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,006 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,015 INFO 1628 [egg-sequelize](9ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,017 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,021 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,024 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,028 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,031 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,034 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,037 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,040 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,043 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,046 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,050 INFO 1628 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,053 INFO 1628 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,056 INFO 1628 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,063 INFO 1628 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,065 INFO 1628 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:02:24,068 INFO 1628 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:02:24,072 INFO 1628 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:02:28,700 INFO 1628 [egg-sequelize](4ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:04:11,410 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:04:11,412 INFO 1760 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,416 INFO 1760 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,423 INFO 1760 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,434 INFO 1760 [egg-sequelize](11ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,439 INFO 1760 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,449 INFO 1760 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,453 INFO 1760 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,463 INFO 1760 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,467 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,471 INFO 1760 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,479 INFO 1760 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,482 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,485 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,489 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,495 INFO 1760 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,500 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,503 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,505 INFO 1760 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,512 INFO 1760 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,516 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,520 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,523 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,530 INFO 1760 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,534 INFO 1760 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,538 INFO 1760 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,547 INFO 1760 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,551 INFO 1760 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,554 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,557 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,565 INFO 1760 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,572 INFO 1760 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,582 INFO 1760 [egg-sequelize](10ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,590 INFO 1760 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,599 INFO 1760 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,604 INFO 1760 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,610 INFO 1760 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,616 INFO 1760 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,623 INFO 1760 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,633 INFO 1760 [egg-sequelize](9ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,638 INFO 1760 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,650 INFO 1760 [egg-sequelize](11ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,658 INFO 1760 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,670 INFO 1760 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,756 INFO 1760 [egg-sequelize](85ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,789 INFO 1760 [egg-sequelize](32ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,810 INFO 1760 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,815 INFO 1760 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,819 INFO 1760 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:04:11,822 INFO 1760 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:04:11,830 INFO 1760 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:04:23,933 INFO 1760 [egg-sequelize](7ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:06:47,717 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,719 INFO 1950 [egg-sequelize](5ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:06:47,723 INFO 1950 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,727 INFO 1950 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,729 INFO 1950 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,732 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,736 INFO 1950 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,739 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,743 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,745 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,748 INFO 1950 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,752 INFO 1950 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,755 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,758 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,762 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,764 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,770 INFO 1950 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,774 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,777 INFO 1950 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,781 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,786 INFO 1950 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,793 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,797 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,800 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,805 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,809 INFO 1950 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,811 INFO 1950 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,814 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,822 INFO 1950 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,827 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,831 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,839 INFO 1950 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,846 INFO 1950 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,859 INFO 1950 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,863 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,868 INFO 1950 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,874 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,877 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,881 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,888 INFO 1950 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,896 INFO 1950 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,899 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,904 INFO 1950 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,908 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,911 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,913 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,920 INFO 1950 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,923 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,927 INFO 1950 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:06:47,929 INFO 1950 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:06:47,932 INFO 1950 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:06:50,921 INFO 1950 [egg-sequelize](5ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:07:43,397 INFO 2027 [egg-sequelize](5ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:07:43,401 INFO 2027 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,405 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,408 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,414 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,417 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,434 INFO 2027 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,441 INFO 2027 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,447 INFO 2027 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,455 INFO 2027 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,463 INFO 2027 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,470 INFO 2027 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,474 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,477 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,484 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,493 INFO 2027 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,496 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,502 INFO 2027 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,515 INFO 2027 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,519 INFO 2027 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,530 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,537 INFO 2027 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,542 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,548 INFO 2027 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,551 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,559 INFO 2027 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,561 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,564 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,569 INFO 2027 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,582 INFO 2027 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,586 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,617 INFO 2027 [egg-sequelize](11ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,622 INFO 2027 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,629 INFO 2027 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,632 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,635 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,640 INFO 2027 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,645 INFO 2027 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,647 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,649 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,652 INFO 2027 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,659 INFO 2027 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,664 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,679 INFO 2027 [egg-sequelize](13ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,682 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,684 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,692 INFO 2027 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,696 INFO 2027 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,699 INFO 2027 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:07:43,702 INFO 2027 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:07:43,710 INFO 2027 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,737 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:11:20,739 INFO 2265 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,743 INFO 2265 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,749 INFO 2265 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,752 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,755 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,757 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,763 INFO 2265 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,768 INFO 2265 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,771 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,773 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,776 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,781 INFO 2265 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,786 INFO 2265 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,788 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,791 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,794 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,799 INFO 2265 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,802 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,804 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,806 INFO 2265 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,809 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,811 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,816 INFO 2265 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,820 INFO 2265 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,823 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,825 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,830 INFO 2265 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,834 INFO 2265 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,837 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,839 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,841 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,843 INFO 2265 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,849 INFO 2265 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,852 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,855 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,857 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,860 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,868 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,870 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,876 INFO 2265 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,884 INFO 2265 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,887 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,889 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,892 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,894 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,901 INFO 2265 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,904 INFO 2265 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,906 INFO 2265 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:11:20,908 INFO 2265 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:11:20,915 INFO 2265 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,378 INFO 2338 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:12:22,379 INFO 2338 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,388 INFO 2338 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,393 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,400 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,403 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,406 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,411 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,417 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,426 INFO 2338 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,432 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,436 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,439 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,444 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,450 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,452 INFO 2338 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,457 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,462 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,467 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,471 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,474 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,477 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,483 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,486 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,500 INFO 2338 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,503 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,506 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,509 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,511 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,515 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,517 INFO 2338 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,520 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,522 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,526 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,529 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,532 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,535 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,537 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,540 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,547 INFO 2338 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,552 INFO 2338 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,554 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,558 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,561 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,563 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,566 INFO 2338 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,569 INFO 2338 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,572 INFO 2338 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,576 INFO 2338 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:12:22,580 INFO 2338 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:12:22,583 INFO 2338 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 17:12:30,886 INFO 2338 [egg-sequelize](5ms) Executed (default): SELECT `id`, `dept_id`, `post_id`, `username`, `nickname`, `password`, `avatar`, `role`, `salt`, `sort`, `is_multipoint`, `is_disable`, `is_delete`, `last_login_ip`, `last_login_time`, `create_time`, `update_time`, `delete_time` FROM `la_system_auth_admin` AS `SystemAuthAdmin` WHERE `SystemAuthAdmin`.`username` = 'admin' LIMIT 1;
+2023-08-29 17:17:21,433 INFO 2683 [egg-sequelize](13ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 17:17:21,440 INFO 2683 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,454 INFO 2683 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,464 INFO 2683 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,473 INFO 2683 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,481 INFO 2683 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,486 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,503 INFO 2683 [egg-sequelize](10ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,514 INFO 2683 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,518 INFO 2683 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,521 INFO 2683 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,526 INFO 2683 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,531 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,535 INFO 2683 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,542 INFO 2683 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,547 INFO 2683 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,551 INFO 2683 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,555 INFO 2683 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,560 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,565 INFO 2683 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,569 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,573 INFO 2683 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,576 INFO 2683 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,583 INFO 2683 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,586 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,589 INFO 2683 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,592 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,595 INFO 2683 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,601 INFO 2683 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,604 INFO 2683 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,609 INFO 2683 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,620 INFO 2683 [egg-sequelize](11ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,636 INFO 2683 [egg-sequelize](15ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,648 INFO 2683 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,655 INFO 2683 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,662 INFO 2683 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,672 INFO 2683 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,676 INFO 2683 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,686 INFO 2683 [egg-sequelize](10ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,699 INFO 2683 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,707 INFO 2683 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,732 INFO 2683 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,749 INFO 2683 [egg-sequelize](15ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,763 INFO 2683 [egg-sequelize](12ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,767 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,772 INFO 2683 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,776 INFO 2683 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,787 INFO 2683 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,802 INFO 2683 [egg-sequelize](13ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 17:17:21,813 INFO 2683 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 17:17:21,818 INFO 2683 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,113 INFO 6915 [egg-sequelize](5ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:26:08,119 INFO 6915 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,126 INFO 6915 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,130 INFO 6915 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,136 INFO 6915 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,140 INFO 6915 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,143 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,145 INFO 6915 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,300 INFO 6915 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,310 INFO 6915 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,320 INFO 6915 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,327 INFO 6915 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,337 INFO 6915 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,343 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,346 INFO 6915 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,353 INFO 6915 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,356 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,359 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,363 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,370 INFO 6915 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,374 INFO 6915 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,376 INFO 6915 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,379 INFO 6915 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,383 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,387 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,391 INFO 6915 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,426 INFO 6915 [egg-sequelize](34ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,432 INFO 6915 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,437 INFO 6915 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,443 INFO 6915 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,446 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,449 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,456 INFO 6915 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,459 INFO 6915 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,466 INFO 6915 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,472 INFO 6915 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,477 INFO 6915 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,480 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,488 INFO 6915 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,491 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,493 INFO 6915 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,498 INFO 6915 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,502 INFO 6915 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,504 INFO 6915 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,509 INFO 6915 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,514 INFO 6915 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,517 INFO 6915 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,538 INFO 6915 [egg-sequelize](21ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,544 INFO 6915 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:26:08,551 INFO 6915 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:08,628 INFO 6915 [egg-sequelize](73ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,857 INFO 6929 [egg-sequelize](5ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:26:10,860 INFO 6929 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,873 INFO 6929 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,877 INFO 6929 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,889 INFO 6929 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,892 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,899 INFO 6929 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,906 INFO 6929 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,909 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,911 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,919 INFO 6929 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,924 INFO 6929 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,926 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,929 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,937 INFO 6929 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,940 INFO 6929 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,942 INFO 6929 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,945 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,952 INFO 6929 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,956 INFO 6929 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,958 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,960 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,962 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,969 INFO 6929 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,972 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,975 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,979 INFO 6929 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,984 INFO 6929 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,987 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,990 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,992 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:26:10,994 INFO 6929 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:10,997 INFO 6929 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,004 INFO 6929 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,006 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,009 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,011 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,013 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,022 INFO 6929 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,028 INFO 6929 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,044 INFO 6929 [egg-sequelize](16ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,052 INFO 6929 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,056 INFO 6929 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,058 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,061 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,070 INFO 6929 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,074 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,077 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,087 INFO 6929 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:26:11,090 INFO 6929 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:26:11,093 INFO 6929 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,179 INFO 7033 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:27:45,180 INFO 7033 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,188 INFO 7033 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,192 INFO 7033 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,195 INFO 7033 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,199 INFO 7033 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,211 INFO 7033 [egg-sequelize](11ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,213 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,222 INFO 7033 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,232 INFO 7033 [egg-sequelize](10ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,242 INFO 7033 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,255 INFO 7033 [egg-sequelize](11ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,260 INFO 7033 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,263 INFO 7033 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,272 INFO 7033 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,279 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,290 INFO 7033 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,294 INFO 7033 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,301 INFO 7033 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,311 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,324 INFO 7033 [egg-sequelize](11ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,331 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,338 INFO 7033 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,344 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,347 INFO 7033 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,357 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,361 INFO 7033 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,364 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,371 INFO 7033 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,377 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,387 INFO 7033 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,391 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,393 INFO 7033 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,397 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,404 INFO 7033 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,409 INFO 7033 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,412 INFO 7033 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,419 INFO 7033 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,424 INFO 7033 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,435 INFO 7033 [egg-sequelize](10ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,443 INFO 7033 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,446 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,455 INFO 7033 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,459 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,463 INFO 7033 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,472 INFO 7033 [egg-sequelize](8ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,493 INFO 7033 [egg-sequelize](16ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,514 INFO 7033 [egg-sequelize](15ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,520 INFO 7033 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:27:45,525 INFO 7033 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:27:45,533 INFO 7033 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,255 INFO 7461 [egg-sequelize](8ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:34:37,264 INFO 7461 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,276 INFO 7461 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,285 INFO 7461 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,294 INFO 7461 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,301 INFO 7461 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,311 INFO 7461 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,314 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,321 INFO 7461 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,326 INFO 7461 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,332 INFO 7461 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,338 INFO 7461 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,344 INFO 7461 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,347 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,353 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,356 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,360 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,364 INFO 7461 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,370 INFO 7461 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,374 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,379 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,385 INFO 7461 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,391 INFO 7461 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,394 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,396 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,401 INFO 7461 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,403 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,405 INFO 7461 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,410 INFO 7461 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,414 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,422 INFO 7461 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,425 INFO 7461 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,428 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,433 INFO 7461 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,458 INFO 7461 [egg-sequelize](24ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,483 INFO 7461 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,488 INFO 7461 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,493 INFO 7461 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,496 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,502 INFO 7461 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,510 INFO 7461 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,513 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,556 INFO 7461 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,561 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,564 INFO 7461 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,570 INFO 7461 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,575 INFO 7461 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,579 INFO 7461 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,585 INFO 7461 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:34:37,592 INFO 7461 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:34:37,594 INFO 7461 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,878 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:35:08,880 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,885 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,889 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,891 INFO 7505 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,894 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,898 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,904 INFO 7505 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,908 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,911 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,922 INFO 7505 [egg-sequelize](10ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,927 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,933 INFO 7505 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,938 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,943 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,946 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,952 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,955 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,958 INFO 7505 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,961 INFO 7505 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,965 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,970 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,974 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,977 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,983 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,988 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,990 INFO 7505 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:35:08,993 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:08,996 INFO 7505 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,004 INFO 7505 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,008 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,012 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,026 INFO 7505 [egg-sequelize](13ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,029 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,037 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,041 INFO 7505 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,045 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,049 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,055 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,058 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,060 INFO 7505 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,063 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,076 INFO 7505 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,080 INFO 7505 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,085 INFO 7505 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,089 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,093 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,096 INFO 7505 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,106 INFO 7505 [egg-sequelize](9ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:35:09,108 INFO 7505 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:35:09,112 INFO 7505 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,856 INFO 7573 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:36:09,858 INFO 7573 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,870 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,874 INFO 7573 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,878 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,889 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,893 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,902 INFO 7573 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,908 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,910 INFO 7573 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,919 INFO 7573 [egg-sequelize](8ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,923 INFO 7573 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,927 INFO 7573 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,936 INFO 7573 [egg-sequelize](9ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,940 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,942 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,945 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,950 INFO 7573 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,953 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,955 INFO 7573 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,958 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,961 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,967 INFO 7573 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,970 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,975 INFO 7573 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,977 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,984 INFO 7573 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,987 INFO 7573 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,990 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:36:09,992 INFO 7573 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:09,994 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,001 INFO 7573 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,003 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,007 INFO 7573 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,010 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,018 INFO 7573 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,023 INFO 7573 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,032 INFO 7573 [egg-sequelize](7ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,039 INFO 7573 [egg-sequelize](7ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,045 INFO 7573 [egg-sequelize](6ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,061 INFO 7573 [egg-sequelize](16ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,075 INFO 7573 [egg-sequelize](13ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,079 INFO 7573 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,089 INFO 7573 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,092 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,098 INFO 7573 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,103 INFO 7573 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,109 INFO 7573 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,169 INFO 7573 [egg-sequelize](59ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:36:10,187 INFO 7573 [egg-sequelize](14ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:10,190 INFO 7573 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,455 INFO 7613 [egg-sequelize](5ms) Executed (default): SELECT 1+1 AS result
+2023-08-29 18:36:30,457 INFO 7613 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,466 INFO 7613 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_album` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,470 INFO 7613 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_album_cate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,474 INFO 7613 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_album_cate` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,477 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,484 INFO 7613 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `la_article` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,486 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_category' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,489 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_article_category` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,492 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_article_collect' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,497 INFO 7613 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_article_collect` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,502 INFO 7613 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_page' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,505 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_page` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,508 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_decorate_tabbar' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,511 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_decorate_tabbar` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,517 INFO 7613 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_data' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,520 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_dict_data` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,523 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_dict_type' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,525 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_dict_type` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,530 INFO 7613 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,534 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_gen_table` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,537 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_gen_table_column' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,539 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_gen_table_column` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,542 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_hot_search' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,545 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_hot_search` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,550 INFO 7613 [egg-sequelize](3ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_notice_setting' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,554 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_notice_setting` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,557 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_official_reply' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,559 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_official_reply` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,565 INFO 7613 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_admin' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,568 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_admin` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,571 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_dept' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,573 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_auth_dept` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,576 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_menu' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,580 INFO 7613 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `la_system_auth_menu` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,586 INFO 7613 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_post' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,589 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_auth_post` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,592 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_auth_role' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,597 INFO 7613 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_auth_role` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,601 INFO 7613 [egg-sequelize](1ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_config' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,604 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_system_config` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,606 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_login' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,608 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_system_log_login` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,613 INFO 7613 [egg-sequelize](4ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_operate' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,617 INFO 7613 [egg-sequelize](3ms) Executed (default): SHOW INDEX FROM `la_system_log_operate` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,620 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_system_log_sms' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,627 INFO 7613 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `la_system_log_sms` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,634 INFO 7613 [egg-sequelize](5ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,636 INFO 7613 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `la_user` FROM `localhost_likeadmin`
+2023-08-29 18:36:30,639 INFO 7613 [egg-sequelize](2ms) Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'la_user_auth' AND TABLE_SCHEMA = 'localhost_likeadmin'
+2023-08-29 18:36:30,642 INFO 7613 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `la_user_auth` FROM `localhost_likeadmin`

@@ -1,0 +1,354 @@
+{
+  "security": {
+    "csrf": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "ignoreJSON": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "type": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "protocolWhiteList": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "validate": {
+    "convert": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "widelyUndefined": "/Users/laijiahua 1/likeadmin/server/config/config.default.js"
+  },
+  "keys": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+  "middleware": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+  "cors": {
+    "origin": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "allowMethods": "/Users/laijiahua 1/likeadmin/server/config/config.default.js"
+  },
+  "cluster": {
+    "listen": {
+      "path": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "port": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "hostname": "/Users/laijiahua 1/likeadmin/server/config/config.default.js"
+    }
+  },
+  "session": {
+    "key": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "maxAge": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "httpOnly": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "encrypt": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "logValue": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-session/config/config.default.js"
+  },
+  "redis": {
+    "client": {
+      "port": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "host": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "password": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+      "db": "/Users/laijiahua 1/likeadmin/server/config/config.default.js"
+    },
+    "default": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-redis/config/config.default.js",
+    "app": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-redis/config/config.default.js",
+    "agent": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-redis/config/config.default.js",
+    "supportTimeCommand": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-redis/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "dir": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "dynamic": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "preload": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "maxAge": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "buffer": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "maxFiles": "/Users/laijiahua 1/likeadmin/server/config/config.default.js"
+  },
+  "multipart": {
+    "fieldNameSize": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "fieldSize": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "fields": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "fileSize": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "files": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "whitelist": "/Users/laijiahua 1/likeadmin/server/config/config.default.js",
+    "mode": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "sequelize": {
+    "dialect": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "host": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "port": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "username": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "password": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "database": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+    "define": {
+      "timestamps": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+      "paranoid": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+      "freezeTableName": "/Users/laijiahua 1/likeadmin/server/config/config.local.js",
+      "underscored": "/Users/laijiahua 1/likeadmin/server/config/config.local.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-schedule/config/config.default.js"
+  },
+  "development": {
+    "watchDirs": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/laijiahua 1/likeadmin/server/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "name": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "version": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "description": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "private": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "egg": {
+      "declarations": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "crypto": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "crypto-js": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "dayjs": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-redis": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-socket.io": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "jsonwebtoken": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "md5": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "mkdirp": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "moment": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "mysql2": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "nanoid": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "node-rsa": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "nodemailer": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "ua-parser-js": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-ci": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "stop": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "dev": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "fake": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "debug": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "test": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "test-local": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "cov": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "lint": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "ci": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "autod": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "url": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "license": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "cacheControl": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "strict": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "depth": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "env": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "level": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "logging": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+  "clusterClient": {
+    "maxWaitTime": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/laijiahua 1/likeadmin/server/node_modules/egg/config/config.default.js"
+}

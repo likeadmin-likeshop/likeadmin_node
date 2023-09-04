@@ -1,0 +1,11 @@
+2023-08-22 11:34:43,181 INFO 2338 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2023-08-22 11:34:42,636 INFO 2338 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2023-08-22 11:34:43,075 INFO 2338 [egg:core] dump config after load, 4ms
+2023-08-22 11:34:43,118 INFO 2338 [egg-watcher] Start watching: ["/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"]
+2023-08-22 11:34:43,118 INFO 2338 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app"
+2023-08-22 11:34:43,119 INFO 2338 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config"
+2023-08-22 11:34:43,119 INFO 2338 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks"
+2023-08-22 11:34:43,119 INFO 2338 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy"
+2023-08-22 11:34:43,119 INFO 2338 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"
+2023-08-22 11:34:43,119 INFO 2338 [egg-watcher:agent] watcher start success
+2023-08-22 11:34:43,210 INFO 2338 [egg:core] dump config after ready, 9ms

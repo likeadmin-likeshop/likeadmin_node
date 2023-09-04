@@ -1,0 +1,15 @@
+2023-08-23 04:30:01,004 INFO 2338 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86399003ms at 2023-08-24 04:30:00.006
+2023-08-23 04:30:01,004 INFO 2365 [Job#1692736200993329028318487121] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2023-08-23 04:30:01,070 INFO 2365 [Job#1692736200993329028318487121] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 61ms. 
+2023-08-23 17:06:40,027 INFO 4706 [egg-schedule]: register schedule /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2023-08-23 17:06:40,028 INFO 4706 [egg-schedule]: register schedule /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2023-08-23 17:06:40,028 INFO 4706 [egg-schedule]: register schedule /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2023-08-23 17:06:43,634 INFO 4687 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 40996370ms at 2023-08-24 04:30:00.004
+2023-08-23 17:06:43,635 INFO 4687 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 24796365ms at 2023-08-24 00:00:00.000
+2023-08-23 17:06:43,635 INFO 4687 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 24797365ms at 2023-08-24 00:00:01.000
+2023-08-24 00:40:51,294 INFO 4687 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 83948712ms at 2023-08-25 00:00:00.006
+2023-08-24 00:40:51,299 INFO 4687 [Timer] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 83949702ms at 2023-08-25 00:00:01.001
+2023-08-24 00:40:51,323 INFO 4706 [Job#1692808851282296247203050721] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2023-08-24 00:40:51,340 INFO 4706 [Job#1692808851298296247361421421] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2023-08-24 00:40:51,486 INFO 4706 [Job#1692808851282296247203050721] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 150ms. 
+2023-08-24 00:40:51,495 INFO 4706 [Job#1692808851298296247361421421] /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 155ms. 

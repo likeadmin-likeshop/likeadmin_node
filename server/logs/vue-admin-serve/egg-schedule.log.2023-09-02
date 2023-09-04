@@ -1,0 +1,12 @@
+2023-09-02 05:05:47,074 INFO 79165 [Job#1693602347026823112237933881] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2023-09-02 05:05:47,126 INFO 79165 [Job#1693602347026823112237933881] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 52ms. 
+2023-09-02 05:05:47,096 INFO 71679 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 84252974ms at 2023-09-03 04:30:00.070
+2023-09-03 07:38:32,637 INFO 71679 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 58887381ms at 2023-09-04 00:00:00.016
+2023-09-03 07:38:32,689 INFO 71679 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 58888360ms at 2023-09-04 00:00:01.048
+2023-09-03 07:38:32,708 INFO 71679 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 75087311ms at 2023-09-04 04:30:00.017
+2023-09-03 07:38:32,829 INFO 79165 [Job#16936979124459186747989166692] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2023-09-03 07:38:33,075 INFO 79165 [Job#16936979126389186748401680552] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2023-09-03 07:38:33,163 INFO 79165 [Job#16936979126899186748911746562] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2023-09-03 07:38:33,392 INFO 79165 [Job#16936979124459186747989166692] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 427ms. 
+2023-09-03 07:38:33,398 INFO 79165 [Job#16936979126899186748911746562] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 235ms. 
+2023-09-03 07:38:33,400 INFO 79165 [Job#16936979126389186748401680552] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 325ms. 

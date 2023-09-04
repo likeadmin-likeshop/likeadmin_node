@@ -1,0 +1,576 @@
+2023-08-25 00:15:44,448 INFO 4706 [egg-logrotator] app logger reload: got log-reload message
+2023-08-25 01:19:53,022 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 01:19:53,022 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 03:20:40,018 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 03:20:40,071 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 05:20:44,339 INFO 4706 [-/127.0.0.1/-/15ms SCHEDULE /__schedule?path=/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/hh/46v1f_v50g70bnh5jl9p6tnc0000gq/T/egg-multipart-tmp/vue-admin-serve"
+2023-08-25 05:20:44,345 INFO 4706 [-/127.0.0.1/-/22ms SCHEDULE /__schedule?path=/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2023-08-25 07:21:30,044 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 07:21:30,044 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 07:58:29,068 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 07:58:29,069 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 09:32:53,340 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 10:31:04,169 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 10:31:04,169 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 11:17:45,544 INFO 61603 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 11:17:45,567 INFO 61603 [egg-multipart] stream mode enable
+2023-08-25 11:17:45,884 INFO 61603 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 11:17:45,886 INFO 61603 [egg-security] use methodnoallow middleware
+2023-08-25 11:17:45,887 INFO 61603 [egg-security] use noopen middleware
+2023-08-25 11:17:45,888 INFO 61603 [egg-security] use nosniff middleware
+2023-08-25 11:17:45,889 INFO 61603 [egg-security] use xssProtection middleware
+2023-08-25 11:17:45,891 INFO 61603 [egg-security] use xframe middleware
+2023-08-25 11:17:45,892 INFO 61603 [egg-security] use dta middleware
+2023-08-25 11:17:45,892 INFO 61603 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 11:17:45,938 INFO 61603 [egg:core] dump config after load, 6ms
+2023-08-25 11:17:45,984 INFO 61603 [egg-watcher:application] watcher start success
+2023-08-25 11:17:47,591 INFO 61603 [egg:core] dump config after ready, 4ms
+2023-08-25 11:28:03,602 INFO 62662 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 11:28:03,651 INFO 62662 [egg-multipart] stream mode enable
+2023-08-25 11:28:04,518 INFO 62662 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 11:28:04,523 INFO 62662 [egg-security] use methodnoallow middleware
+2023-08-25 11:28:04,523 INFO 62662 [egg-security] use noopen middleware
+2023-08-25 11:28:04,524 INFO 62662 [egg-security] use nosniff middleware
+2023-08-25 11:28:04,525 INFO 62662 [egg-security] use xssProtection middleware
+2023-08-25 11:28:04,525 INFO 62662 [egg-security] use xframe middleware
+2023-08-25 11:28:04,526 INFO 62662 [egg-security] use dta middleware
+2023-08-25 11:28:04,526 INFO 62662 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 11:28:04,564 INFO 62662 [egg:core] dump config after load, 7ms
+2023-08-25 11:28:04,612 INFO 62662 [egg-watcher:application] watcher start success
+2023-08-25 11:28:04,902 INFO 62662 [egg:core] dump config after ready, 7ms
+2023-08-25 11:42:36,862 INFO 63743 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 11:42:36,889 INFO 63743 [egg-multipart] stream mode enable
+2023-08-25 11:42:37,384 INFO 63743 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 11:42:37,386 INFO 63743 [egg-security] use methodnoallow middleware
+2023-08-25 11:42:37,387 INFO 63743 [egg-security] use noopen middleware
+2023-08-25 11:42:37,388 INFO 63743 [egg-security] use nosniff middleware
+2023-08-25 11:42:37,389 INFO 63743 [egg-security] use xssProtection middleware
+2023-08-25 11:42:37,390 INFO 63743 [egg-security] use xframe middleware
+2023-08-25 11:42:37,391 INFO 63743 [egg-security] use dta middleware
+2023-08-25 11:42:37,391 INFO 63743 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 11:42:37,421 INFO 63743 [egg:core] dump config after load, 6ms
+2023-08-25 11:42:37,455 INFO 63743 [egg-watcher:application] watcher start success
+2023-08-25 11:42:37,692 INFO 63743 [egg:core] dump config after ready, 9ms
+2023-08-25 11:46:35,197 INFO 64025 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 11:46:35,225 INFO 64025 [egg-multipart] stream mode enable
+2023-08-25 11:46:35,677 INFO 64025 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 11:46:35,679 INFO 64025 [egg-security] use methodnoallow middleware
+2023-08-25 11:46:35,680 INFO 64025 [egg-security] use noopen middleware
+2023-08-25 11:46:35,681 INFO 64025 [egg-security] use nosniff middleware
+2023-08-25 11:46:35,681 INFO 64025 [egg-security] use xssProtection middleware
+2023-08-25 11:46:35,682 INFO 64025 [egg-security] use xframe middleware
+2023-08-25 11:46:35,682 INFO 64025 [egg-security] use dta middleware
+2023-08-25 11:46:35,683 INFO 64025 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 11:46:35,711 INFO 64025 [egg:core] dump config after load, 5ms
+2023-08-25 11:46:35,740 INFO 64025 [egg-watcher:application] watcher start success
+2023-08-25 11:46:35,955 INFO 64025 [egg:core] dump config after ready, 16ms
+2023-08-25 11:46:42,633 INFO 64039 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 11:46:42,657 INFO 64039 [egg-multipart] stream mode enable
+2023-08-25 11:46:42,997 INFO 64039 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 11:46:42,998 INFO 64039 [egg-security] use methodnoallow middleware
+2023-08-25 11:46:42,999 INFO 64039 [egg-security] use noopen middleware
+2023-08-25 11:46:42,999 INFO 64039 [egg-security] use nosniff middleware
+2023-08-25 11:46:42,999 INFO 64039 [egg-security] use xssProtection middleware
+2023-08-25 11:46:43,000 INFO 64039 [egg-security] use xframe middleware
+2023-08-25 11:46:43,000 INFO 64039 [egg-security] use dta middleware
+2023-08-25 11:46:43,000 INFO 64039 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 11:46:43,024 INFO 64039 [egg:core] dump config after load, 5ms
+2023-08-25 11:46:43,051 INFO 64039 [egg-watcher:application] watcher start success
+2023-08-25 11:46:43,344 INFO 64039 [egg:core] dump config after ready, 5ms
+2023-08-25 13:57:23,322 INFO 78592 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 13:57:23,347 INFO 78592 [egg-multipart] stream mode enable
+2023-08-25 13:57:23,743 INFO 78592 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 13:57:23,745 INFO 78592 [egg-security] use methodnoallow middleware
+2023-08-25 13:57:23,746 INFO 78592 [egg-security] use noopen middleware
+2023-08-25 13:57:23,747 INFO 78592 [egg-security] use nosniff middleware
+2023-08-25 13:57:23,748 INFO 78592 [egg-security] use xssProtection middleware
+2023-08-25 13:57:23,749 INFO 78592 [egg-security] use xframe middleware
+2023-08-25 13:57:23,750 INFO 78592 [egg-security] use dta middleware
+2023-08-25 13:57:23,750 INFO 78592 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 13:57:23,778 INFO 78592 [egg:core] dump config after load, 7ms
+2023-08-25 13:57:23,821 INFO 78592 [egg-watcher:application] watcher start success
+2023-08-25 13:57:24,038 INFO 78592 [egg:core] dump config after ready, 3ms
+2023-08-25 13:57:39,527 INFO 78624 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 13:57:39,548 INFO 78624 [egg-multipart] stream mode enable
+2023-08-25 13:57:39,914 INFO 78624 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 13:57:39,916 INFO 78624 [egg-security] use methodnoallow middleware
+2023-08-25 13:57:39,917 INFO 78624 [egg-security] use noopen middleware
+2023-08-25 13:57:39,918 INFO 78624 [egg-security] use nosniff middleware
+2023-08-25 13:57:39,919 INFO 78624 [egg-security] use xssProtection middleware
+2023-08-25 13:57:39,920 INFO 78624 [egg-security] use xframe middleware
+2023-08-25 13:57:39,921 INFO 78624 [egg-security] use dta middleware
+2023-08-25 13:57:39,921 INFO 78624 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 13:57:39,948 INFO 78624 [egg:core] dump config after load, 4ms
+2023-08-25 13:57:39,980 INFO 78624 [egg-watcher:application] watcher start success
+2023-08-25 13:57:40,411 INFO 78624 [egg:core] dump config after ready, 114ms
+2023-08-25 13:57:58,560 INFO 78647 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 13:57:58,587 INFO 78647 [egg-multipart] stream mode enable
+2023-08-25 13:57:59,252 INFO 78647 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 13:57:59,255 INFO 78647 [egg-security] use methodnoallow middleware
+2023-08-25 13:57:59,255 INFO 78647 [egg-security] use noopen middleware
+2023-08-25 13:57:59,256 INFO 78647 [egg-security] use nosniff middleware
+2023-08-25 13:57:59,258 INFO 78647 [egg-security] use xssProtection middleware
+2023-08-25 13:57:59,259 INFO 78647 [egg-security] use xframe middleware
+2023-08-25 13:57:59,260 INFO 78647 [egg-security] use dta middleware
+2023-08-25 13:57:59,260 INFO 78647 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 13:57:59,298 INFO 78647 [egg:core] dump config after load, 10ms
+2023-08-25 13:57:59,356 INFO 78647 [egg-watcher:application] watcher start success
+2023-08-25 13:57:59,567 INFO 78647 [egg:core] dump config after ready, 8ms
+2023-08-25 14:03:42,624 INFO 79024 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:03:42,656 INFO 79024 [egg-multipart] stream mode enable
+2023-08-25 14:03:43,256 INFO 79024 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:03:43,258 INFO 79024 [egg-security] use methodnoallow middleware
+2023-08-25 14:03:43,259 INFO 79024 [egg-security] use noopen middleware
+2023-08-25 14:03:43,260 INFO 79024 [egg-security] use nosniff middleware
+2023-08-25 14:03:43,261 INFO 79024 [egg-security] use xssProtection middleware
+2023-08-25 14:03:43,262 INFO 79024 [egg-security] use xframe middleware
+2023-08-25 14:03:43,263 INFO 79024 [egg-security] use dta middleware
+2023-08-25 14:03:43,263 INFO 79024 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:03:43,291 INFO 79024 [egg:core] dump config after load, 6ms
+2023-08-25 14:03:43,326 INFO 79024 [egg-watcher:application] watcher start success
+2023-08-25 14:03:43,563 INFO 79024 [egg:core] dump config after ready, 12ms
+2023-08-25 14:04:21,374 INFO 79072 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:04:21,398 INFO 79072 [egg-multipart] stream mode enable
+2023-08-25 14:04:21,702 INFO 79072 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:04:21,704 INFO 79072 [egg-security] use methodnoallow middleware
+2023-08-25 14:04:21,704 INFO 79072 [egg-security] use noopen middleware
+2023-08-25 14:04:21,705 INFO 79072 [egg-security] use nosniff middleware
+2023-08-25 14:04:21,705 INFO 79072 [egg-security] use xssProtection middleware
+2023-08-25 14:04:21,705 INFO 79072 [egg-security] use xframe middleware
+2023-08-25 14:04:21,705 INFO 79072 [egg-security] use dta middleware
+2023-08-25 14:04:21,706 INFO 79072 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:04:21,735 INFO 79072 [egg:core] dump config after load, 7ms
+2023-08-25 14:04:21,762 INFO 79072 [egg-watcher:application] watcher start success
+2023-08-25 14:04:21,970 INFO 79072 [egg:core] dump config after ready, 12ms
+2023-08-25 14:04:53,662 INFO 79109 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:04:53,702 INFO 79109 [egg-multipart] stream mode enable
+2023-08-25 14:04:54,267 INFO 79109 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:04:54,269 INFO 79109 [egg-security] use methodnoallow middleware
+2023-08-25 14:04:54,269 INFO 79109 [egg-security] use noopen middleware
+2023-08-25 14:04:54,270 INFO 79109 [egg-security] use nosniff middleware
+2023-08-25 14:04:54,271 INFO 79109 [egg-security] use xssProtection middleware
+2023-08-25 14:04:54,272 INFO 79109 [egg-security] use xframe middleware
+2023-08-25 14:04:54,273 INFO 79109 [egg-security] use dta middleware
+2023-08-25 14:04:54,273 INFO 79109 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:04:54,300 INFO 79109 [egg:core] dump config after load, 5ms
+2023-08-25 14:04:54,332 INFO 79109 [egg-watcher:application] watcher start success
+2023-08-25 14:04:54,525 INFO 79109 [egg:core] dump config after ready, 5ms
+2023-08-25 14:06:18,659 INFO 79199 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:06:18,687 INFO 79199 [egg-multipart] stream mode enable
+2023-08-25 14:06:19,289 INFO 79199 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:06:19,291 INFO 79199 [egg-security] use methodnoallow middleware
+2023-08-25 14:06:19,292 INFO 79199 [egg-security] use noopen middleware
+2023-08-25 14:06:19,293 INFO 79199 [egg-security] use nosniff middleware
+2023-08-25 14:06:19,294 INFO 79199 [egg-security] use xssProtection middleware
+2023-08-25 14:06:19,295 INFO 79199 [egg-security] use xframe middleware
+2023-08-25 14:06:19,296 INFO 79199 [egg-security] use dta middleware
+2023-08-25 14:06:19,296 INFO 79199 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:06:19,330 INFO 79199 [egg:core] dump config after load, 9ms
+2023-08-25 14:06:19,372 INFO 79199 [egg-watcher:application] watcher start success
+2023-08-25 14:06:19,629 INFO 79199 [egg:core] dump config after ready, 13ms
+2023-08-25 14:07:25,194 INFO 79278 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:07:25,232 INFO 79278 [egg-multipart] stream mode enable
+2023-08-25 14:07:25,903 INFO 79278 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:07:25,905 INFO 79278 [egg-security] use methodnoallow middleware
+2023-08-25 14:07:25,906 INFO 79278 [egg-security] use noopen middleware
+2023-08-25 14:07:25,907 INFO 79278 [egg-security] use nosniff middleware
+2023-08-25 14:07:25,908 INFO 79278 [egg-security] use xssProtection middleware
+2023-08-25 14:07:25,909 INFO 79278 [egg-security] use xframe middleware
+2023-08-25 14:07:25,910 INFO 79278 [egg-security] use dta middleware
+2023-08-25 14:07:25,910 INFO 79278 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:07:25,943 INFO 79278 [egg:core] dump config after load, 6ms
+2023-08-25 14:07:25,987 INFO 79278 [egg-watcher:application] watcher start success
+2023-08-25 14:07:26,371 INFO 79278 [egg:core] dump config after ready, 15ms
+2023-08-25 14:08:27,857 INFO 79355 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:08:27,977 INFO 79355 [egg-multipart] stream mode enable
+2023-08-25 14:08:29,257 INFO 79355 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:08:29,261 INFO 79355 [egg-security] use methodnoallow middleware
+2023-08-25 14:08:29,262 INFO 79355 [egg-security] use noopen middleware
+2023-08-25 14:08:29,262 INFO 79355 [egg-security] use nosniff middleware
+2023-08-25 14:08:29,263 INFO 79355 [egg-security] use xssProtection middleware
+2023-08-25 14:08:29,263 INFO 79355 [egg-security] use xframe middleware
+2023-08-25 14:08:29,264 INFO 79355 [egg-security] use dta middleware
+2023-08-25 14:08:29,264 INFO 79355 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:08:29,313 INFO 79355 [egg:core] dump config after load, 8ms
+2023-08-25 14:08:29,593 INFO 79355 [egg-watcher:application] watcher start success
+2023-08-25 14:08:30,250 INFO 79355 [egg:core] dump config after ready, 13ms
+2023-08-25 14:12:33,215 INFO 79609 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:12:33,243 INFO 79609 [egg-multipart] stream mode enable
+2023-08-25 14:12:34,075 INFO 79609 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:12:34,077 INFO 79609 [egg-security] use methodnoallow middleware
+2023-08-25 14:12:34,078 INFO 79609 [egg-security] use noopen middleware
+2023-08-25 14:12:34,079 INFO 79609 [egg-security] use nosniff middleware
+2023-08-25 14:12:34,079 INFO 79609 [egg-security] use xssProtection middleware
+2023-08-25 14:12:34,080 INFO 79609 [egg-security] use xframe middleware
+2023-08-25 14:12:34,081 INFO 79609 [egg-security] use dta middleware
+2023-08-25 14:12:34,081 INFO 79609 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:12:34,152 INFO 79609 [egg:core] dump config after load, 15ms
+2023-08-25 14:12:34,278 INFO 79609 [egg-watcher:application] watcher start success
+2023-08-25 14:12:34,652 INFO 79609 [egg:core] dump config after ready, 7ms
+2023-08-25 14:16:13,402 INFO 79837 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:16:13,436 INFO 79837 [egg-multipart] stream mode enable
+2023-08-25 14:16:14,219 INFO 79837 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:16:14,243 INFO 79837 [egg-security] use methodnoallow middleware
+2023-08-25 14:16:14,268 INFO 79837 [egg-security] use noopen middleware
+2023-08-25 14:16:14,273 INFO 79837 [egg-security] use nosniff middleware
+2023-08-25 14:16:14,273 INFO 79837 [egg-security] use xssProtection middleware
+2023-08-25 14:16:14,274 INFO 79837 [egg-security] use xframe middleware
+2023-08-25 14:16:14,289 INFO 79837 [egg-security] use dta middleware
+2023-08-25 14:16:14,289 INFO 79837 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:16:14,353 INFO 79837 [egg:core] dump config after load, 12ms
+2023-08-25 14:16:14,408 INFO 79837 [egg-watcher:application] watcher start success
+2023-08-25 14:16:14,920 INFO 79837 [egg:core] dump config after ready, 20ms
+2023-08-25 14:23:03,223 INFO 80249 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:23:03,299 INFO 80249 [egg-multipart] stream mode enable
+2023-08-25 14:23:03,915 INFO 80249 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:23:03,918 INFO 80249 [egg-security] use methodnoallow middleware
+2023-08-25 14:23:03,918 INFO 80249 [egg-security] use noopen middleware
+2023-08-25 14:23:03,919 INFO 80249 [egg-security] use nosniff middleware
+2023-08-25 14:23:03,920 INFO 80249 [egg-security] use xssProtection middleware
+2023-08-25 14:23:03,921 INFO 80249 [egg-security] use xframe middleware
+2023-08-25 14:23:03,922 INFO 80249 [egg-security] use dta middleware
+2023-08-25 14:23:03,922 INFO 80249 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:23:03,953 INFO 80249 [egg:core] dump config after load, 6ms
+2023-08-25 14:23:03,973 INFO 80249 [egg-watcher:application] watcher start success
+2023-08-25 14:23:04,272 INFO 80249 [egg:core] dump config after ready, 13ms
+2023-08-25 14:25:59,353 INFO 80441 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:25:59,383 INFO 80441 [egg-multipart] stream mode enable
+2023-08-25 14:25:59,997 INFO 80441 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:26:00,022 INFO 80441 [egg-security] use methodnoallow middleware
+2023-08-25 14:26:00,022 INFO 80441 [egg-security] use noopen middleware
+2023-08-25 14:26:00,067 INFO 80441 [egg-security] use nosniff middleware
+2023-08-25 14:26:00,068 INFO 80441 [egg-security] use xssProtection middleware
+2023-08-25 14:26:00,070 INFO 80441 [egg-security] use xframe middleware
+2023-08-25 14:26:00,071 INFO 80441 [egg-security] use dta middleware
+2023-08-25 14:26:00,071 INFO 80441 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:26:00,189 INFO 80441 [egg:core] dump config after load, 33ms
+2023-08-25 14:26:00,451 INFO 80441 [egg-watcher:application] watcher start success
+2023-08-25 14:26:01,105 INFO 80441 [egg:core] dump config after ready, 4ms
+2023-08-25 14:29:53,104 INFO 80686 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:29:53,138 INFO 80686 [egg-multipart] stream mode enable
+2023-08-25 14:29:54,563 INFO 80686 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:29:54,568 INFO 80686 [egg-security] use methodnoallow middleware
+2023-08-25 14:29:54,568 INFO 80686 [egg-security] use noopen middleware
+2023-08-25 14:29:54,569 INFO 80686 [egg-security] use nosniff middleware
+2023-08-25 14:29:54,570 INFO 80686 [egg-security] use xssProtection middleware
+2023-08-25 14:29:54,571 INFO 80686 [egg-security] use xframe middleware
+2023-08-25 14:29:54,572 INFO 80686 [egg-security] use dta middleware
+2023-08-25 14:29:54,572 INFO 80686 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:29:54,611 INFO 80686 [egg:core] dump config after load, 9ms
+2023-08-25 14:29:54,658 INFO 80686 [egg-watcher:application] watcher start success
+2023-08-25 14:29:55,257 INFO 80686 [egg:core] dump config after ready, 15ms
+2023-08-25 14:34:25,529 INFO 80990 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:34:25,556 INFO 80990 [egg-multipart] stream mode enable
+2023-08-25 14:34:26,066 INFO 80990 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:34:26,069 INFO 80990 [egg-security] use methodnoallow middleware
+2023-08-25 14:34:26,070 INFO 80990 [egg-security] use noopen middleware
+2023-08-25 14:34:26,070 INFO 80990 [egg-security] use nosniff middleware
+2023-08-25 14:34:26,071 INFO 80990 [egg-security] use xssProtection middleware
+2023-08-25 14:34:26,071 INFO 80990 [egg-security] use xframe middleware
+2023-08-25 14:34:26,072 INFO 80990 [egg-security] use dta middleware
+2023-08-25 14:34:26,072 INFO 80990 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:34:26,162 INFO 80990 [egg:core] dump config after load, 34ms
+2023-08-25 14:34:26,267 INFO 80990 [egg-watcher:application] watcher start success
+2023-08-25 14:34:26,702 INFO 80990 [egg:core] dump config after ready, 7ms
+2023-08-25 14:35:59,147 INFO 81087 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:35:59,181 INFO 81087 [egg-multipart] stream mode enable
+2023-08-25 14:36:00,426 INFO 81087 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:36:00,428 INFO 81087 [egg-security] use methodnoallow middleware
+2023-08-25 14:36:00,429 INFO 81087 [egg-security] use noopen middleware
+2023-08-25 14:36:00,429 INFO 81087 [egg-security] use nosniff middleware
+2023-08-25 14:36:00,430 INFO 81087 [egg-security] use xssProtection middleware
+2023-08-25 14:36:00,430 INFO 81087 [egg-security] use xframe middleware
+2023-08-25 14:36:00,432 INFO 81087 [egg-security] use dta middleware
+2023-08-25 14:36:00,433 INFO 81087 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:36:00,469 INFO 81087 [egg:core] dump config after load, 6ms
+2023-08-25 14:36:00,509 INFO 81087 [egg-watcher:application] watcher start success
+2023-08-25 14:36:01,151 INFO 81087 [egg:core] dump config after ready, 79ms
+2023-08-25 14:37:04,264 INFO 81161 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:37:04,302 INFO 81161 [egg-multipart] stream mode enable
+2023-08-25 14:37:05,272 INFO 81161 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:37:05,276 INFO 81161 [egg-security] use methodnoallow middleware
+2023-08-25 14:37:05,276 INFO 81161 [egg-security] use noopen middleware
+2023-08-25 14:37:05,277 INFO 81161 [egg-security] use nosniff middleware
+2023-08-25 14:37:05,278 INFO 81161 [egg-security] use xssProtection middleware
+2023-08-25 14:37:05,278 INFO 81161 [egg-security] use xframe middleware
+2023-08-25 14:37:05,279 INFO 81161 [egg-security] use dta middleware
+2023-08-25 14:37:05,279 INFO 81161 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:37:05,317 INFO 81161 [egg:core] dump config after load, 8ms
+2023-08-25 14:37:05,355 INFO 81161 [egg-watcher:application] watcher start success
+2023-08-25 14:37:05,735 INFO 81161 [egg:core] dump config after ready, 12ms
+2023-08-25 14:39:14,827 INFO 81307 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:39:14,855 INFO 81307 [egg-multipart] stream mode enable
+2023-08-25 14:39:15,869 INFO 81307 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:39:15,871 INFO 81307 [egg-security] use methodnoallow middleware
+2023-08-25 14:39:15,872 INFO 81307 [egg-security] use noopen middleware
+2023-08-25 14:39:15,874 INFO 81307 [egg-security] use nosniff middleware
+2023-08-25 14:39:15,874 INFO 81307 [egg-security] use xssProtection middleware
+2023-08-25 14:39:15,875 INFO 81307 [egg-security] use xframe middleware
+2023-08-25 14:39:15,876 INFO 81307 [egg-security] use dta middleware
+2023-08-25 14:39:15,876 INFO 81307 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:39:15,907 INFO 81307 [egg:core] dump config after load, 5ms
+2023-08-25 14:39:15,956 INFO 81307 [egg-watcher:application] watcher start success
+2023-08-25 14:39:16,234 INFO 81307 [egg:core] dump config after ready, 4ms
+2023-08-25 14:41:43,017 INFO 81457 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:41:43,048 INFO 81457 [egg-multipart] stream mode enable
+2023-08-25 14:41:43,754 INFO 81457 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:41:43,757 INFO 81457 [egg-security] use methodnoallow middleware
+2023-08-25 14:41:43,758 INFO 81457 [egg-security] use noopen middleware
+2023-08-25 14:41:43,759 INFO 81457 [egg-security] use nosniff middleware
+2023-08-25 14:41:43,759 INFO 81457 [egg-security] use xssProtection middleware
+2023-08-25 14:41:43,760 INFO 81457 [egg-security] use xframe middleware
+2023-08-25 14:41:43,762 INFO 81457 [egg-security] use dta middleware
+2023-08-25 14:41:43,762 INFO 81457 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:41:43,798 INFO 81457 [egg:core] dump config after load, 9ms
+2023-08-25 14:41:43,837 INFO 81457 [egg-watcher:application] watcher start success
+2023-08-25 14:41:44,120 INFO 81457 [egg:core] dump config after ready, 5ms
+2023-08-25 14:44:15,103 INFO 81632 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:44:15,148 INFO 81632 [egg-multipart] stream mode enable
+2023-08-25 14:44:15,975 INFO 81632 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:44:15,979 INFO 81632 [egg-security] use methodnoallow middleware
+2023-08-25 14:44:15,981 INFO 81632 [egg-security] use noopen middleware
+2023-08-25 14:44:15,982 INFO 81632 [egg-security] use nosniff middleware
+2023-08-25 14:44:15,983 INFO 81632 [egg-security] use xssProtection middleware
+2023-08-25 14:44:15,983 INFO 81632 [egg-security] use xframe middleware
+2023-08-25 14:44:15,984 INFO 81632 [egg-security] use dta middleware
+2023-08-25 14:44:15,985 INFO 81632 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:44:16,313 INFO 81632 [egg:core] dump config after load, 24ms
+2023-08-25 14:44:16,397 INFO 81632 [egg-watcher:application] watcher start success
+2023-08-25 14:44:16,917 INFO 81632 [egg:core] dump config after ready, 18ms
+2023-08-25 14:46:32,383 INFO 81771 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:46:32,411 INFO 81771 [egg-multipart] stream mode enable
+2023-08-25 14:46:33,055 INFO 81771 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:46:33,057 INFO 81771 [egg-security] use methodnoallow middleware
+2023-08-25 14:46:33,058 INFO 81771 [egg-security] use noopen middleware
+2023-08-25 14:46:33,060 INFO 81771 [egg-security] use nosniff middleware
+2023-08-25 14:46:33,061 INFO 81771 [egg-security] use xssProtection middleware
+2023-08-25 14:46:33,062 INFO 81771 [egg-security] use xframe middleware
+2023-08-25 14:46:33,063 INFO 81771 [egg-security] use dta middleware
+2023-08-25 14:46:33,063 INFO 81771 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:46:33,107 INFO 81771 [egg:core] dump config after load, 8ms
+2023-08-25 14:46:33,148 INFO 81771 [egg-watcher:application] watcher start success
+2023-08-25 14:46:33,480 INFO 81771 [egg:core] dump config after ready, 32ms
+2023-08-25 14:52:28,202 INFO 82138 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:52:28,255 INFO 82138 [egg-multipart] stream mode enable
+2023-08-25 14:52:28,915 INFO 82138 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:52:28,923 INFO 82138 [egg-security] use methodnoallow middleware
+2023-08-25 14:52:28,924 INFO 82138 [egg-security] use noopen middleware
+2023-08-25 14:52:28,925 INFO 82138 [egg-security] use nosniff middleware
+2023-08-25 14:52:28,926 INFO 82138 [egg-security] use xssProtection middleware
+2023-08-25 14:52:28,926 INFO 82138 [egg-security] use xframe middleware
+2023-08-25 14:52:28,930 INFO 82138 [egg-security] use dta middleware
+2023-08-25 14:52:28,930 INFO 82138 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:52:28,990 INFO 82138 [egg:core] dump config after load, 7ms
+2023-08-25 14:52:29,097 INFO 82138 [egg-watcher:application] watcher start success
+2023-08-25 14:52:29,794 INFO 82138 [egg:core] dump config after ready, 6ms
+2023-08-25 14:54:29,300 INFO 82260 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:54:29,327 INFO 82260 [egg-multipart] stream mode enable
+2023-08-25 14:54:29,892 INFO 82260 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:54:29,894 INFO 82260 [egg-security] use methodnoallow middleware
+2023-08-25 14:54:29,895 INFO 82260 [egg-security] use noopen middleware
+2023-08-25 14:54:29,896 INFO 82260 [egg-security] use nosniff middleware
+2023-08-25 14:54:29,897 INFO 82260 [egg-security] use xssProtection middleware
+2023-08-25 14:54:29,898 INFO 82260 [egg-security] use xframe middleware
+2023-08-25 14:54:29,898 INFO 82260 [egg-security] use dta middleware
+2023-08-25 14:54:29,899 INFO 82260 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:54:29,925 INFO 82260 [egg:core] dump config after load, 5ms
+2023-08-25 14:54:29,962 INFO 82260 [egg-watcher:application] watcher start success
+2023-08-25 14:54:30,267 INFO 82260 [egg:core] dump config after ready, 5ms
+2023-08-25 14:59:13,486 INFO 82561 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 14:59:13,515 INFO 82561 [egg-multipart] stream mode enable
+2023-08-25 14:59:15,984 INFO 82561 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 14:59:16,097 INFO 82561 [egg-security] use methodnoallow middleware
+2023-08-25 14:59:16,098 INFO 82561 [egg-security] use noopen middleware
+2023-08-25 14:59:16,100 INFO 82561 [egg-security] use nosniff middleware
+2023-08-25 14:59:16,100 INFO 82561 [egg-security] use xssProtection middleware
+2023-08-25 14:59:16,101 INFO 82561 [egg-security] use xframe middleware
+2023-08-25 14:59:16,103 INFO 82561 [egg-security] use dta middleware
+2023-08-25 14:59:16,103 INFO 82561 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 14:59:16,150 INFO 82561 [egg:core] dump config after load, 12ms
+2023-08-25 14:59:16,228 INFO 82561 [egg-watcher:application] watcher start success
+2023-08-25 14:59:16,656 INFO 82561 [egg:core] dump config after ready, 23ms
+2023-08-25 15:01:41,242 INFO 82733 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:01:41,271 INFO 82733 [egg-multipart] stream mode enable
+2023-08-25 15:01:41,912 INFO 82733 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:01:41,914 INFO 82733 [egg-security] use methodnoallow middleware
+2023-08-25 15:01:41,915 INFO 82733 [egg-security] use noopen middleware
+2023-08-25 15:01:41,916 INFO 82733 [egg-security] use nosniff middleware
+2023-08-25 15:01:41,916 INFO 82733 [egg-security] use xssProtection middleware
+2023-08-25 15:01:41,917 INFO 82733 [egg-security] use xframe middleware
+2023-08-25 15:01:41,918 INFO 82733 [egg-security] use dta middleware
+2023-08-25 15:01:41,918 INFO 82733 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:01:41,953 INFO 82733 [egg:core] dump config after load, 8ms
+2023-08-25 15:01:41,993 INFO 82733 [egg-watcher:application] watcher start success
+2023-08-25 15:01:42,381 INFO 82733 [egg:core] dump config after ready, 15ms
+2023-08-25 15:03:03,480 INFO 82815 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:03:03,506 INFO 82815 [egg-multipart] stream mode enable
+2023-08-25 15:03:04,121 INFO 82815 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:03:04,124 INFO 82815 [egg-security] use methodnoallow middleware
+2023-08-25 15:03:04,124 INFO 82815 [egg-security] use noopen middleware
+2023-08-25 15:03:04,125 INFO 82815 [egg-security] use nosniff middleware
+2023-08-25 15:03:04,126 INFO 82815 [egg-security] use xssProtection middleware
+2023-08-25 15:03:04,127 INFO 82815 [egg-security] use xframe middleware
+2023-08-25 15:03:04,128 INFO 82815 [egg-security] use dta middleware
+2023-08-25 15:03:04,128 INFO 82815 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:03:04,162 INFO 82815 [egg:core] dump config after load, 5ms
+2023-08-25 15:03:04,212 INFO 82815 [egg-watcher:application] watcher start success
+2023-08-25 15:03:04,532 INFO 82815 [egg:core] dump config after ready, 5ms
+2023-08-25 15:03:45,547 INFO 82883 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:03:45,580 INFO 82883 [egg-multipart] stream mode enable
+2023-08-25 15:03:46,259 INFO 82883 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:03:46,263 INFO 82883 [egg-security] use methodnoallow middleware
+2023-08-25 15:03:46,265 INFO 82883 [egg-security] use noopen middleware
+2023-08-25 15:03:46,266 INFO 82883 [egg-security] use nosniff middleware
+2023-08-25 15:03:46,266 INFO 82883 [egg-security] use xssProtection middleware
+2023-08-25 15:03:46,267 INFO 82883 [egg-security] use xframe middleware
+2023-08-25 15:03:46,268 INFO 82883 [egg-security] use dta middleware
+2023-08-25 15:03:46,268 INFO 82883 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:03:46,381 INFO 82883 [egg:core] dump config after load, 44ms
+2023-08-25 15:03:46,486 INFO 82883 [egg-watcher:application] watcher start success
+2023-08-25 15:03:46,965 INFO 82883 [egg:core] dump config after ready, 15ms
+2023-08-25 15:06:37,275 INFO 83055 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:06:37,305 INFO 83055 [egg-multipart] stream mode enable
+2023-08-25 15:06:37,929 INFO 83055 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:06:37,931 INFO 83055 [egg-security] use methodnoallow middleware
+2023-08-25 15:06:37,931 INFO 83055 [egg-security] use noopen middleware
+2023-08-25 15:06:37,932 INFO 83055 [egg-security] use nosniff middleware
+2023-08-25 15:06:37,933 INFO 83055 [egg-security] use xssProtection middleware
+2023-08-25 15:06:37,934 INFO 83055 [egg-security] use xframe middleware
+2023-08-25 15:06:37,935 INFO 83055 [egg-security] use dta middleware
+2023-08-25 15:06:37,935 INFO 83055 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:06:37,967 INFO 83055 [egg:core] dump config after load, 7ms
+2023-08-25 15:06:38,011 INFO 83055 [egg-watcher:application] watcher start success
+2023-08-25 15:06:38,428 INFO 83055 [egg:core] dump config after ready, 15ms
+2023-08-25 15:24:42,760 INFO 84135 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:24:42,802 INFO 84135 [egg-multipart] stream mode enable
+2023-08-25 15:24:43,509 INFO 84135 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:24:43,511 INFO 84135 [egg-security] use methodnoallow middleware
+2023-08-25 15:24:43,512 INFO 84135 [egg-security] use noopen middleware
+2023-08-25 15:24:43,513 INFO 84135 [egg-security] use nosniff middleware
+2023-08-25 15:24:43,514 INFO 84135 [egg-security] use xssProtection middleware
+2023-08-25 15:24:43,516 INFO 84135 [egg-security] use xframe middleware
+2023-08-25 15:24:43,517 INFO 84135 [egg-security] use dta middleware
+2023-08-25 15:24:43,518 INFO 84135 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:24:43,557 INFO 84135 [egg:core] dump config after load, 12ms
+2023-08-25 15:24:43,632 INFO 84135 [egg-watcher:application] watcher start success
+2023-08-25 15:24:44,260 INFO 84135 [egg:core] dump config after ready, 15ms
+2023-08-25 15:54:54,296 INFO 85951 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:54:54,333 INFO 85951 [egg-multipart] stream mode enable
+2023-08-25 15:54:54,926 INFO 85951 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:54:54,928 INFO 85951 [egg-security] use methodnoallow middleware
+2023-08-25 15:54:54,929 INFO 85951 [egg-security] use noopen middleware
+2023-08-25 15:54:54,930 INFO 85951 [egg-security] use nosniff middleware
+2023-08-25 15:54:54,931 INFO 85951 [egg-security] use xssProtection middleware
+2023-08-25 15:54:54,932 INFO 85951 [egg-security] use xframe middleware
+2023-08-25 15:54:54,932 INFO 85951 [egg-security] use dta middleware
+2023-08-25 15:54:54,933 INFO 85951 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:54:54,976 INFO 85951 [egg:core] dump config after load, 9ms
+2023-08-25 15:54:55,057 INFO 85951 [egg-watcher:application] watcher start success
+2023-08-25 15:54:55,525 INFO 85951 [egg:core] dump config after ready, 13ms
+2023-08-25 15:55:45,890 INFO 86021 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:55:45,925 INFO 86021 [egg-multipart] stream mode enable
+2023-08-25 15:55:46,522 INFO 86021 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:55:46,524 INFO 86021 [egg-security] use methodnoallow middleware
+2023-08-25 15:55:46,524 INFO 86021 [egg-security] use noopen middleware
+2023-08-25 15:55:46,525 INFO 86021 [egg-security] use nosniff middleware
+2023-08-25 15:55:46,530 INFO 86021 [egg-security] use xssProtection middleware
+2023-08-25 15:55:46,530 INFO 86021 [egg-security] use xframe middleware
+2023-08-25 15:55:46,531 INFO 86021 [egg-security] use dta middleware
+2023-08-25 15:55:46,531 INFO 86021 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:55:46,593 INFO 86021 [egg:core] dump config after load, 5ms
+2023-08-25 15:55:46,644 INFO 86021 [egg-watcher:application] watcher start success
+2023-08-25 15:55:47,319 INFO 86021 [egg:core] dump config after ready, 19ms
+2023-08-25 15:57:46,886 INFO 86158 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:57:46,909 INFO 86158 [egg-multipart] stream mode enable
+2023-08-25 15:57:47,235 INFO 86158 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:57:47,236 INFO 86158 [egg-security] use methodnoallow middleware
+2023-08-25 15:57:47,237 INFO 86158 [egg-security] use noopen middleware
+2023-08-25 15:57:47,237 INFO 86158 [egg-security] use nosniff middleware
+2023-08-25 15:57:47,238 INFO 86158 [egg-security] use xssProtection middleware
+2023-08-25 15:57:47,238 INFO 86158 [egg-security] use xframe middleware
+2023-08-25 15:57:47,239 INFO 86158 [egg-security] use dta middleware
+2023-08-25 15:57:47,239 INFO 86158 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:57:47,266 INFO 86158 [egg:core] dump config after load, 5ms
+2023-08-25 15:57:47,294 INFO 86158 [egg-watcher:application] watcher start success
+2023-08-25 15:57:47,658 INFO 86158 [egg:core] dump config after ready, 10ms
+2023-08-25 15:58:41,732 INFO 86227 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 15:58:41,765 INFO 86227 [egg-multipart] stream mode enable
+2023-08-25 15:58:42,597 INFO 86227 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 15:58:42,599 INFO 86227 [egg-security] use methodnoallow middleware
+2023-08-25 15:58:42,600 INFO 86227 [egg-security] use noopen middleware
+2023-08-25 15:58:42,600 INFO 86227 [egg-security] use nosniff middleware
+2023-08-25 15:58:42,601 INFO 86227 [egg-security] use xssProtection middleware
+2023-08-25 15:58:42,601 INFO 86227 [egg-security] use xframe middleware
+2023-08-25 15:58:42,602 INFO 86227 [egg-security] use dta middleware
+2023-08-25 15:58:42,602 INFO 86227 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 15:58:42,680 INFO 86227 [egg:core] dump config after load, 10ms
+2023-08-25 15:58:42,739 INFO 86227 [egg-watcher:application] watcher start success
+2023-08-25 15:58:43,123 INFO 86227 [egg:core] dump config after ready, 7ms
+2023-08-25 16:01:40,304 INFO 86426 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 16:01:40,336 INFO 86426 [egg-multipart] stream mode enable
+2023-08-25 16:01:41,041 INFO 86426 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 16:01:41,043 INFO 86426 [egg-security] use methodnoallow middleware
+2023-08-25 16:01:41,044 INFO 86426 [egg-security] use noopen middleware
+2023-08-25 16:01:41,045 INFO 86426 [egg-security] use nosniff middleware
+2023-08-25 16:01:41,046 INFO 86426 [egg-security] use xssProtection middleware
+2023-08-25 16:01:41,047 INFO 86426 [egg-security] use xframe middleware
+2023-08-25 16:01:41,048 INFO 86426 [egg-security] use dta middleware
+2023-08-25 16:01:41,048 INFO 86426 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 16:01:41,079 INFO 86426 [egg:core] dump config after load, 4ms
+2023-08-25 16:01:41,119 INFO 86426 [egg-watcher:application] watcher start success
+2023-08-25 16:01:41,470 INFO 86426 [egg:core] dump config after ready, 4ms
+2023-08-25 16:02:41,024 INFO 86499 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 16:02:41,055 INFO 86499 [egg-multipart] stream mode enable
+2023-08-25 16:02:41,614 INFO 86499 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 16:02:41,617 INFO 86499 [egg-security] use methodnoallow middleware
+2023-08-25 16:02:41,618 INFO 86499 [egg-security] use noopen middleware
+2023-08-25 16:02:41,619 INFO 86499 [egg-security] use nosniff middleware
+2023-08-25 16:02:41,622 INFO 86499 [egg-security] use xssProtection middleware
+2023-08-25 16:02:41,623 INFO 86499 [egg-security] use xframe middleware
+2023-08-25 16:02:41,624 INFO 86499 [egg-security] use dta middleware
+2023-08-25 16:02:41,624 INFO 86499 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 16:02:41,655 INFO 86499 [egg:core] dump config after load, 7ms
+2023-08-25 16:02:41,695 INFO 86499 [egg-watcher:application] watcher start success
+2023-08-25 16:02:42,271 INFO 86499 [egg:core] dump config after ready, 17ms
+2023-08-25 16:03:14,300 INFO 86540 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 16:03:14,438 INFO 86540 [egg-multipart] stream mode enable
+2023-08-25 16:03:15,096 INFO 86540 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 16:03:15,098 INFO 86540 [egg-security] use methodnoallow middleware
+2023-08-25 16:03:15,099 INFO 86540 [egg-security] use noopen middleware
+2023-08-25 16:03:15,100 INFO 86540 [egg-security] use nosniff middleware
+2023-08-25 16:03:15,101 INFO 86540 [egg-security] use xssProtection middleware
+2023-08-25 16:03:15,102 INFO 86540 [egg-security] use xframe middleware
+2023-08-25 16:03:15,103 INFO 86540 [egg-security] use dta middleware
+2023-08-25 16:03:15,103 INFO 86540 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 16:03:15,133 INFO 86540 [egg:core] dump config after load, 6ms
+2023-08-25 16:03:15,170 INFO 86540 [egg-watcher:application] watcher start success
+2023-08-25 16:03:15,592 INFO 86540 [egg:core] dump config after ready, 13ms
+2023-08-25 16:06:07,933 INFO 86720 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 16:06:07,968 INFO 86720 [egg-multipart] stream mode enable
+2023-08-25 16:06:08,479 INFO 86720 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 16:06:08,480 INFO 86720 [egg-security] use methodnoallow middleware
+2023-08-25 16:06:08,481 INFO 86720 [egg-security] use noopen middleware
+2023-08-25 16:06:08,482 INFO 86720 [egg-security] use nosniff middleware
+2023-08-25 16:06:08,482 INFO 86720 [egg-security] use xssProtection middleware
+2023-08-25 16:06:08,483 INFO 86720 [egg-security] use xframe middleware
+2023-08-25 16:06:08,483 INFO 86720 [egg-security] use dta middleware
+2023-08-25 16:06:08,483 INFO 86720 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 16:06:08,513 INFO 86720 [egg:core] dump config after load, 6ms
+2023-08-25 16:06:08,551 INFO 86720 [egg-watcher:application] watcher start success
+2023-08-25 16:06:08,945 INFO 86720 [egg:core] dump config after ready, 4ms
+2023-08-25 16:51:20,138 INFO 89429 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2023-08-25 16:51:20,200 INFO 89429 [egg-multipart] stream mode enable
+2023-08-25 16:51:21,094 INFO 89429 [egg-static] starting static serve /public -> /Users/laijiahua 1/likeadmin/egg/app/public
+2023-08-25 16:51:21,106 INFO 89429 [egg-security] use methodnoallow middleware
+2023-08-25 16:51:21,107 INFO 89429 [egg-security] use noopen middleware
+2023-08-25 16:51:21,108 INFO 89429 [egg-security] use nosniff middleware
+2023-08-25 16:51:21,109 INFO 89429 [egg-security] use xssProtection middleware
+2023-08-25 16:51:21,110 INFO 89429 [egg-security] use xframe middleware
+2023-08-25 16:51:21,111 INFO 89429 [egg-security] use dta middleware
+2023-08-25 16:51:21,111 INFO 89429 [egg-security] compose 6 middlewares into one security middleware
+2023-08-25 16:51:21,203 INFO 89429 [egg:core] dump config after load, 6ms
+2023-08-25 16:51:21,360 INFO 89429 [egg-watcher:application] watcher start success
+2023-08-25 16:51:21,834 INFO 89429 [egg:core] dump config after ready, 16ms
+2023-08-26 00:00:00,493 INFO 89429 [egg-logrotator] clean all log before 31 days
+2023-08-26 00:00:01,370 INFO 89429 [egg-logrotator] broadcast log-reload
+2023-08-26 00:00:01,370 INFO 89429 [egg-logrotator] rotate files success by DayRotator, files ["/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/common-error.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/common-error.log.2023-08-25","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/vue-admin-serve-web.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/vue-admin-serve-web.log.2023-08-25","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-web.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-web.log.2023-08-25","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-schedule.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-schedule.log.2023-08-25","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-agent.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-agent.log.2023-08-25"]

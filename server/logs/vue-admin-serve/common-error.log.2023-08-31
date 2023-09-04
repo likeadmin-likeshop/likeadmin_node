@@ -1,0 +1,112 @@
+2023-08-31 15:12:21,093 ERROR 74079 nodejs.ReferenceError: redis is not defined
+    at RedisService.Exists (/Users/laijiahua 1/likeadmin/egg/app/service/redis.js:95:24)
+    at tokenAuth (/Users/laijiahua 1/likeadmin/egg/app/middleware/auth.js:26:41)
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at verify (/Users/laijiahua 1/likeadmin/egg/app/middleware/authority.js:18:19)
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/laijiahua 1/likeadmin/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at i18n (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+
+pid: 74079
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:35:58,840 ERROR 95904 nodejs.ReferenceError: ctx is not defined
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:68:32)
+    at SystemController.self (/Users/laijiahua 1/likeadmin/egg/app/controller/system.js:104:47)
+    at Object.callFn (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/laijiahua 1/likeadmin/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/laijiahua 1/likeadmin/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/laijiahua 1/likeadmin/egg/node_modules/koa-compose/index.js:45:18)
+    at /Users/laijiahua 1/likeadmin/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/laijiahua 1/likeadmin/egg/node_modules/koa-compose/index.js:44:32)
+
+pid: 95904
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:49:50,372 ERROR 97064 nodejs.TypeError: Cannot read properties of undefined (reading 'findAll')
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:73:47)
+    at SystemController.self (/Users/laijiahua 1/likeadmin/egg/app/controller/system.js:109:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tokenAuth (/Users/laijiahua 1/likeadmin/egg/app/middleware/auth.js:92:13)
+    at async verify (/Users/laijiahua 1/likeadmin/egg/app/middleware/authority.js:18:13)
+    at async /Users/laijiahua 1/likeadmin/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 97064
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:52:33,643 ERROR 97250 nodejs.TypeError: Cannot read properties of undefined (reading 'findAll')
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:74:47)
+    at SystemController.self (/Users/laijiahua 1/likeadmin/egg/app/controller/system.js:109:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tokenAuth (/Users/laijiahua 1/likeadmin/egg/app/middleware/auth.js:92:13)
+    at async verify (/Users/laijiahua 1/likeadmin/egg/app/middleware/authority.js:18:13)
+    at async /Users/laijiahua 1/likeadmin/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 97250
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:53:23,275 ERROR 97318 nodejs.TypeError: Cannot read properties of undefined (reading 'findAll')
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:74:47)
+    at SystemController.self (/Users/laijiahua 1/likeadmin/egg/app/controller/system.js:109:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tokenAuth (/Users/laijiahua 1/likeadmin/egg/app/middleware/auth.js:92:13)
+    at async verify (/Users/laijiahua 1/likeadmin/egg/app/middleware/authority.js:18:13)
+    at async /Users/laijiahua 1/likeadmin/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 97318
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:57:37,728 ERROR 97648 nodejs.TypeError: Cannot read properties of undefined (reading 'findAll')
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:74:57)
+    at SystemController.self (/Users/laijiahua 1/likeadmin/egg/app/controller/system.js:109:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async tokenAuth (/Users/laijiahua 1/likeadmin/egg/app/middleware/auth.js:92:13)
+    at async verify (/Users/laijiahua 1/likeadmin/egg/app/middleware/authority.js:18:13)
+    at async /Users/laijiahua 1/likeadmin/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/laijiahua 1/likeadmin/egg/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 97648
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:59:19,443 ERROR 97795 nodejs.TypeError: Cannot read properties of undefined (reading 'findAll')
+    at AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:84:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+pid: 97795
+hostname: MacBook-Pro-6.local
+
+2023-08-31 20:59:34,744 ERROR 97831 nodejs.SequelizeDatabaseError: Unknown column 'role_id' in 'field list'
+    at Query.run (/Users/laijiahua 1/likeadmin/egg/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/laijiahua 1/likeadmin/egg/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/Users/laijiahua 1/likeadmin/egg/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async SystemAuthMenu.findAll (/Users/laijiahua 1/likeadmin/egg/node_modules/sequelize/lib/model.js:1140:21)
+    at async AuthAdminService.selectMenuIdsByRoleId (/Users/laijiahua 1/likeadmin/egg/app/service/authAdmin.js:84:27)
+name: "SequelizeDatabaseError"
+parent: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'role_id' in 'field list'","sql":"SELECT `id`, `role_id` AS `roleId`, `menu_id` AS `menuId` FROM `la_system_auth_menu` AS `SystemAuthMenu` WHERE `SystemAuthMenu`.`role_id` = 1;"}
+original: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'role_id' in 'field list'","sql":"SELECT `id`, `role_id` AS `roleId`, `menu_id` AS `menuId` FROM `la_system_auth_menu` AS `SystemAuthMenu` WHERE `SystemAuthMenu`.`role_id` = 1;"}
+sql: "SELECT `id`, `role_id` AS `roleId`, `menu_id` AS `menuId` FROM `la_system_auth_menu` AS `SystemAuthMenu` WHERE `SystemAuthMenu`.`role_id` = 1;"
+parameters: {}
+pid: 97831
+hostname: MacBook-Pro-6.local
+

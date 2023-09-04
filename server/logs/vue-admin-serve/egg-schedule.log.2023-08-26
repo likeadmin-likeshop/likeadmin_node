@@ -1,0 +1,9 @@
+2023-08-26 04:30:00,189 INFO 89429 [Job#16929954001772161702428048671] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2023-08-26 04:30:00,188 INFO 61581 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86399819ms at 2023-08-27 04:30:00.006
+2023-08-26 04:30:00,224 INFO 89429 [Job#16929954001772161702428048671] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 34ms. 
+2023-08-26 23:59:59,621 INFO 89429 [Job#16930655996052863699091298562] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2023-08-26 23:59:59,634 INFO 89429 [Job#16930655996052863699091298562] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 9ms. 
+2023-08-26 23:59:59,616 INFO 61581 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 86400390ms at 2023-08-28 00:00:00.006
+2023-08-27 00:00:00,588 INFO 89429 [Job#16930656005852863708893653132] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2023-08-27 00:00:00,596 INFO 89429 [Job#16930656005852863708893653132] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 7ms. 
+2023-08-27 00:00:00,588 INFO 61581 [Timer] /Users/laijiahua 1/likeadmin/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 86400414ms at 2023-08-28 00:00:01.002

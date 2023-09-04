@@ -1,0 +1,28 @@
+2023-09-02 00:07:12,474 INFO 79165 [egg-logrotator] app logger reload: got log-reload message
+2023-09-02 01:54:28,024 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 01:54:28,024 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 03:39:01,027 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 03:39:01,027 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 05:05:47,027 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 05:05:47,027 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 05:05:47,107 INFO 79165 [-/127.0.0.1/-/32ms SCHEDULE /__schedule?path=/Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/hh/46v1f_v50g70bnh5jl9p6tnc0000gq/T/egg-multipart-tmp/vue-admin-serve"
+2023-09-02 05:05:47,126 INFO 79165 [-/127.0.0.1/-/52ms SCHEDULE /__schedule?path=/Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2023-09-02 06:05:13,018 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 06:05:13,019 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 06:32:10,023 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 06:32:10,023 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 07:26:18,026 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 07:26:18,027 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 14:45:10,033 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 14:45:10,033 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 19:24:59,047 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 19:24:59,047 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-02 22:58:15,796 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-02 22:58:15,802 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-03 07:38:32,230 WARN 79165 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-09-03 07:38:32,332 WARN 79165 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-09-03 07:38:33,174 INFO 79165 [-/127.0.0.1/-/11ms SCHEDULE /__schedule?path=/Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/hh/46v1f_v50g70bnh5jl9p6tnc0000gq/T/egg-multipart-tmp/vue-admin-serve"
+2023-09-03 07:38:33,391 INFO 79165 [egg-logrotator] clean all log before 31 days
+2023-09-03 07:38:33,398 INFO 79165 [-/127.0.0.1/-/235ms SCHEDULE /__schedule?path=/Users/laijiahua 1/likeadmin/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2023-09-03 07:38:33,399 INFO 79165 [egg-logrotator] broadcast log-reload
+2023-09-03 07:38:33,400 INFO 79165 [egg-logrotator] rotate files success by DayRotator, files ["/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/common-error.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/common-error.log.2023-09-02","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/vue-admin-serve-web.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/vue-admin-serve-web.log.2023-09-02","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-web.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-web.log.2023-09-02","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-schedule.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-schedule.log.2023-09-02","/Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-agent.log -> /Users/laijiahua 1/likeadmin/egg/logs/vue-admin-serve/egg-agent.log.2023-09-02"]

@@ -1,0 +1,14 @@
+2023-08-24 00:40:51,525 INFO 4706 [egg-logrotator] app logger reload: got log-reload message
+2023-08-24 08:53:51,394 INFO 4706 [-/127.0.0.1/-/1ms SCHEDULE /__schedule?path=/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/hh/46v1f_v50g70bnh5jl9p6tnc0000gq/T/egg-multipart-tmp/vue-admin-serve"
+2023-08-24 08:53:51,398 INFO 4706 [-/127.0.0.1/-/6ms SCHEDULE /__schedule?path=/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2023-08-24 09:22:46,011 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-24 09:22:46,011 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-24 20:14:48,338 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-24 20:14:48,357 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-24 22:15:39,082 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-24 22:15:39,082 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 00:15:44,296 WARN 4706 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2023-08-25 00:15:44,297 WARN 4706 [ClusterClient:Watcher] follower closed, and try to init it again
+2023-08-25 00:15:44,416 INFO 4706 [egg-logrotator] clean all log before 31 days
+2023-08-25 00:15:44,430 INFO 4706 [egg-logrotator] broadcast log-reload
+2023-08-25 00:15:44,430 INFO 4706 [egg-logrotator] rotate files success by DayRotator, files ["/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/common-error.log -> /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/common-error.log.2023-08-24","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/vue-admin-serve-web.log -> /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/vue-admin-serve-web.log.2023-08-24","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-web.log -> /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-web.log.2023-08-24","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-schedule.log -> /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-schedule.log.2023-08-24","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-agent.log -> /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve/egg-agent.log.2023-08-24"]

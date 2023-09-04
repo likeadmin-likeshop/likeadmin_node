@@ -1,0 +1,50 @@
+2023-08-23 00:00:02,001 INFO 2338 [egg-logrotator] agent logger reload: got log-reload message
+2023-08-23 17:06:04,995 WARN 4569 Sequelize Error: connect ECONNREFUSED 127.0.0.1:3307, sleep 1 seconds to retry...
+2023-08-23 17:06:04,420 INFO 4569 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2023-08-23 17:06:04,946 INFO 4569 [egg:core] dump config after load, 8ms
+2023-08-23 17:06:04,986 INFO 4569 [egg-watcher] Start watching: ["/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"]
+2023-08-23 17:06:04,986 INFO 4569 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app"
+2023-08-23 17:06:04,987 INFO 4569 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config"
+2023-08-23 17:06:04,987 INFO 4569 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks"
+2023-08-23 17:06:04,987 INFO 4569 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy"
+2023-08-23 17:06:04,987 INFO 4569 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"
+2023-08-23 17:06:04,988 INFO 4569 [egg-watcher:agent] watcher start success
+2023-08-23 17:06:06,000 WARN 4569 Sequelize Error: connect ECONNREFUSED 127.0.0.1:3307, sleep 1 seconds to retry...
+2023-08-23 17:06:07,004 WARN 4569 Sequelize Error: connect ECONNREFUSED 127.0.0.1:3307, sleep 1 seconds to retry...
+2023-08-23 17:06:08,010 ERROR 4569 nodejs.SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3307
+    at ConnectionManager.connect (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:92:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:222:24)
+    at async /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:174:32
+    at async ConnectionManager.getConnection (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:197:7)
+    at async /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/sequelize.js:305:26
+    at async Sequelize.authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/sequelize.js:457:5)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:134:7)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:142:7)
+name: "SequelizeConnectionRefusedError"
+parent: {"errno":-61,"code":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":3307,"fatal":true}
+original: {"errno":-61,"code":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":3307,"fatal":true}
+pid: 4569
+hostname: MacBook-Pro-6.local
+
+2023-08-23 17:06:08,021 INFO 4569 [egg:core] dump config after ready, 5ms
+2023-08-23 17:06:38,623 INFO 4687 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2023-08-23 17:06:38,072 INFO 4687 [egg:logger] init all loggers with options: {"dir":"/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/logs/vue-admin-serve","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"vue-admin-serve-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2023-08-23 17:06:38,502 INFO 4687 [egg:core] dump config after load, 7ms
+2023-08-23 17:06:38,538 INFO 4687 [egg-watcher] Start watching: ["/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy","/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"]
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app"
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/config"
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks"
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/mocks_proxy"
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher] Start watching: "/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/app.js"
+2023-08-23 17:06:38,539 INFO 4687 [egg-watcher:agent] watcher start success
+2023-08-23 17:06:38,651 INFO 4687 [egg:core] dump config after ready, 17ms
+2023-08-23 21:04:31,206 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 7209700ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+

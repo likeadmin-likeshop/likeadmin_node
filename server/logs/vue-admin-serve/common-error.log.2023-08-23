@@ -1,0 +1,25 @@
+2023-08-23 17:06:08,009 ERROR 4569 nodejs.SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3307
+    at ConnectionManager.connect (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:92:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:222:24)
+    at async /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:174:32
+    at async ConnectionManager.getConnection (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:197:7)
+    at async /Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/sequelize.js:305:26
+    at async Sequelize.authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/sequelize/lib/sequelize.js:457:5)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:134:7)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/egg-sequelize/lib/loader.js:142:7)
+name: "SequelizeConnectionRefusedError"
+parent: {"errno":-61,"code":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":3307,"fatal":true}
+original: {"errno":-61,"code":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":3307,"fatal":true}
+pid: 4569
+hostname: MacBook-Pro-6.local
+
+2023-08-23 21:04:31,194 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 7209700ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+

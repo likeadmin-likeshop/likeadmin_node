@@ -1,0 +1,48 @@
+2023-08-25 01:19:53,034 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 3810848ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
+2023-08-25 03:20:40,027 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 7205128ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
+2023-08-25 07:21:30,044 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 7205801ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
+2023-08-25 07:58:29,067 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 68698ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
+2023-08-25 09:32:53,339 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 5664265ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
+2023-08-25 10:31:04,160 ERROR 4687 nodejs.ClusterClientNoResponseError: client no response in 3450652ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/laijiahua 1/lkyy/vue-bag-admin-master/egg/node_modules/cluster-client/lib/leader.js:79:25)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+name: "ClusterClientNoResponseError"
+pid: 4687
+hostname: MacBook-Pro-6.local
+
