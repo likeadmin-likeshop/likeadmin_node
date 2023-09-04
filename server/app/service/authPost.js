@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
 
-class SystemAuthPostService extends Service {
+class AuthPostService extends Service {
     async list(listReq) {
         const { ctx } = this;
         try {
@@ -45,11 +45,11 @@ class SystemAuthPostService extends Service {
                 lists: postResps,
             };
         } catch (err) {
-            ctx.logger.error(`SystemAuthPostService.list error: ${err}`);
+            ctx.logger.error(`AuthPostService.list error: ${err}`);
             throw err;
         }
     }
 }
 
 
-module.exports = SystemAuthPostService
+module.exports = AuthPostService

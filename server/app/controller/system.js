@@ -197,7 +197,7 @@ class SystemController extends baseController {
         const { ctx } = this;
         try {
             const listReq = ctx.request.query;
-            const data = await ctx.service.systemAuthDept.list(listReq);
+            const data = await ctx.service.authDept.list(listReq);
             this.result({
                 data
             })
@@ -212,7 +212,7 @@ class SystemController extends baseController {
         const { ctx } = this;
         try {
             const params = ctx.query;
-            const data = await ctx.service.systemAuthPost.list(params);
+            const data = await ctx.service.authPost.list(params);
             this.result({
                 data
             })
@@ -226,7 +226,7 @@ class SystemController extends baseController {
     async roleAll() {
         const { ctx } = this;
         try {
-            const data = await ctx.service.systemAuthRole.all();
+            const data = await ctx.service.authRole.all();
             this.result({
                 data
             })

@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
 
-class SystemAuthRoleService extends Service {
+class AuthRoleService extends Service {
     async all() {
         const { ctx } = this;
         try {
@@ -15,11 +15,11 @@ class SystemAuthRoleService extends Service {
               const res = roles.map(role => role.toJSON());
               return res;
         } catch (err) {
-            ctx.logger.error(`SystemAuthRoleService.all error: ${err}`);
+            ctx.logger.error(`AuthRoleService.all error: ${err}`);
             throw err;
         }
     }
 }
 
 
-module.exports = SystemAuthRoleService
+module.exports = AuthRoleService

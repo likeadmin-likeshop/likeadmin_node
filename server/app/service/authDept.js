@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
 
-class SystemAuthDeptService extends Service {
+class AuthDeptService extends Service {
     async list(listReq) {
         const { ctx } = this;
         try {
@@ -35,11 +35,11 @@ class SystemAuthDeptService extends Service {
 
             return mapList;
         } catch (err) {
-            ctx.logger.error(`SystemAuthDeptService.list error: ${err}`);
+            ctx.logger.error(`AuthDeptService.list error: ${err}`);
             throw err;
         }
     }
 }
 
 
-module.exports = SystemAuthDeptService
+module.exports = AuthDeptService
