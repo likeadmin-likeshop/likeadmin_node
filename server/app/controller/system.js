@@ -193,6 +193,65 @@ class SystemController extends baseController {
         }
     }
 
+    async deptList() {
+        const { ctx } = this;
+        try {
+            const listReq = ctx.request.query;
+            const data = await ctx.service.systemAuthDept.list(listReq);
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`SystemAuthDeptController.deptList error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async postList() {
+        const { ctx } = this;
+        try {
+            const params = ctx.query;
+            const data = await ctx.service.systemAuthPost.list(params);
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`SystemAuthPostController.postList error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async roleAll() {
+        const { ctx } = this;
+        try {
+            const data = await ctx.service.systemAuthRole.all();
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`SystemAuthPostController.roleAll error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async adminList() {
+        const { ctx } = this;
+        try {
+            const params = ctx.query;
+            const data = await ctx.service.authAdmin.adminList(params);
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`SystemAuthPostController.roleAll error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
     async logout() {
         this.ctx.cookies.set('token', null, { maxAge: 0 })
         this.result({ data: '' })

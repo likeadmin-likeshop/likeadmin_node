@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT, CHAR } = app.Sequelize
@@ -36,23 +37,34 @@ module.exports = app => {
             defaultValue: 0,
             comment: '角色排序',
         },
-        is_disable: {
+        isDisable: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否禁用: 0=否, 1=是',
+            field: 'is_disable',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
     };
     const SystemAuthRole = app.model.define('SystemAuthRole', modelDefinition, {

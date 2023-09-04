@@ -163,6 +163,17 @@ module.exports = app => {
         tableName: 'la_system_auth_admin', // 定义实际表名
     })
 
+    SystemAuthAdmin.associate = function () {
+        // SystemAuthRole 表建立多对一关系
+        app.model.SystemAuthAdmin.belongsTo(app.model.SystemAuthRole, {
+            foreignKey: 'role', as: 'authRole'
+        })
+        // SystemAuthDept 表建立多对一关系
+        app.model.SystemAuthAdmin.belongsTo(app.model.SystemAuthDept, {
+            foreignKey: 'deptId', as: 'dept'
+        })
+    }
+
     return SystemAuthAdmin
 }
 

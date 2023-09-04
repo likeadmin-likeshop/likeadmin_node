@@ -4,6 +4,7 @@ const parser = require('ua-parser-js');
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
+const urlUtil = require('../util/urlUtil')
 
 class AuthAdminService extends Service {
     async cacheAdminUserByUid(id) {
@@ -103,12 +104,12 @@ class AuthAdminService extends Service {
     async selectMenuByRoleId(roleId) {
         const { ctx } = this;
         const adminId = ctx.session[reqAdminIdKey];
-        console.log(adminId,'adminId....')
+        console.log(adminId, 'adminId....')
         let menuIds = await this.selectMenuIdsByRoleId(roleId);
         if (!menuIds || menuIds.length === 0) {
             menuIds = [0];
         }
-        console.log(menuIds,'menuIds......')
+        console.log(menuIds, 'menuIds......')
         let chain = ctx.model.SystemAuthMenu
             .findAll({
                 where: {
@@ -117,7 +118,7 @@ class AuthAdminService extends Service {
                 },
                 order: [['menuSort', 'DESC'], ['id']],
             });
-        console.log(chain,'chain....')
+        console.log(chain, 'chain....')
         if (adminId !== superAdminId) {
             chain = chain.where({
                 id: menuIds,
@@ -131,7 +132,7 @@ class AuthAdminService extends Service {
             'pid',
             'children'
         );
-        console.log(mapList,'mapList....')
+        console.log(mapList, 'mapList....')
         return mapList;
     }
 
@@ -158,6 +159,66 @@ class AuthAdminService extends Service {
             return result;
         } catch (error) {
             return false;
+        }
+    }
+
+    async adminList(listReq) {
+        const { ctx } = this;
+        const { SystemAuthAdmin, SystemAuthRole, SystemAuthDept } = ctx.model;
+
+        try {
+            const limit = parseInt(listReq.pageSize, 10);
+            const offset = listReq.pageSize * (listReq.pageNo - 1);
+
+            const username = listReq.username || '';
+            const nickname = listReq.nickname || '';
+
+            const where = {};
+            if(listReq.role) {
+                where['role'] = listReq.role
+            }
+
+            const adminModel = await SystemAuthAdmin.findAndCountAll({
+                where: {
+                    isDelete: 0,
+                    username: { [Op.like]: `%${username}%` },
+                    nickname: { [Op.like]: `%${nickname}%` },
+                    // role: listReq.role >= 0 ? listReq.role : { [Op.gte]: 0 },
+                    ...where
+                },
+                include: [
+                    { model: SystemAuthRole, as: 'authRole', attributes: ['name'] },
+                    { model: SystemAuthDept, as: 'dept', attributes: ['name'] },
+                ],
+                limit,
+                offset,
+                order: [['id', 'DESC'], ['sort', 'DESC']],
+                attributes: { exclude: ['password', 'salt', 'deleteTime', 'isDelete', 'sort'] }  // 排除该字段显示
+            });
+
+            const [adminResp, count] = await Promise.all([
+                adminModel.rows.map(admin => admin.toJSON()),
+                adminModel.count,
+            ]);
+
+            for (let i = 0; i < adminResp.length; i++) {
+                adminResp[i].avatar = urlUtil.toAbsoluteUrl(adminResp[i].avatar);
+                adminResp[i].dept = adminResp[i].dept.name;
+                if (adminResp[i].id === 1) {
+                    adminResp[i].role = '系统管理员';
+                    delete adminResp[i].authRole;
+                }
+            }
+
+            return {
+                pageNo: listReq.pageNo,
+                pageSize: listReq.pageSize,
+                count,
+                lists: adminResp,
+            };
+        } catch (err) {
+            ctx.logger.error(err);
+            throw new Error('List Find err');
         }
     }
 }

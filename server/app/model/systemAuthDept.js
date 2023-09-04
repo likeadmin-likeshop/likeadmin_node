@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT } = app.Sequelize
@@ -49,38 +50,57 @@ module.exports = app => {
             defaultValue: 0,
             comment: '排序编号',
         },
-        is_stop: {
+        isStop: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否禁用: 0=否, 1=是',
+            field: 'is_stop',
         },
-        is_delete: {
+        isDelete: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否删除: 0=否, 1=是',
+            field: 'is_delete',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '删除时间',
+            field: 'delete_time',
+            get() {
+                const timestamp = this.getDataValue('deleteTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
     };
     const SystemAuthDept = app.model.define('SystemAuthDept', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_auth_dept', // 定义实际表名
     })
 
