@@ -1,6 +1,0 @@
-2023-09-04 10:05:22,091 INFO 90057 [egg-schedule]: register schedule /Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2023-09-04 10:05:22,091 INFO 90057 [egg-schedule]: register schedule /Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/app/schedule/clean_log.js
-2023-09-04 10:05:22,091 INFO 90057 [egg-schedule]: register schedule /Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2023-09-04 10:05:23,230 INFO 90042 [Timer] /Users/laijiahua 1/likeadmin/server/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 66276773ms at 2023-09-05 04:30:00.003
-2023-09-04 10:05:23,231 INFO 90042 [Timer] /Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 50076769ms at 2023-09-05 00:00:00.000
-2023-09-04 10:05:23,231 INFO 90042 [Timer] /Users/laijiahua 1/likeadmin/server/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 50077769ms at 2023-09-05 00:00:01.000

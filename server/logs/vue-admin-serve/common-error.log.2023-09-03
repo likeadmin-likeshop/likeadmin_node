@@ -1,8 +1,0 @@
-2023-09-04 09:24:59,449 ERROR 71679 nodejs.ClusterClientNoResponseError: client no response in 92763615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/laijiahua 1/likeadmin/egg/node_modules/cluster-client/lib/leader.js:79:25)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7)
-name: "ClusterClientNoResponseError"
-pid: 71679
-hostname: MacBook-Pro-6.local
-
