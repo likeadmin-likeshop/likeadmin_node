@@ -44,38 +44,45 @@ module.exports = app => {
             defaultValue: 0,
             comment: '岗位排序',
         },
-        is_stop: {
+        isStop: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否停用: 0=否, 1=是',
+            field: 'is_stop',
         },
-        is_delete: {
+        isDelete: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否删除: 0=否, 1=是',
+            field: 'is_delete',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '删除时间',
+            field: 'delete_time',
         },
     };
     const SystemAuthPost = app.model.define('SystemAuthPost', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_auth_post', // 定义实际表名
     })
 
