@@ -158,7 +158,7 @@ module.exports = app => {
         },
     };
     const SystemAuthAdmin = app.model.define('SystemAuthAdmin', modelDefinition, {
-        createdAt: 'createTime', // 指定名字
+        createdAt: false, // 指定名字
         updatedAt: false,
         tableName: 'la_system_auth_admin', // 定义实际表名
     })

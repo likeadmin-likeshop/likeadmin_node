@@ -1,10 +1,11 @@
 const Service = require('egg').Service
-const { backstageManageKey, backstageRolesKey, reqAdminIdKey, superAdminId } = require('../extend/config')
+const { backstageManageKey, backstageRolesKey, reqAdminIdKey, superAdminId, backstageTokenKey, backstageTokenSet } = require('../extend/config')
 const parser = require('ua-parser-js');
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
 const urlUtil = require('../util/urlUtil')
+const md5 = require('md5')
 
 class AuthAdminService extends Service {
     async cacheAdminUserByUid(id) {
@@ -104,12 +105,10 @@ class AuthAdminService extends Service {
     async selectMenuByRoleId(roleId) {
         const { ctx } = this;
         const adminId = ctx.session[reqAdminIdKey];
-        console.log(adminId, 'adminId....')
         let menuIds = await this.selectMenuIdsByRoleId(roleId);
         if (!menuIds || menuIds.length === 0) {
             menuIds = [0];
         }
-        console.log(menuIds, 'menuIds......')
         let chain = ctx.model.SystemAuthMenu
             .findAll({
                 where: {
@@ -118,7 +117,6 @@ class AuthAdminService extends Service {
                 },
                 order: [['menuSort', 'DESC'], ['id']],
             });
-        console.log(chain, 'chain....')
         if (adminId !== superAdminId) {
             chain = chain.where({
                 id: menuIds,
@@ -132,13 +130,11 @@ class AuthAdminService extends Service {
             'pid',
             'children'
         );
-        console.log(mapList, 'mapList....')
         return mapList;
     }
 
     async recordLoginLog(adminId, username, errStr) {
         const { ctx } = this;
-        console.log(adminId, username, errStr, 'adminId, username, errStr.....')
         const ua = parser(ctx.request.header['user-agent']);
         let status = 0;
         if (!errStr) {
@@ -174,7 +170,7 @@ class AuthAdminService extends Service {
             const nickname = listReq.nickname || '';
 
             const where = {};
-            if(listReq.role) {
+            if (listReq.role) {
                 where['role'] = listReq.role
             }
 
@@ -207,6 +203,9 @@ class AuthAdminService extends Service {
                 if (adminResp[i].id === 1) {
                     adminResp[i].role = '系统管理员';
                     delete adminResp[i].authRole;
+                } else {
+                    adminResp[i].role = adminResp[i].authRole?.name;
+                    delete adminResp[i].authRole;
                 }
             }
 
@@ -219,6 +218,230 @@ class AuthAdminService extends Service {
         } catch (err) {
             ctx.logger.error(err);
             throw new Error('List Find err');
+        }
+    }
+
+    async detail(id) {
+        const { ctx } = this;
+        const { SystemAuthAdmin } = ctx.model;
+
+        try {
+            const sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    id,
+                    isDelete: 0,
+                },
+                attributes: { exclude: ['password', 'salt', 'deleteTime', 'isDelete', 'sort'] }
+            });
+
+            if (!sysAdmin) {
+                throw new Error('账号已不存在！');
+            }
+
+            const res = sysAdmin.toJSON();
+
+            res.avatar = urlUtil.toAbsoluteUrl(res.avatar);
+
+            if (!res.dept) {
+                res.dept = String(res.deptId);
+            }
+
+            return res;
+        } catch (err) {
+            ctx.logger.error(err);
+            throw new Error('Get Admin Detail error');
+        }
+    }
+
+    async add(addReq) {
+        const { ctx } = this;
+        const { SystemAuthAdmin, SystemAuthRole } = ctx.model;
+        delete addReq.id;
+
+        try {
+            let sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    username: addReq.username,
+                    isDelete: 0,
+                },
+            });
+
+            if (sysAdmin) {
+                throw new Error('账号已存在换一个吧！');
+            }
+
+            sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    nickname: addReq.nickname,
+                    isDelete: 0,
+                },
+            });
+
+            if (sysAdmin) {
+                throw new Error('昵称已存在换一个吧！');
+            }
+
+            const roles = addReq.role; // 角色数组
+
+            const roleResps = await SystemAuthRole.findAll({
+                where: {
+                    id: roles,
+                    isDisable: 0,
+                },
+            });
+
+            if (roleResps.length === 0) {
+                throw new Error('当前角色已被禁用!');
+            }
+
+            const passwdLen = addReq.password.length;
+
+            if (!(passwdLen >= 6 && passwdLen <= 20)) {
+                throw new Error('密码必须在6~20位');
+            }
+
+            const salt = util.randomString(5);
+
+            sysAdmin = new SystemAuthAdmin();
+            const dateTime = Math.floor(Date.now() / 1000);
+            const timeObject = {
+                createTime: dateTime,
+                updateTime: dateTime,
+            }
+
+            Object.assign(sysAdmin, addReq, timeObject);
+
+            sysAdmin.role = String(addReq.role);
+            sysAdmin.salt = salt;
+            sysAdmin.password = md5(addReq.password.trim() + salt);
+
+            if (!addReq.avatar) {
+                addReq.avatar = '/public/static/backend_avatar.png';
+            } else {
+                addReq.avatar = urlUtil.toRelativeUrl(addReq.avatar);
+            }
+
+            sysAdmin.avatar = addReq.avatar;
+
+            console.log(sysAdmin,'sysAdmin....')
+
+            await sysAdmin.save();
+
+            return;
+        } catch (err) {
+            ctx.logger.error(err);
+            throw new Error('Add Admin error');
+        }
+    }
+
+    async edit(editReq) {
+        const { ctx } = this;
+        const { redis } = this.app;
+        const { SystemAuthAdmin, SystemAuthRole } = ctx.model;
+
+        console.log(ctx.request.header.token, 'ctx.request.header.token....')
+
+        try {
+            const admin = await SystemAuthAdmin.findByPk(editReq.id);
+
+            if (!admin || admin.isDelete) {
+                throw new Error('账号不存在了!');
+            }
+
+            let sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    username: editReq.username,
+                    isDelete: 0,
+                    id: {
+                        [Op.ne]: editReq.id,
+                    },
+                },
+            });
+
+            if (sysAdmin) {
+                throw new Error('账号已存在换一个吧！');
+            }
+
+            sysAdmin = await SystemAuthAdmin.findOne({
+                where: {
+                    nickname: editReq.nickname,
+                    isDelete: 0,
+                    id: {
+                        [Op.ne]: editReq.id,
+                    },
+                },
+            });
+
+            if (sysAdmin) {
+                throw new Error('昵称已存在换一个吧！');
+            }
+
+            if (editReq.role > 0 && editReq.id !== 1) {
+                const roleResp = await SystemAuthRole.findByPk(editReq.role);
+
+                if (!roleResp) {
+                    throw new Error('角色不存在!');
+                }
+            }
+
+            const adminMap = {
+                ...editReq,
+                avatar: urlUtil.toRelativeUrl(editReq.avatar),
+            };
+
+            const role = editReq.role > 0 && editReq.id !== 1 ? editReq.role : 0;
+
+            adminMap.role = String(role);
+
+            if (editReq.id === 1) {
+                delete adminMap.username;
+            }
+
+            if (editReq.password) {
+                const passwdLen = editReq.password.length;
+
+                if (!(passwdLen >= 6 && passwdLen <= 20)) {
+                    throw new Error('密码必须在6~20位');
+                }
+
+                const salt = util.randomString(5);
+
+                adminMap.salt = salt;
+                adminMap.password = md5(editReq.password.trim() + salt);
+            } else {
+                delete adminMap.password;
+            }
+
+            await admin.update(adminMap);
+
+            this.cacheAdminUserByUid(editReq.id);
+
+            const adminId = ctx.session[reqAdminIdKey];
+
+            if (editReq.password && editReq.id === adminId) {
+                const token = ctx.request.header.token;
+
+                await ctx.service.redis.del(backstageTokenKey + token);
+
+                const adminSetKey = backstageTokenSet + String(adminId);
+
+                const ts = await redis.smembers(adminSetKey);
+
+                if (ts.length > 0) {
+                    const tokenKeys = ts.map(t => backstageTokenKey + t);
+
+                    await ctx.service.redis.del(tokenKeys);
+                }
+
+                await ctx.service.redis.del(adminSetKey);
+
+                await redis.sadd(adminSetKey, token);
+            }
+
+            return;
+        } catch (err) {
+            ctx.logger.error(err);
+            throw new Error('Edit Admin error');
         }
     }
 }

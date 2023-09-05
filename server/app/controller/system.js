@@ -97,69 +97,6 @@ class SystemController extends baseController {
         }
     }
 
-    async self() {
-        const { ctx } = this
-        const SystemAuthAdmin = ctx.model.SystemAuthAdmin;
-        const SystemAuthMenu = ctx.model.SystemAuthMenu;
-        const authAdminService = ctx.service.authAdmin;
-        const adminId = ctx.session[reqAdminIdKey]
-
-        try {
-            const sysAdmin = await SystemAuthAdmin.findOne({
-                where: {
-                    id: adminId,
-                    isDelete: 0,
-                },
-                attributes: ['id', 'nickname', 'nickname', 'avatar', 'role', 'deptId', 'isMultipoint', 'isDisable', 'lastLoginIp', 'lastLoginTime', 'createTime', 'updateTime']
-            });
-
-            if (!sysAdmin) {
-                return null;
-            }
-
-            let auths = [];
-            if (adminId > 1) {
-                const roleId = parseInt(sysAdmin.role, 10);
-                const menuIds = await authAdminService.selectMenuIdsByRoleId(roleId);
-
-                if (menuIds.length > 0) {
-                    const menus = await SystemAuthMenu.findAll({
-                        where: {
-                            id: {
-                                [Op.in]: menuIds,
-                            },
-                            isDisable: 0,
-                            menuType: ['C', 'A'],
-                        },
-                        order: [['menuSort', 'ASC'], ['id', 'ASC']],
-                    });
-
-                    if (menus.length > 0) {
-                        auths = menus.map((menu) => menu.perms.trim());
-                    }
-                }
-            } else {
-                auths = ['*'];
-            }
-
-            const admin = {
-                user: {
-                    ...sysAdmin.toJSON(),
-                    dept: sysAdmin.deptId.toString(),
-                    avatar: urlUtil.toAbsoluteUrl(sysAdmin.avatar),
-                },
-                permissions: auths,
-            };
-
-            this.result({
-                data: admin
-            })
-        } catch (err) {
-            console.error('GetAdminInfo error:', err);
-            return null;
-        }
-    }
-
     async menusRoute() {
         const { ctx } = this;
         const roleId = ctx.session[reqRoleIdKey];
@@ -191,37 +128,7 @@ class SystemController extends baseController {
         } catch (err) {
             ctx.logger.error(`systemController.config error: ${err}`);
         }
-    }
-
-    async deptList() {
-        const { ctx } = this;
-        try {
-            const listReq = ctx.request.query;
-            const data = await ctx.service.authDept.list(listReq);
-            this.result({
-                data
-            })
-        } catch (err) {
-            ctx.logger.error(`SystemAuthDeptController.deptList error: ${err}`);
-            ctx.body = 'Internal Server Error';
-            ctx.status = 500;
-        }
-    }
-
-    async postList() {
-        const { ctx } = this;
-        try {
-            const params = ctx.query;
-            const data = await ctx.service.authPost.list(params);
-            this.result({
-                data
-            })
-        } catch (err) {
-            ctx.logger.error(`SystemAuthPostController.postList error: ${err}`);
-            ctx.body = 'Internal Server Error';
-            ctx.status = 500;
-        }
-    }
+    }    
 
     async roleAll() {
         const { ctx } = this;
@@ -237,16 +144,33 @@ class SystemController extends baseController {
         }
     }
 
-    async adminList() {
+    // 角色列表
+    async roleList() {
         const { ctx } = this;
         try {
             const params = ctx.query;
-            const data = await ctx.service.authAdmin.adminList(params);
+            const data = await ctx.service.authRole.list(params);
             this.result({
                 data
             })
         } catch (err) {
-            ctx.logger.error(`SystemAuthPostController.roleAll error: ${err}`);
+            ctx.logger.error(`SystemController.roleList error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    // 菜单列表
+    async menuList() {
+        const { ctx } = this;
+        try {
+            const params = ctx.query;
+            const data = await ctx.service.authMenu.list(params);
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`SystemController.menuList error: ${err}`);
             ctx.body = 'Internal Server Error';
             ctx.status = 500;
         }

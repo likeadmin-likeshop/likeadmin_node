@@ -46,8 +46,21 @@ function listToTree(arr, id, pid, child) {
     return mapList;
 }
 
+//RandomString 返回随机字符串
+function randomString(length) {
+    const allRandomStr = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let byteList = '';
+
+    for (let i = 0; i < length; i++) {
+        byteList += allRandomStr.charAt(Math.floor(Math.random() * allRandomStr.length));
+    }
+
+    return byteList;
+}
+
 // 导出公共方法
 module.exports = {
     structsToMaps,
-    listToTree
+    listToTree,
+    randomString
 };
