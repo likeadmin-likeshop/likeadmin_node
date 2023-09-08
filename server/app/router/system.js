@@ -27,8 +27,17 @@ module.exports = app => {
     router.all('/api/system/admin/add', controller.system.admin.add);
     router.all('/api/system/admin/detail', controller.system.admin.detail);
     router.all('/api/system/admin/edit', controller.system.admin.edit);
+    router.all('/api/system/admin/upInfo', controller.system.admin.update);
+    router.all('/api/system/admin/del', controller.system.admin.del);
+    router.all('/api/system/admin/disable', controller.system.admin.disable);
 
-    router.all('/api/system/role/all', controller.system.roleAll);
-    router.all('/api/system/role/list', controller.system.roleList);
+    // 角色管理
+    router.all('/api/system/role/all', controller.system.role.roleAll);
+    router.all('/api/system/role/list', controller.system.role.roleList);
+    router.all('/api/system/role/detail', controller.system.role.detail);
+    router.all('/api/system/role/add', controller.system.role.add);
+    router.all('/api/system/role/edit', controller.system.role.edit);
+    router.all('/api/system/role/del', controller.system.role.del);
+
     router.all('/api/system/menu/list', controller.system.menuList);
 };

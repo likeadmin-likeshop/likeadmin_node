@@ -2,6 +2,7 @@ const Service = require('egg').Service
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const util = require('../util')
+const { backstageRolesKey } = require('../extend/config')
 
 class AuthRoleService extends Service {
     async all() {
@@ -82,10 +83,158 @@ class AuthRoleService extends Service {
                 },
             });
 
-            return 0;
+            return count;
         } catch (err) {
             ctx.logger.error(err);
             throw new Error('Get Member Count error');
+        }
+    }
+
+    async detail(id) {
+        const { ctx } = this;
+        const { response } = ctx;
+
+        const role = await ctx.model.SystemAuthRole.findOne({
+            where: {
+                id,
+            },
+        });
+
+        if (!role) {
+            throw response.CheckErrDBNotRecord('角色已不存在!');
+        }
+
+        const res = role;
+
+        res.Member = await this.getMemberCnt(role.id);
+        res.Menus = await ctx.service.authAdmin.selectMenuIdsByRoleId(role.id);
+
+        return res;
+    }
+
+    async add(addReq) {
+        const { ctx } = this;
+        delete addReq.id;
+        const dateTime = Math.floor(Date.now() / 1000);
+        const timeObject = {
+            createTime: dateTime,
+            updateTime: dateTime,
+        }
+
+        const existingRole = await ctx.model.SystemAuthRole.findOne({
+            where: {
+                name: addReq.name.trim(),
+            },
+        });
+
+        if (existingRole) {
+            throw new Error('角色名称已存在!');
+        }
+
+        const role = {
+            ...addReq,
+            ...timeObject
+        };
+
+        const transaction = await ctx.model.transaction();
+
+        try {
+            const createdRole = await ctx.model.SystemAuthRole.create(role, { transaction });
+
+            await ctx.service.authAdmin.batchSaveByMenuIds(createdRole.id, addReq.menuIds, transaction);
+
+            await transaction.commit();
+        } catch (err) {
+            await transaction.rollback();
+            throw err;
+        }
+    }
+
+    async edit(editReq) {
+        const { ctx } = this;
+        const { response } = ctx;
+
+        const existingRole = await ctx.model.SystemAuthRole.findOne({
+            where: {
+                id: editReq.id,
+            },
+        });
+
+        if (!existingRole) {
+            throw new Error('角色已不存在!');
+        }
+
+        const role = await ctx.model.SystemAuthRole.findOne({
+            where: {
+                id: { [Op.ne]: editReq.id },
+                name: editReq.name.trim(),
+            },
+        });
+
+        if (role) {
+            throw new Error('角色名称已存在!');
+        }
+
+        const roleMap = {
+            ...editReq
+        };
+
+        const transaction = await ctx.model.transaction();
+
+        try {
+            await existingRole.update(roleMap, { transaction });
+
+            await ctx.service.authAdmin.batchDeleteByRoleId(editReq.id, transaction);
+            await ctx.service.authAdmin.batchSaveByMenuIds(editReq.id, editReq.menuIds, transaction);
+            await ctx.service.authAdmin.cacheRoleMenusByRoleId(editReq.id);
+
+            await transaction.commit();
+        } catch (err) {
+            await transaction.rollback();
+            throw err;
+        }
+    }
+
+    async del(id) {
+        const { ctx } = this;
+
+        const existingRole = await ctx.model.SystemAuthRole.findOne({
+            where: {
+                id,
+            },
+        });
+
+        if (!existingRole) {
+            throw new Error('角色已不存在!');
+        }
+        const admin = await ctx.model.SystemAuthAdmin.findOne({
+            where: {
+                role: {
+                    [Op.and]: [
+                        Sequelize.literal(`FIND_IN_SET('${id}', role) > 0`)
+                    ]
+                },
+                isDelete: 0
+            },
+        });
+
+        if (admin) {
+            throw new Error('角色已被管理员使用,请先移除!');
+        }
+
+        const transaction = await ctx.model.transaction();
+
+        try {
+            await existingRole.destroy({ transaction });
+
+            await ctx.service.authAdmin.batchDeleteByRoleId(id, transaction);
+
+            await ctx.service.redis.hDel(backstageRolesKey, id.toString());
+
+            await transaction.commit();
+        } catch (err) {
+            await transaction.rollback();
+            throw err;
         }
     }
 }

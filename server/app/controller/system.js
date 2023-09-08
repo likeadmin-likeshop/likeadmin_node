@@ -128,36 +128,6 @@ class SystemController extends baseController {
         } catch (err) {
             ctx.logger.error(`systemController.config error: ${err}`);
         }
-    }    
-
-    async roleAll() {
-        const { ctx } = this;
-        try {
-            const data = await ctx.service.authRole.all();
-            this.result({
-                data
-            })
-        } catch (err) {
-            ctx.logger.error(`SystemAuthPostController.roleAll error: ${err}`);
-            ctx.body = 'Internal Server Error';
-            ctx.status = 500;
-        }
-    }
-
-    // 角色列表
-    async roleList() {
-        const { ctx } = this;
-        try {
-            const params = ctx.query;
-            const data = await ctx.service.authRole.list(params);
-            this.result({
-                data
-            })
-        } catch (err) {
-            ctx.logger.error(`SystemController.roleList error: ${err}`);
-            ctx.body = 'Internal Server Error';
-            ctx.status = 500;
-        }
     }
 
     // 菜单列表

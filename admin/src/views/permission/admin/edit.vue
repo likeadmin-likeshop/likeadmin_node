@@ -27,7 +27,7 @@
                         }" check-strictly :default-expand-all="true" placeholder="请选择上级部门" />
                 </el-form-item>
                 <el-form-item label="岗位" prop="postId">
-                    <el-select class="flex-1" clearable v-model="formData.postId" placeholder="请选择岗位" multiple>
+                    <el-select class="flex-1" clearable v-model="formData.postId" placeholder="请选择岗位">
                         <el-option v-for="(item, index) in optionsData.post" :key="index" :label="item.name"
                             :value="item.id" />
                     </el-select>
@@ -202,7 +202,9 @@ const setFormData = async (row: any) => {
             //后端返回string类型做处理
             if (key === 'role') {
                 //@ts-ignore
-                formData[key] = Number(data[key])
+                // formData[key] = Number(data[key])
+                const arr = data[key].split(',').map(char => Number(char));
+                formData[key] = arr
                 return
             }
             //@ts-ignore

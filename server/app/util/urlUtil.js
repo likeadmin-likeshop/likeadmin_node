@@ -28,6 +28,7 @@ function toAbsoluteUrl(u) {
 }
 
 function toRelativeUrl(u) {
+  console.log(u,'u....')
   if (u === '') {
     return '';
   }
@@ -40,6 +41,8 @@ function toRelativeUrl(u) {
     const lu = up.toString();
     return lu.replace(publicUrl, '').replace(publicPrefix, '');
   }
+
+  console.log(u,'u.....aaaa')
 
   // TODO: 其他engine
   return u;

@@ -133,6 +133,50 @@ class AuthAdminService extends Service {
         return mapList;
     }
 
+    //BatchSaveByMenuIds 批量写入角色菜单
+    async batchSaveByMenuIds(roleId, menuIds, transaction) {
+        const { ctx } = this;
+
+        if (!menuIds) {
+            return;
+        }
+
+        const menuIdArray = menuIds.split(',');
+
+        const perms = menuIdArray.map(menuIdStr => ({
+            id: util.makeUuid(),
+            roleId,
+            menuId: parseInt(menuIdStr, 10),
+        }));
+
+        try {
+            await ctx.model.SystemAuthPerm.bulkCreate(perms, { transaction });
+        } catch (err) {
+            throw new Error(err, 'BatchSaveByMenuIds Create in tx err');
+        }
+    }
+
+    //BatchDeleteByRoleId 批量删除角色菜单(根据角色ID)
+    async batchDeleteByRoleId(roleId, transaction) {
+        const { ctx } = this;
+
+        const options = {
+            where: {
+                roleId,
+            },
+        };
+
+        if (transaction) {
+            options.transaction = transaction;
+        }
+
+        try {
+            await ctx.model.SystemAuthPerm.destroy(options);
+        } catch (err) {
+            throw new Error(err, 'BatchDeleteByRoleId Delete err');
+        }
+    }
+
     async recordLoginLog(adminId, username, errStr) {
         const { ctx } = this;
         const ua = parser(ctx.request.header['user-agent']);
@@ -179,11 +223,9 @@ class AuthAdminService extends Service {
                     isDelete: 0,
                     username: { [Op.like]: `%${username}%` },
                     nickname: { [Op.like]: `%${nickname}%` },
-                    // role: listReq.role >= 0 ? listReq.role : { [Op.gte]: 0 },
                     ...where
                 },
                 include: [
-                    { model: SystemAuthRole, as: 'authRole', attributes: ['name'] },
                     { model: SystemAuthDept, as: 'dept', attributes: ['name'] },
                 ],
                 limit,
@@ -204,8 +246,15 @@ class AuthAdminService extends Service {
                     adminResp[i].role = '系统管理员';
                     delete adminResp[i].authRole;
                 } else {
-                    adminResp[i].role = adminResp[i].authRole?.name;
-                    delete adminResp[i].authRole;
+                    const roleIds = adminResp[i].role.split(',');
+                    const role = await ctx.model.SystemAuthRole.findAll({
+                        where: {
+                            id: roleIds
+                        },
+                        attributes: ['name']
+                    })
+                    const rows = role.map(items => items.name);
+                    adminResp[i].role = rows
                 }
             }
 
@@ -323,7 +372,7 @@ class AuthAdminService extends Service {
 
             sysAdmin.avatar = addReq.avatar;
 
-            console.log(sysAdmin,'sysAdmin....')
+            console.log(sysAdmin, 'sysAdmin....')
 
             await sysAdmin.save();
 
@@ -377,16 +426,28 @@ class AuthAdminService extends Service {
             }
 
             if (editReq.role > 0 && editReq.id !== 1) {
-                const roleResp = await SystemAuthRole.findByPk(editReq.role);
 
-                if (!roleResp) {
+                const roleResps = await SystemAuthRole.findAll({
+                    where: {
+                        id: editReq.role
+                    }
+                });
+
+                if (roleResps.length === 0) {
                     throw new Error('角色不存在!');
                 }
             }
 
+            console.log(editReq.avatar, 'editReq.avatar....')
+
+            if (!editReq.avatar) {
+                editReq.avatar = '/public/static/backend_avatar.png';
+            } else {
+                editReq.avatar = urlUtil.toRelativeUrl(editReq.avatar);
+            }
+
             const adminMap = {
-                ...editReq,
-                avatar: urlUtil.toRelativeUrl(editReq.avatar),
+                ...editReq
             };
 
             const role = editReq.role > 0 && editReq.id !== 1 ? editReq.role : 0;
@@ -444,6 +505,137 @@ class AuthAdminService extends Service {
             throw new Error('Edit Admin error');
         }
     }
+
+    async update(updateReq) {
+        const { ctx } = this;
+        const adminId = ctx.session[reqAdminIdKey];
+        // 检查id
+        let admin = await ctx.model.SystemAuthAdmin.findOne({
+            where: {
+                id: adminId,
+                isDelete: 0
+            }
+        });
+        if (!admin) {
+            ctx.throw(404, '账号不存在了!');
+        }
+
+        // 更新管理员信息
+        let adminMap = {
+            ...updateReq
+        };
+        delete adminMap.currPassword;
+
+        if (!updateReq.avatar) {
+            adminMap.avatar = '/public/static/backend_avatar.png';
+        } else {
+            adminMap.avatar = urlUtil.toRelativeUrl(updateReq.avatar);
+        }
+        // delete adminMap.aaa;
+
+        if (updateReq.password) {
+            let currPass = md5(updateReq.currPassword + admin.salt);
+            if (currPass !== admin.password) {
+                ctx.throw(400, '当前密码不正确!');
+            }
+            let passwdLen = updateReq.password.length;
+            if (!(passwdLen >= 6 && passwdLen <= 20)) {
+                ctx.throw(400, '密码必须在6~20位');
+            }
+            let salt = util.randomString(5);
+            adminMap.salt = salt;
+            adminMap.password = md5(updateReq.password.trim() + salt);
+        } else {
+            delete adminMap.password;
+        }
+
+        try {
+            await ctx.model.SystemAuthAdmin.update(adminMap, {
+                where: {
+                    id: adminId
+                }
+            });
+        } catch (err) {
+            ctx.throw(500, '更新管理员信息失败');
+        }
+
+        adminSrv.cacheAdminUserByUid(adminId);
+
+        // 如果更改自己的密码,则删除旧缓存
+        if (updateReq.password) {
+            let token = ctx.request.header.token;
+            await ctx.service.redis.del(backstageTokenKey + token);
+            let adminSetKey = backstageTokenSet + adminId.toString();
+            let ts = await ctx.service.redis.sGet(adminSetKey);
+            if (ts.length > 0) {
+                let tokenKeys = ts.map(t => backstageTokenKey + t);
+                await ctx.service.redis.del(...tokenKeys);
+            }
+            await ctx.service.redis.del(adminSetKey);
+            await ctx.service.redis.sSet(adminSetKey, token);
+        }
+    }
+
+    async del(id) {
+        const { ctx } = this;
+        const adminId = ctx.session[reqAdminIdKey];
+
+        const admin = await ctx.model.SystemAuthAdmin.findOne({
+            where: {
+                id,
+                isDelete: 0,
+            },
+        });
+
+        if (!admin) {
+            throw new Error('账号已不存在!');
+        }
+
+        if (id === 1) {
+            throw new Error('系统管理员不允许删除!');
+        }
+
+        if (id === adminId) {
+            throw new Error('不能删除自己!');
+        }
+
+        await admin.update({
+            isDelete: 1,
+            deleteTime: Math.floor(Date.now() / 1000),
+        });
+
+        return null;
+    }
+
+    async disable(id) {
+        const { ctx } = this;
+        const adminId = ctx.session[reqAdminIdKey];
+
+        const admin = await ctx.model.SystemAuthAdmin.findOne({
+            where: {
+                id,
+                isDelete: 0,
+            },
+        });
+
+        if (!admin) {
+            throw new Error('账号已不存在！');
+        }
+
+        if (id === adminId) {
+            throw new Error('不能禁用自己!');
+        }
+
+        const isDisable = admin.isDisable === 0 ? 1 : 0;
+
+        await admin.update({
+            isDisable,
+            updateTime: Math.floor(Date.now() / 1000),
+        });
+
+        return null;
+    }
+
 }
 
 

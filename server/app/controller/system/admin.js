@@ -149,6 +149,63 @@ class SystemAdminController extends baseController {
             ctx.status = 500;
         }
     }
+
+    async update() {
+        const { ctx } = this;
+        const { authAdmin } = ctx.service;
+
+        try {
+            const editReq = ctx.request.body;
+
+            await authAdmin.update(editReq);
+
+            this.result({
+                data: {}
+            })
+        } catch (err) {
+            ctx.logger.error(err);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async del() {
+        const { ctx } = this;
+        const { authAdmin } = ctx.service;
+
+        try {
+            const id = ctx.request.body.id;
+
+            await authAdmin.del(id);
+
+            this.result({
+                data: {}
+            })
+        } catch (err) {
+            ctx.logger.error(err);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async disable() {
+        const { ctx } = this;
+        const { authAdmin } = ctx.service;
+
+        try {
+            const id = ctx.request.body.id;
+
+            await authAdmin.disable(id);
+
+            this.result({
+                data: {}
+            })
+        } catch (err) {
+            ctx.logger.error(err);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
 }
 
 module.exports = SystemAdminController

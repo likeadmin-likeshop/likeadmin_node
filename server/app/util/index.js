@@ -1,3 +1,5 @@
+const { v4: uuidv4 } = require('uuid');
+
 //StructsToMaps 将结构体转换成Map列表
 function structsToMaps(objs) {
     let objList = [];
@@ -58,9 +60,14 @@ function randomString(length) {
     return byteList;
 }
 
+function makeUuid() {
+    return uuidv4().replace(/-/g, '');
+  }
+
 // 导出公共方法
 module.exports = {
     structsToMaps,
     listToTree,
-    randomString
+    randomString,
+    makeUuid
 };
