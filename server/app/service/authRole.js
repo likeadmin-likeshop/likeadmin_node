@@ -78,7 +78,11 @@ class AuthRoleService extends Service {
         try {
             const count = await SystemAuthAdmin.count({
                 where: {
-                    role: roleId,
+                    role: {
+                        [Op.and]: [
+                            Sequelize.literal(`FIND_IN_SET('${roleId}', role) > 0`)
+                        ]
+                    },
                     isDelete: 0,
                 },
             });
@@ -104,12 +108,16 @@ class AuthRoleService extends Service {
             throw response.CheckErrDBNotRecord('角色已不存在!');
         }
 
-        const res = role;
+        const res = role.toJSON();
 
-        res.Member = await this.getMemberCnt(role.id);
-        res.Menus = await ctx.service.authAdmin.selectMenuIdsByRoleId(role.id);
+        const member = await this.getMemberCnt(role.id);        
+        const menus = await ctx.service.authAdmin.selectMenuIdsByRoleId(role.id);
 
-        return res;
+        return {
+            ...res,
+            member,
+            menus
+        };
     }
 
     async add(addReq) {

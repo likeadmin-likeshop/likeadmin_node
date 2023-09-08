@@ -71,7 +71,6 @@ class AuthAdminService extends Service {
 
     //SelectMenuIdsByRoleId 根据角色ID获取菜单ID
     async selectMenuIdsByRoleId(roleId) {
-        console.log(roleId, '....')
         const { ctx } = this;
         const systemAuthRole = ctx.model.SystemAuthRole;
         const systemAuthPerm = ctx.model.SystemAuthPerm;
@@ -92,8 +91,7 @@ class AuthAdminService extends Service {
                 },
             });
 
-            const menuIds = perms.map((perm) => perm.MenuId);
-            console.log(menuIds, 'menuIds....')
+            const menuIds = perms.map((perm) => perm.menuId);
             return menuIds;
         } catch (err) {
             console.error('SelectMenuIdsByRoleId error:', err);
@@ -372,8 +370,6 @@ class AuthAdminService extends Service {
 
             sysAdmin.avatar = addReq.avatar;
 
-            console.log(sysAdmin, 'sysAdmin....')
-
             await sysAdmin.save();
 
             return;
@@ -387,8 +383,6 @@ class AuthAdminService extends Service {
         const { ctx } = this;
         const { redis } = this.app;
         const { SystemAuthAdmin, SystemAuthRole } = ctx.model;
-
-        console.log(ctx.request.header.token, 'ctx.request.header.token....')
 
         try {
             const admin = await SystemAuthAdmin.findByPk(editReq.id);
@@ -437,8 +431,6 @@ class AuthAdminService extends Service {
                     throw new Error('角色不存在!');
                 }
             }
-
-            console.log(editReq.avatar, 'editReq.avatar....')
 
             if (!editReq.avatar) {
                 editReq.avatar = '/public/static/backend_avatar.png';
