@@ -78,7 +78,7 @@ class AuthAdminService extends Service {
             const role = await systemAuthRole.findOne({
                 where: {
                     id: roleId,
-                    is_disable: 0,
+                    isDisable: 0,
                 },
             });
             if (!role) {

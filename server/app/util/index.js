@@ -62,6 +62,23 @@ function randomString(length) {
 
 function makeUuid() {
     return uuidv4().replace(/-/g, '');
+}
+
+//GetFmtSize 按照正确的格式缩放字节
+function getFmtSize(data) {
+    const factor = 1024;
+    let res = data;
+
+    const units = ['', 'K', 'M', 'G', 'T', 'P'];
+
+    for (let i = 0; i < units.length; i++) {
+      if (res < factor) {
+        return `${res.toFixed(2)}${units[i]}B`;
+      }
+      res /= factor;
+    }
+
+    return `${res.toFixed(2)}P`;
   }
 
 // 导出公共方法
@@ -69,5 +86,6 @@ module.exports = {
     structsToMaps,
     listToTree,
     randomString,
-    makeUuid
+    makeUuid,
+    getFmtSize
 };

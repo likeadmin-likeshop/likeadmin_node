@@ -128,23 +128,7 @@ class SystemController extends baseController {
         } catch (err) {
             ctx.logger.error(`systemController.config error: ${err}`);
         }
-    }
-
-    // 菜单列表
-    async menuList() {
-        const { ctx } = this;
-        try {
-            const params = ctx.query;
-            const data = await ctx.service.authMenu.list(params);
-            this.result({
-                data
-            })
-        } catch (err) {
-            ctx.logger.error(`SystemController.menuList error: ${err}`);
-            ctx.body = 'Internal Server Error';
-            ctx.status = 500;
-        }
-    }
+    }    
 
     async logout() {
         this.ctx.cookies.set('token', null, { maxAge: 0 })

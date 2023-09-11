@@ -39,5 +39,18 @@ module.exports = app => {
     router.all('/api/system/role/edit', controller.system.role.edit);
     router.all('/api/system/role/del', controller.system.role.del);
 
-    router.all('/api/system/menu/list', controller.system.menuList);
+    // 菜单管理
+    router.all('/api/system/menu/list', controller.system.menu.menuList);
+    router.all('/api/system/menu/detail', controller.system.menu.menuDetail);
+    router.all('/api/system/menu/add', controller.system.menu.menuAdd);
+    router.all('/api/system/menu/edit', controller.system.menu.menuEdit);
+    router.all('/api/system/menu/del', controller.system.menu.menuDel);
+
+    // 素材管理
+    router.all('/api/common/album/cateList', controller.common.album.cateList);
+    router.all('/api/common/album/cateAdd', controller.common.album.cateAdd);
+    router.all('/api/common/album/cateRename', controller.common.album.cateRename);
+    router.all('/api/common/album/cateDel', controller.common.album.cateDel);
+    router.all('/api/common/album/albumList', controller.common.album.albumList);
+    
 };

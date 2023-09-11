@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const {customAlphabet} = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 /**
  * 相册管理表
@@ -54,28 +55,46 @@ module.exports = app => {
             allowNull: false,
             defaultValue: 0,
         },
-        is_delete: {
+        isDelete: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'is_delete',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'delete_time',
+            get() {
+                const timestamp = this.getDataValue('deleteTime') * 1000;
+                return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
+            }
         },
     }
     const Album = app.model.define('Album', modelDefinition , {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_album', // 定义实际表名
     })
 
