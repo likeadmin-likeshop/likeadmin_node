@@ -52,5 +52,13 @@ module.exports = app => {
     router.all('/api/common/album/cateRename', controller.common.album.cateRename);
     router.all('/api/common/album/cateDel', controller.common.album.cateDel);
     router.all('/api/common/album/albumList', controller.common.album.albumList);
+    router.all('/api/common/album/albumRename', controller.common.album.albumRename);
+    router.all('/api/common/album/albumDel', controller.common.album.albumDel);
+    router.all('/api/common/album/albumAdd', controller.common.album.albumAdd);
+    router.all('/api/common/album/albumMove', controller.common.album.albumMove);
+
+    // 上传
+    router.all('/api/common/upload/image', controller.common.album.uploadImage);
+    router.all('/api/common/upload/video', controller.common.album.uploadVideo);
     
 };

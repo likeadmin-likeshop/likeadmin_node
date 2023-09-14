@@ -12,7 +12,12 @@ function toAbsoluteUrl(u) {
   }
   const parsedUrl = new URL(publicUrl);
 
-  if (u.indexOf('/public/static/') === 0) {
+  if (u.indexOf('/public/static/') === 0) {    
+    parsedUrl.pathname = path.join(parsedUrl.pathname, u);
+    return parsedUrl.toString();
+  }
+
+  if (u.includes('public/uploads/')) {    
     parsedUrl.pathname = path.join(parsedUrl.pathname, u);
     return parsedUrl.toString();
   }
