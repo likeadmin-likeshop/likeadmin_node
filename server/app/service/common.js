@@ -114,6 +114,28 @@ class CommonService extends Service {
             throw err;
         }
     }
+
+    async set(cnfType, name, val) {
+        const { ctx } = this;
+        const { SystemConfig } = ctx.model;
+
+        try {
+            let config = await SystemConfig.findOne({
+                where: { type: cnfType, name },
+            });
+
+            if (!config) {
+                config = await SystemConfig.create({ type: cnfType, name });
+            }
+
+            await config.update({ value: val });
+
+            ctx.status = 200;
+        } catch (error) {
+            ctx.body = 'Internal server error';
+            ctx.status = 500;
+        }
+    }
 }
 
 

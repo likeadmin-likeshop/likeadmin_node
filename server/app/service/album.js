@@ -122,7 +122,7 @@ class AlbumService extends Service {
             await cate.save();
         } catch (err) {
             throw new Error(err, 'CateDel Save err');
-        }
+        } 
     }
 
     async albumList(listReq) {

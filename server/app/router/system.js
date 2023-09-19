@@ -4,7 +4,7 @@ module.exports = app => {
     router.all('/api/system/menu/route', controller.system.menusRoute);
     router.all('/api/common/index/console', controller.system.console);
     router.all('/api/common/index/config', controller.system.configInfo);
-    
+
     // 部门管理
     router.all('/api/system/dept/list', controller.system.dept.deptList);
     router.all('/api/system/dept/add', controller.system.dept.deptAdd);
@@ -60,5 +60,13 @@ module.exports = app => {
     // 上传
     router.all('/api/common/upload/image', controller.common.album.uploadImage);
     router.all('/api/common/upload/video', controller.common.album.uploadVideo);
-    
+
+    // 网站信息
+    router.all('/api/setting/website/detail', controller.setting.website.details);
+    router.all('/api/setting/website/save', controller.setting.website.save);
+    router.all('/api/setting/copyright/detail', controller.setting.copyright.details);
+    router.all('/api/setting/copyright/save', controller.setting.copyright.save);
+    router.all('/api/setting/protocol/detail', controller.setting.protocol.details);
+    router.all('/api/setting/protocol/save', controller.setting.protocol.save);
+
 };
