@@ -94,6 +94,21 @@ class CommonService extends Service {
         }
     }
 
+    async getMap(cnfType, name) {
+        const { ctx } = this;
+        try {
+            const val = await this.getVal(cnfType, name, '');
+            if (val === '') {
+                return {};
+            }
+            const data = JSON.parse(val);
+            return data;
+        } catch (err) {
+            ctx.logger.error(`ConfigUtilService.getMap error: ${err}`);
+            throw err;
+        }
+    }
+
     async get(cnfType, name) {
         const { ctx } = this;
         try {

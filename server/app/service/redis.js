@@ -126,6 +126,29 @@ class RedisService extends Service {
         const result = await redis.expire(key, timeSec);
         return result;
     }
+
+    async info(sections) {
+        const { redis } = this.app;
+        const infoStr = sections ? await redis.info(sections) : await redis.info();
+        const res = {};
+
+        const lines = infoStr.split('\r\n');
+        for (let i = 0; i < lines.length; i++) {
+            if (lines[i] === '' || lines[i].startsWith('# ')) {
+                continue;
+            }
+            const [k, v] = lines[i].split(':');
+            res[k] = v;
+        };
+
+        return res;
+    }
+
+    async dbSize() {
+        const { redis } = this.app;
+        const res = await redis.dbsize();
+        return res;
+    }
 }
 
 module.exports = RedisService

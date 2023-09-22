@@ -18,6 +18,7 @@ module.exports = app => {
             allowNull: false,
             defaultValue: 0,
             comment: '操作人ID',
+            field: 'admin_id',
         },
         type: {
             type: STRING(30),
@@ -70,29 +71,42 @@ module.exports = app => {
             allowNull: false,
             defaultValue: 0,
             comment: '开始时间',
+            field: 'start_time',
         },
         endTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '结束时间',
+            field: 'end_time',
         },
         taskTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '执行耗时',
+            field: 'task_time',
         },
         createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
         },
     };
     const SystemLogOperate = app.model.define('SystemLogOperate', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_system_log_operate', // 定义实际表名
     })
+
+    SystemLogOperate.associate = function () {
+        // SystemAuthAdmin 表建立多对一关系
+        app.model.SystemLogOperate.belongsTo(app.model.SystemAuthAdmin, {
+            foreignKey: 'adminId', as: 'admin'
+        })
+    }
 
     return SystemLogOperate
 }

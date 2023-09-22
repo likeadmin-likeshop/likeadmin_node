@@ -72,14 +72,44 @@ function getFmtSize(data) {
     const units = ['', 'K', 'M', 'G', 'T', 'P'];
 
     for (let i = 0; i < units.length; i++) {
-      if (res < factor) {
-        return `${res.toFixed(2)}${units[i]}B`;
-      }
-      res /= factor;
+        if (res < factor) {
+            return `${res.toFixed(2)}${units[i]}B`;
+        }
+        res /= factor;
     }
 
     return `${res.toFixed(2)}P`;
+}
+
+//Round float四舍五入
+function round(val, n) {
+    const base = Math.pow(10, n);
+    return Math.round(base * val) / base;
+}
+
+const { Readable } = require('stream');
+const readline = require('readline');
+
+function stringToLines(s) {
+  const lines = [];
+  const stream = new Readable();
+  console.log(s,'s.....')
+  stream.push(s);
+  stream.push(null);
+
+  const rl = readline.createInterface({
+    input: stream,
+    crlfDelay: Infinity,
+  });
+
+  for (const line of rl) {
+    lines.push(line);
   }
+
+  console.log(lines,'lines.....')
+
+  return lines;
+}
 
 // 导出公共方法
 module.exports = {
@@ -87,5 +117,7 @@ module.exports = {
     listToTree,
     randomString,
     makeUuid,
-    getFmtSize
+    getFmtSize,
+    round,
+    stringToLines
 };

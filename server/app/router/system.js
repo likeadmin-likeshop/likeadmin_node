@@ -68,5 +68,14 @@ module.exports = app => {
     router.all('/api/setting/copyright/save', controller.setting.copyright.save);
     router.all('/api/setting/protocol/detail', controller.setting.protocol.details);
     router.all('/api/setting/protocol/save', controller.setting.protocol.save);
+    router.all('/api/setting/storage/list', controller.setting.storage.list);
+    router.all('/api/setting/storage/detail', controller.setting.storage.detail);
+    router.all('/api/setting/storage/edit', controller.setting.storage.edit);
+    router.all('/api/setting/storage/change', controller.setting.storage.change);
+    router.all('/api/monitor/server', controller.monitor.monitor.server);
+    router.all('/api/monitor/cache', controller.monitor.monitor.cache);
+
+    // 日志管理
+    router.all('/api/system/log/operate', controller.system.log.operate);
 
 };
