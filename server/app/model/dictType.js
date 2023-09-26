@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT } = app.Sequelize
@@ -12,48 +13,70 @@ module.exports = app => {
             allowNull: false,
             primaryKey: true,
         },
-        dict_name: {
+        dictName: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'dict_name',
         },
-        dict_type: {
+        dictType: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'dict_type',
         },
-        dict_remark: {
+        dictRemark: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
+            field: 'dict_remark',
         },
-        dict_status: {
+        dictStatus: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 1,
+            field: 'dict_status',
         },
-        is_delete: {
+        isDelete: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'is_delete',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'delete_time',
+            get() {
+                const timestamp = this.getDataValue('deleteTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
     };
     const DictType = app.model.define('DictType', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_dict_type', // 定义实际表名
     })
 

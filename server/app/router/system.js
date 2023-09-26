@@ -78,4 +78,18 @@ module.exports = app => {
     // 日志管理
     router.all('/api/system/log/operate', controller.system.log.operate);
 
+    // 字典管理
+    router.all('/api/setting/dict/type/list', controller.setting.dict.list);
+    router.all('/api/setting/dict/type/all', controller.setting.dict.all);
+    router.all('/api/setting/dict/type/add', controller.setting.dict.add);
+    router.all('/api/setting/dict/type/detail', controller.setting.dict.detail);
+    router.all('/api/setting/dict/type/edit', controller.setting.dict.edit);
+    router.all('/api/setting/dict/type/del', controller.setting.dict.del);
+    router.all('/api/setting/dict/data/list', controller.setting.dict.dataList);
+    router.all('/api/setting/dict/data/all', controller.setting.dict.dataAll);
+    router.all('/api/setting/dict/data/detail', controller.setting.dict.dataDetail);
+    router.all('/api/setting/dict/data/add', controller.setting.dict.dataAdd);
+    router.all('/api/setting/dict/data/edit', controller.setting.dict.dataEdit);
+    router.all('/api/setting/dict/data/del', controller.setting.dict.dataDel);    
+
 };

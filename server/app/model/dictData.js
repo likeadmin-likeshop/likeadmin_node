@@ -12,10 +12,11 @@ module.exports = app => {
             allowNull: false,
             primaryKey: true,
         },
-        type_id: {
+        typeId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'type_id',
         },
         name: {
             type: STRING(100),
@@ -42,28 +43,34 @@ module.exports = app => {
             allowNull: false,
             defaultValue: 1,
         },
-        is_delete: {
+        isDelete: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'is_delete'
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'create_time',
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'update_time',
         },
-        delete_time: {
+        deleteTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'delete_time',
         },
     };
     const DictData = app.model.define('DictData', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_dict_data', // 定义实际表名
     })
 
