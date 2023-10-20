@@ -90,6 +90,9 @@ module.exports = app => {
     router.all('/api/setting/dict/data/detail', controller.setting.dict.dataDetail);
     router.all('/api/setting/dict/data/add', controller.setting.dict.dataAdd);
     router.all('/api/setting/dict/data/edit', controller.setting.dict.dataEdit);
-    router.all('/api/setting/dict/data/del', controller.setting.dict.dataDel);    
+    router.all('/api/setting/dict/data/del', controller.setting.dict.dataDel);
+
+    router.all('/api/gen/list', controller.gen.gen.list);
+    router.all('/api/gen/db', controller.gen.gen.dbTables);
 
 };

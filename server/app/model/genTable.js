@@ -12,93 +12,119 @@ module.exports = app => {
             allowNull: false,
             primaryKey: true,
         },
-        table_name: {
+        tableName: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
+            field: 'table_name',
         },
-        table_comment: {
+        tableComment: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
+            field: 'table_comment',
         },
-        sub_table_name: {
+        subTableName: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
+            field: 'sub_table_name',
         },
-        sub_table_fk: {
+        subTableFk: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
+            field: 'sub_table_fk',
         },
-        author_name: {
+        authorName: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'author_name',
         },
-        entity_name: {
+        entityName: {
             type: STRING(100),
             allowNull: false,
             defaultValue: '',
+            field: 'entity_name',
         },
-        module_name: {
+        moduleName: {
             type: STRING(60),
             allowNull: false,
             defaultValue: '',
+            field: 'module_name',
         },
-        function_name: {
+        functionName: {
             type: STRING(60),
             allowNull: false,
             defaultValue: '',
+            field: 'function_name',
         },
-        tree_primary: {
+        treePrimary: {
             type: STRING(60),
             allowNull: false,
             defaultValue: '',
+            field: 'tree_primary',
         },
-        tree_parent: {
+        treeParent: {
             type: STRING(60),
             allowNull: false,
             defaultValue: '',
+            field: 'tree_parent',
         },
-        tree_name: {
+        treeName: {
             type: STRING(60),
             allowNull: false,
             defaultValue: '',
+            field: 'tree_name',
         },
-        gen_tpl: {
+        genTpl: {
             type: STRING(20),
             allowNull: false,
             defaultValue: 'crud',
+            field: 'gen_tpl',
         },
-        gen_type: {
+        genType: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'gen_type',
         },
-        gen_path: {
+        genPath: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '/',
+            field: 'gen_path',
         },
         remarks: {
             type: STRING(200),
             allowNull: false,
             defaultValue: '',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
     };
     const GenTable = app.model.define('GenTable', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_gen_table', // 定义实际表名
     })
 
