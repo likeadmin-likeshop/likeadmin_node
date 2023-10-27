@@ -87,28 +87,43 @@ function round(val, n) {
     return Math.round(base * val) / base;
 }
 
+function toCamelCase(s) {
+    const words = s.split("_");
+    for (let i = 1; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+    return words.join("");
+}
+
+function contains(src, elem) {
+    if (isArray(src)) {
+        return src.includes(elem);
+    }
+    return false;
+}
+
 const { Readable } = require('stream');
 const readline = require('readline');
 
 function stringToLines(s) {
-  const lines = [];
-  const stream = new Readable();
-  console.log(s,'s.....')
-  stream.push(s);
-  stream.push(null);
+    const lines = [];
+    const stream = new Readable();
+    console.log(s, 's.....')
+    stream.push(s);
+    stream.push(null);
 
-  const rl = readline.createInterface({
-    input: stream,
-    crlfDelay: Infinity,
-  });
+    const rl = readline.createInterface({
+        input: stream,
+        crlfDelay: Infinity,
+    });
 
-  for (const line of rl) {
-    lines.push(line);
-  }
+    for (const line of rl) {
+        lines.push(line);
+    }
 
-  console.log(lines,'lines.....')
+    console.log(lines, 'lines.....')
 
-  return lines;
+    return lines;
 }
 
 // 导出公共方法
@@ -119,5 +134,7 @@ module.exports = {
     makeUuid,
     getFmtSize,
     round,
-    stringToLines
+    stringToLines,
+    toCamelCase,
+    contains
 };

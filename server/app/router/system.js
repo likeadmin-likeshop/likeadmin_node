@@ -94,5 +94,6 @@ module.exports = app => {
 
     router.all('/api/gen/list', controller.gen.gen.list);
     router.all('/api/gen/db', controller.gen.gen.dbTables);
+    router.all('/api/gen/importTable', controller.gen.gen.importTable);
 
 };

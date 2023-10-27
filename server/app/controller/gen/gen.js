@@ -44,6 +44,21 @@ class GenController extends baseController {
             ctx.status = 500;
         }
     }
+
+    async importTable() {
+        const { ctx } = this;
+        try {
+            const { tables } = ctx.request.query;
+            const data = await ctx.service.gen.importTable(tables);
+            this.result({
+                data
+            })
+        } catch (err) {
+            ctx.logger.error(`GenController.importTable error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
 }
 
 module.exports = GenController

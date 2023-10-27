@@ -1,7 +1,7 @@
 const Service = require('egg').Service
 const await = require('await-stream-ready/lib/await')
-const { version, publicUrl } = require('../extend/config')
-const util = require('../util/urlUtil')
+const { version, publicUrl, dbTablePrefix, genConfig, goConstants, genConstants, sqlConstants, htmlConstants } = require('../extend/config')
+const util = require('../util')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 
@@ -66,6 +66,53 @@ class GenService extends Service {
         };
     }
 
+    async importTable(tableNames) {
+        const { ctx, app } = this;
+        const { GenTable, GenTableColumn } = app.model;
+        let dbTbs;
+        try {
+            dbTbs = await this.getDbTablesQueryByNames(tableNames);
+        } catch (err) {
+            throw new Error('ImportTable Find tables err');
+        }
+
+        if (dbTbs.length === 0) {
+            throw new Error('表不存在!');
+        }
+
+        try {
+            await this.ctx.model.transaction(async (transaction) => {
+                for (let i = 0; i < dbTbs.length; i++) {
+                    const genTable = await this.initTable(dbTbs[i]);
+                    let genTableId = ''
+                    try {
+                        const result = await GenTable.create(genTable, { transaction });
+                        genTableId = result.id
+                    } catch (err) {
+                        throw new Error(`ImportTable Create table err: ${err}`);
+                    }
+
+                    const columns = await this.getDbTableColumnsQueryByName(dbTbs[i].tableName);
+
+                    for (let j = 0; j < columns.length; j++) {
+                        const column = await this.initColumn(genTableId, columns[j]);
+                        try {
+                            await GenTableColumn.create(column, { transaction });
+                        } catch (err) {
+                            throw new Error(`ImportTable Create column err: ${err}`);
+                        }
+                    }
+                }
+            });
+        } catch (err) {
+            throw new Error('ImportTable Transaction err', err);
+        }
+    }
+
+
+    /**
+     * 下面是通用方法
+    */
     async getDbTablesQuery(tableName, tableComment, limit, offset) {
         const { ctx, app } = this;
         const sequelize = app.model; // 获取 Sequelize 实例
@@ -112,6 +159,192 @@ class GenService extends Service {
             ctx.logger.error(err);
             throw new Error('Failed to get database tables query.');
         }
+    }
+
+    async getDbTablesQueryByNames(tableNames) {
+        const { ctx, app } = this;
+        const sequelize = app.model; // 获取 sequelize 实例
+
+        try {
+            const query = await sequelize.query(`
+            SELECT table_name AS tableName, table_comment AS tableComment, create_time AS createTime, update_time AS updateTime
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+              AND table_name NOT LIKE 'qrtz_%'
+              AND table_name NOT LIKE 'gen_%'
+              AND table_name IN (:tableNames)
+          `, {
+                replacements: { tableNames },
+                type: sequelize.QueryTypes.SELECT,
+            });
+
+            return query;
+        } catch (err) {
+            ctx.logger.error(err);
+            throw new Error('Failed to get database tables query by names.');
+        }
+    }
+
+    async getDbTableColumnsQueryByName(tableName) {
+        console.log(tableName, 'tableName...')
+        const { ctx, app } = this;
+        const sequelize = app.model;
+
+        const query = await sequelize.query(`
+          SELECT column_name AS columnName,
+            (CASE WHEN (is_nullable = "no" AND column_key != "PRI") THEN "1" ELSE "0" END) AS isRequired,
+            (CASE WHEN column_key = "PRI" THEN "1" ELSE "0" END) AS isPk,
+            ordinal_position AS sort, column_comment AS columnComment,
+            (CASE WHEN extra = "auto_increment" THEN "1" ELSE "0" END) AS isIncrement, column_type AS columnType
+          FROM information_schema.columns
+          WHERE table_schema = DATABASE() AND table_name = :tableName
+          ORDER BY ordinal_position
+        `, {
+            type: sequelize.QueryTypes.SELECT,
+            replacements: { tableName },
+        });
+
+        return query;
+    }
+
+    async initColumn(tableId, column) {
+        const columnType = await this.getDbType(column.columnType);
+        const columnLen = await this.getColumnLength(column.columnType);
+
+        const col = {
+            tableId: tableId,
+            columnName: column.columnName,
+            columnComment: column.columnComment,
+            columnType: columnType,
+            columnLength: columnLen,
+            javaField: column.columnName,
+            javaType: goConstants.typeString,
+            queryType: genConstants.QueryEq,
+            sort: column.sort,
+            isPk: column.isPk,
+            isIncrement: column.isIncrement,
+            isRequired: column.isRequired,
+            createTime: Math.floor(Date.now() / 1000),
+            updateTime: Math.floor(Date.now() / 1000),
+        };
+
+        // if (util.contains([...sqlConstants.ColumnTypeStr, ...sqlConstants.ColumnTypeText], columnType)) {
+        //     if (columnLen >= 500 || util.contains(sqlConstants.ColumnTypeText, columnType)) {
+        //         col.HtmlType = htmlConstants.HtmlTextarea;
+        //     } else {
+        //         col.HtmlType = htmlConstants.HtmlInput;
+        //     }
+        // } else if (util.contains(sqlConstants.ColumnTypeTime, columnType)) {
+        //     col.JavaType = goConstants.typeDate;
+        //     col.HtmlType = htmlConstants.HtmlDatetime;
+        // } else if (util.contains(sqlConstants.ColumnTimeName, col.ColumnName)) {
+        //     col.JavaType = goConstants.typeDate;
+        //     col.HtmlType = htmlConstants.HtmlDatetime;
+        // } else if (util.contains(sqlConstants.ColumnTypeNumber, columnType)) {
+        //     col.HtmlType = htmlConstants.HtmlInput;
+        //     if (columnType.includes(',')) {
+        //         col.JavaType = goConstants.typeFloat;
+        //     } else {
+        //         col.JavaType = goConstants.typeInt;
+        //     }
+        // }
+
+        // if (util.contains(sqlConstants.ColumnNameNotEdit, col.ColumnName)) {
+        //     col.IsRequired = 0;
+        // }
+
+        // if (!util.contains(sqlConstants.ColumnNameNotAdd, col.ColumnName)) {
+        //     col.IsInsert = genConstants.Require;
+        // }
+
+        // if (!util.contains(sqlConstants.ColumnNameNotEdit, col.ColumnName)) {
+        //     col.IsEdit = genConstants.Require;
+        //     col.IsRequired = genConstants.Require;
+        // }
+
+        // if (!util.contains(sqlConstants.ColumnNameNotList, col.ColumnName) && col.IsPk === 0) {
+        //     col.IsList = genConstants.Require;
+        // }
+
+        // if (!util.contains(sqlConstants.ColumnNameNotQuery, col.ColumnName) && col.IsPk === 0) {
+        //     col.IsQuery = genConstants.Require;
+        // }
+
+        // const lowerColName = col.ColumnName.toLowerCase();
+
+        // if (lowerColName.endsWith('name') || util.contains(['title', 'mobile'], lowerColName)) {
+        //     col.QueryType = genConstants.QueryLike;
+        // }
+
+        // if (lowerColName.endsWith('status') || util.contains(['is_show', 'is_disable'], lowerColName)) {
+        //     col.HtmlType = htmlConstants.HtmlRadio;
+        // } else if (lowerColName.endsWith('type') || lowerColName.endsWith('sex')) {
+        //     col.HtmlType = htmlConstants.HtmlSelect;
+        // } else if (lowerColName.endsWith('image')) {
+        //     col.HtmlType = htmlConstants.HtmlImageUpload;
+        // } else if (lowerColName.endsWith('file')) {
+        //     col.HtmlType = htmlConstants.HtmlFileUpload;
+        // } else if (lowerColName.endsWith('content')) {
+        //     col.HtmlType = htmlConstants.HtmlEditor;
+        // }
+
+        return col;
+    }
+
+    async initTable(table) {
+        const { ctx } = this;
+
+        return {
+            tableName: table.tableName,
+            tableComment: table.tableComment,
+            authorName: "",
+            entityName: await this.toClassName(table.tableName),
+            moduleName: await this.toModuleName(table.tableName),
+            functionName: table.tableComment.replace("表", ""),
+            createTime: Math.floor(Date.now() / 1000),
+            updateTime: Math.floor(Date.now() / 1000),
+        };
+    }
+
+    async toClassName(name) {
+        const tablePrefix = dbTablePrefix;
+
+        if (genConfig.isRemoveTablePrefix && tablePrefix !== "" && name.startsWith(tablePrefix)) {
+            name = name.slice(tablePrefix.length);
+        }
+
+        return util.toCamelCase(name);
+    }
+
+    async toModuleName(name) {
+        const names = name.split("_");
+        return names[names.length - 1];
+    }
+
+    async getDbType(columnType) {
+        console.log(columnType, 'columnType...')
+        const index = columnType.indexOf('(');
+        if (index < 0) {
+            return columnType;
+        }
+        return columnType.substring(0, index);
+    }
+
+    async getColumnLength(columnType) {
+        const index = columnType.indexOf('(');
+        if (index < 0) {
+            return 0;
+        }
+        const endIndex = columnType.indexOf(')', index);
+        if (endIndex < 0) {
+            return 0;
+        }
+        const lengthStr = columnType.substring(index + 1, endIndex);
+        const length = parseInt(lengthStr, 10);
+        if (isNaN(length)) {
+            return 0;
+        }
+        return length;
     }
 }
 

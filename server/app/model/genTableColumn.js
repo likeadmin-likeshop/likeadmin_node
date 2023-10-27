@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT } = app.Sequelize
@@ -13,125 +14,142 @@ module.exports = app => {
             primaryKey: true,
             comment: '列主键',
         },
-        table_id: {
+        tableId: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '表外键',
+            field: 'table_id',
         },
-        column_name: {
+        columnName: {
             type: STRING(200),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '列名称',
+            field: 'column_name',
         },
-        column_comment: {
+        columnComment: {
             type: STRING(200),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '列描述',
+            field: 'column_comment',
         },
-        column_length: {
+        columnLength: {
             type: STRING(5),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: true,
             defaultValue: '0',
             comment: '列长度',
+            field: 'column_length',
         },
-        column_type: {
+        columnType: {
             type: STRING(100),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '列类型 ',
+            field: 'column_type',
         },
-        java_type: {
+        javaType: {
             type: STRING(100),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: 'JAVA类型',
+            field: 'java_type',
         },
-        java_field: {
+        javaField: {
             type: STRING(100),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: 'JAVA字段',
+            field: 'java_field',
         },
-        is_pk: {
+        isPk: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否主键: [1=是, 0=否]',
+            field: 'is_pk',
         },
-        is_increment: {
+        isIncrement: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否自增: [1=是, 0=否]',
+            field: 'is_increment',
         },
-        is_required: {
+        isRequired: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否必填: [1=是, 0=否]',
+            field: 'is_required',
         },
-        is_insert: {
+        isInsert: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否插入字段: [1=是, 0=否]',
+            field: 'is_insert',
         },
-        is_edit: {
+        isEdit: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否编辑字段: [1=是, 0=否]',
+            field: 'is_edit',
         },
-        is_list: {
+        isList: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否列表字段: [1=是, 0=否]',
+            field: 'is_list',
         },
-        is_query: {
+        isQuery: {
             type: SMALLINT.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '是否查询字段: [1=是, 0=否]',
+            field: 'is_query',
         },
-        query_type: {
+        queryType: {
             type: STRING(30),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: 'EQ',
             comment: '查询方式: [等于、不等于、大于、小于、范围]',
+            field: 'query_type',
         },
-        html_type: {
+        htmlType: {
             type: STRING(30),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '显示类型: [文本框、文本域、下拉框、复选框、单选框、日期控件]',
+            field: 'html_type',
         },
-        dict_type: {
+        dictType: {
             type: STRING(200),
             charset: 'utf8mb4',
             collation: 'utf8mb4_general_ci',
             allowNull: false,
             defaultValue: '',
             comment: '字典类型',
+            field: 'dict_type',
         },
         sort: {
             type: SMALLINT.UNSIGNED,
@@ -139,20 +157,32 @@ module.exports = app => {
             defaultValue: 0,
             comment: '排序编号',
         },
-        create_time: {
+        createTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '创建时间',
+            field: 'create_time',
+            get() {
+                const timestamp = this.getDataValue('createTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
-        update_time: {
+        updateTime: {
             type: INTEGER.UNSIGNED,
             allowNull: false,
             defaultValue: 0,
             comment: '更新时间',
+            field: 'update_time',
+            get() {
+                const timestamp = this.getDataValue('updateTime') * 1000;
+                return timestamp > 0 && moment(timestamp).format('YYYY-MM-DD HH:mm:ss') || '';
+            }
         },
     };
     const GenTableColumn = app.model.define('GenTableColumn', modelDefinition, {
+        createdAt: false, // 指定名字
+        updatedAt: false,
         tableName: 'la_gen_table_column', // 定义实际表名
     })
 

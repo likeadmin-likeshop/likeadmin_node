@@ -1,6 +1,7 @@
 const dayjs = require('dayjs')
 const { customAlphabet } = require('nanoid')
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)
+const moment = require('moment');
 
 module.exports = app => {
     const { STRING, INTEGER, SMALLINT, TEXT } = app.Sequelize
