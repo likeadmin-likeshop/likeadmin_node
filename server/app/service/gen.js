@@ -109,6 +109,120 @@ class GenService extends Service {
         }
     }
 
+    async delTable(ids) {
+        const { ctx, app } = this;
+        const { GenTable, GenTableColumn } = app.model;
+
+        try {
+            await app.model.transaction(async (t) => {
+                await GenTable.destroy({
+                    where: {
+                        id: ids,
+                    },
+                    transaction: t,
+                });
+
+                await GenTableColumn.destroy({
+                    where: {
+                        tableId: ids,
+                    },
+                    transaction: t,
+                });
+            });
+        } catch (err) {
+            ctx.logger.error('DelTable Transaction err', err);
+            throw new Error('DelTable Transaction failed');
+        }
+    }
+
+    async syncTable(id) {
+        const { ctx, app } = this;
+        const { GenTable, GenTableColumn } = app.model;
+
+        try {
+            // 获取旧数据
+            const genTable = await GenTable.findOne({
+                where: {
+                    id,
+                },
+            });
+            if (!genTable) {
+                throw new Error('生成数据不存在！');
+            }
+
+            const genTableCols = await GenTableColumn.findAll({
+                where: {
+                    tableId: id,
+                },
+                order: [['sort', 'ASC']],
+            });
+            if (genTableCols.length <= 0) {
+                throw new Error('旧数据异常！');
+            }
+
+            const prevColMap = {};
+            for (let i = 0; i < genTableCols.length; i++) {
+                prevColMap[genTableCols[i].columnName] = genTableCols[i];
+            }
+
+            // 获取新数据
+            const columns = await this.getDbTableColumnsQueryByName(genTable.tableName);
+
+            if (columns.length <= 0) {
+                throw new Error('同步结构失败，原表结构不存在！');
+            }
+
+            // 事务处理
+            await app.model.transaction(async (t) => {
+                // 处理新增和更新
+                for (let i = 0; i < columns.length; i++) {
+                    const col = this.initColumn(id, columns[i]);
+                    if (prevColMap.hasOwnProperty(columns[i].columnName)) {
+                        // 更新
+                        const prevCol = prevColMap[columns[i].columnName];
+                        col.id = prevCol.id;
+                        if (col.isList === 0) {
+                            col.dictType = prevCol.dictType;
+                            col.queryType = prevCol.queryType;
+                        }
+                        if ((prevCol.isRequired === 1 && prevCol.isPk === 0 && prevCol.isInsert === 1) || prevCol.isEdit === 1) {
+                            col.htmlType = prevCol.htmlType;
+                            col.isRequired = prevCol.isRequired;
+                        }
+                        await GenTableColumn.update(col, {
+                            where: {
+                                id: prevCol.id,
+                            },
+                            transaction: t,
+                        });
+                    } else {
+                        // 新增
+                        await col.save({ transaction: t });
+                    }
+                }
+
+                // 处理删除
+                const colNames = columns.map((col) => col.columnName);
+                const delColIds = [];
+                for (const prevCol of Object.values(prevColMap)) {
+                    if (!colNames.includes(prevCol.columnName)) {
+                        delColIds.push(prevCol.id);
+                    }
+                }
+                await GenTableColumn.destroy({
+                    where: {
+                        id: delColIds,
+                    },
+                    transaction: t,
+                });
+
+            });
+        } catch (err) {
+            ctx.logger.error('SyncTable Transaction err', err);
+            throw new Error('SyncTable Transaction failed');
+        }
+    }
+
 
     /**
      * 下面是通用方法

@@ -59,6 +59,38 @@ class GenController extends baseController {
             ctx.status = 500;
         }
     }
+
+    async delTable() {
+        const { ctx } = this;
+        const { ids } = ctx.request.body;
+
+        try {
+            await ctx.service.gen.delTable(ids);
+            this.result({
+                data: ''
+            })
+        } catch (err) {
+            ctx.logger.error(`DelTable Delete error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    async syncTable() {
+        const { ctx } = this;
+        const { id } = ctx.request.query;
+
+        try {
+            await ctx.service.gen.syncTable(id);
+            this.result({
+                data: ''
+            })
+        } catch (err) {
+            ctx.logger.error(`syncTable error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
 }
 
 module.exports = GenController

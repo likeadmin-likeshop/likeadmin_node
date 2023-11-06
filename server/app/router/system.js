@@ -92,8 +92,11 @@ module.exports = app => {
     router.all('/api/setting/dict/data/edit', controller.setting.dict.dataEdit);
     router.all('/api/setting/dict/data/del', controller.setting.dict.dataDel);
 
+    // 生成代码
     router.all('/api/gen/list', controller.gen.gen.list);
     router.all('/api/gen/db', controller.gen.gen.dbTables);
     router.all('/api/gen/importTable', controller.gen.gen.importTable);
+    router.all('/api/gen/delTable', controller.gen.gen.delTable);
+    router.all('/api/gen/syncTable', controller.gen.gen.syncTable);
 
 };
