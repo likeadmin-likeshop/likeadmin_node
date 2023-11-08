@@ -95,8 +95,16 @@ function toCamelCase(s) {
     return words.join("");
 }
 
+function toPascalCase(str) {
+    const words = str.split("_");
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    return words.join("");
+}
+
 function contains(src, elem) {
-    if (isArray(src)) {
+    if (Array.isArray(src)) {
         return src.includes(elem);
     }
     return false;
@@ -136,5 +144,6 @@ module.exports = {
     round,
     stringToLines,
     toCamelCase,
-    contains
+    contains,
+    toPascalCase
 };

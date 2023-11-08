@@ -4,6 +4,8 @@ const { version, publicUrl, dbTablePrefix, genConfig, goConstants, genConstants,
 const util = require('../util')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
+const templateUtil = require('../util/templateUtil');
+const nunjucks = require('nunjucks');
 
 class GenService extends Service {
     async list(listReq) {
@@ -223,6 +225,27 @@ class GenService extends Service {
         }
     }
 
+    //PreviewCode 预览代码
+    async previewCode(id) {
+        const { ctx, app } = this;
+        const { GenTable } = app.model;
+
+        const genTable = await GenTable.findOne({ where: { id } });
+
+        if (!genTable) {
+            throw new Error('记录丢失！');
+        }
+
+        const tplCodeMap = await this.renderCodeByTable(genTable);
+
+        const res = {};
+        for (const tplPath in tplCodeMap) {
+            res[tplPath.replace('.tpl', '')] = tplCodeMap[tplPath];
+        }
+
+        return res;
+    }
+
 
     /**
      * 下面是通用方法
@@ -342,65 +365,65 @@ class GenService extends Service {
             updateTime: Math.floor(Date.now() / 1000),
         };
 
-        // if (util.contains([...sqlConstants.ColumnTypeStr, ...sqlConstants.ColumnTypeText], columnType)) {
-        //     if (columnLen >= 500 || util.contains(sqlConstants.ColumnTypeText, columnType)) {
-        //         col.HtmlType = htmlConstants.HtmlTextarea;
-        //     } else {
-        //         col.HtmlType = htmlConstants.HtmlInput;
-        //     }
-        // } else if (util.contains(sqlConstants.ColumnTypeTime, columnType)) {
-        //     col.JavaType = goConstants.typeDate;
-        //     col.HtmlType = htmlConstants.HtmlDatetime;
-        // } else if (util.contains(sqlConstants.ColumnTimeName, col.ColumnName)) {
-        //     col.JavaType = goConstants.typeDate;
-        //     col.HtmlType = htmlConstants.HtmlDatetime;
-        // } else if (util.contains(sqlConstants.ColumnTypeNumber, columnType)) {
-        //     col.HtmlType = htmlConstants.HtmlInput;
-        //     if (columnType.includes(',')) {
-        //         col.JavaType = goConstants.typeFloat;
-        //     } else {
-        //         col.JavaType = goConstants.typeInt;
-        //     }
-        // }
+        if (util.contains([...sqlConstants.columnTypeStr, ...sqlConstants.columnTypeText], columnType)) {
+            if (columnLen >= 500 || util.contains(sqlConstants.columnTypeText, columnType)) {
+                col.htmlType = htmlConstants.htmlTextarea;
+            } else {
+                col.htmlType = htmlConstants.htmlInput;
+            }
+        } else if (util.contains(sqlConstants.columnTypeTime, columnType)) {
+            col.javaType = goConstants.typeDate;
+            col.htmlType = htmlConstants.htmlDatetime;
+        } else if (util.contains(sqlConstants.columnTimeName, col.columnName)) {
+            col.javaType = goConstants.typeDate;
+            col.htmlType = htmlConstants.htmlDatetime;
+        } else if (util.contains(sqlConstants.columnTypeNumber, columnType)) {
+            col.htmlType = htmlConstants.htmlInput;
+            if (columnType.includes(',')) {
+                col.javaType = goConstants.typeFloat;
+            } else {
+                col.javaType = goConstants.typeInt;
+            }
+        }
 
-        // if (util.contains(sqlConstants.ColumnNameNotEdit, col.ColumnName)) {
-        //     col.IsRequired = 0;
-        // }
+        if (util.contains(sqlConstants.columnNameNotEdit, col.columnName)) {
+            col.isRequired = 0;
+        }
 
-        // if (!util.contains(sqlConstants.ColumnNameNotAdd, col.ColumnName)) {
-        //     col.IsInsert = genConstants.Require;
-        // }
+        if (!util.contains(sqlConstants.columnNameNotAdd, col.columnName)) {
+            col.isInsert = genConstants.require;
+        }
 
-        // if (!util.contains(sqlConstants.ColumnNameNotEdit, col.ColumnName)) {
-        //     col.IsEdit = genConstants.Require;
-        //     col.IsRequired = genConstants.Require;
-        // }
+        if (!util.contains(sqlConstants.columnNameNotEdit, col.columnName)) {
+            col.isEdit = genConstants.require;
+            col.isRequired = genConstants.require;
+        }
 
-        // if (!util.contains(sqlConstants.ColumnNameNotList, col.ColumnName) && col.IsPk === 0) {
-        //     col.IsList = genConstants.Require;
-        // }
+        if (!util.contains(sqlConstants.columnNameNotList, col.columnName) && col.isPk === 0) {
+            col.isList = genConstants.require;
+        }
 
-        // if (!util.contains(sqlConstants.ColumnNameNotQuery, col.ColumnName) && col.IsPk === 0) {
-        //     col.IsQuery = genConstants.Require;
-        // }
+        if (!util.contains(sqlConstants.columnNameNotQuery, col.columnName) && col.isPk === 0) {
+            col.isQuery = genConstants.require;
+        }
 
-        // const lowerColName = col.ColumnName.toLowerCase();
+        const lowerColName = col.columnName.toLowerCase();
 
-        // if (lowerColName.endsWith('name') || util.contains(['title', 'mobile'], lowerColName)) {
-        //     col.QueryType = genConstants.QueryLike;
-        // }
+        if (lowerColName.endsWith('name') || util.contains(['title', 'mobile'], lowerColName)) {
+            col.queryType = genConstants.queryLike;
+        }
 
-        // if (lowerColName.endsWith('status') || util.contains(['is_show', 'is_disable'], lowerColName)) {
-        //     col.HtmlType = htmlConstants.HtmlRadio;
-        // } else if (lowerColName.endsWith('type') || lowerColName.endsWith('sex')) {
-        //     col.HtmlType = htmlConstants.HtmlSelect;
-        // } else if (lowerColName.endsWith('image')) {
-        //     col.HtmlType = htmlConstants.HtmlImageUpload;
-        // } else if (lowerColName.endsWith('file')) {
-        //     col.HtmlType = htmlConstants.HtmlFileUpload;
-        // } else if (lowerColName.endsWith('content')) {
-        //     col.HtmlType = htmlConstants.HtmlEditor;
-        // }
+        if (lowerColName.endsWith('status') || util.contains(['is_show', 'is_disable'], lowerColName)) {
+            col.htmlType = htmlConstants.htmlRadio;
+        } else if (lowerColName.endsWith('type') || lowerColName.endsWith('sex')) {
+            col.htmlType = htmlConstants.htmlSelect;
+        } else if (lowerColName.endsWith('image')) {
+            col.htmlType = htmlConstants.htmlImageUpload;
+        } else if (lowerColName.endsWith('file')) {
+            col.htmlType = htmlConstants.htmlFileUpload;
+        } else if (lowerColName.endsWith('content')) {
+            col.htmlType = htmlConstants.htmlEditor;
+        }
 
         return col;
     }
@@ -460,6 +483,73 @@ class GenService extends Service {
         }
         return length;
     }
+
+    async getTablePriCol(columns) {
+        for (const col of columns) {
+            if (col.isPk === 1) {
+                return col;
+            }
+        }
+    }
+
+    //getSubTableInfo 根据主表获取子表主键和列信息
+    async getSubTableInfo(genTable) {
+        const { ctx, app } = this;
+        const { GenTable, GenTableColumn } = app.model;
+        console.log(genTable,'genTable....')
+        if (!genTable.tableName || !genTable.subTableFk) {
+            return;
+        }
+
+        try {
+            const table = await GenTable.findOne({
+                where: {
+                    tableName: genTable.tableName,
+                },
+            });
+
+            console.log(table, 'table........')
+
+            if (!table) {
+                throw new Error('子表记录丢失！');
+            }
+
+            const cols = await this.getDbTableColumnsQueryByName(genTable.tableName);
+
+            console.log(table,'cols......')
+
+            const pkCol = await this.initColumn(table.id, await this.getTablePriCol(cols));
+
+            return { pkCol, cols };
+        } catch (err) {
+            throw new Error('getSubTableInfo error: ' + err);
+        }
+    }
+
+    //renderCodeByTable 根据主表和模板文件渲染模板代码
+    async renderCodeByTable(genTable) {
+        const { ctx, app } = this;
+        const { GenTableColumn } = app.model;
+
+        const columns = await GenTableColumn.findAll({ where: { tableId: genTable.id }, order: [['sort', 'ASC']] });
+
+        const data = await this.getSubTableInfo(genTable);
+
+        const pkCol = data?.pkCol || {};
+        const cols = data?.cols || [];
+        // console.log(data,'data......')
+
+        const vars = templateUtil.prepareVars(genTable, columns, pkCol, cols);
+
+        const res = {};
+        for (const tplPath of templateUtil.getTemplatePaths(genTable.genTpl)) {
+            res[tplPath] = await templateUtil.render(tplPath, vars);
+        }
+
+        return res;
+    }
+
+
 }
 
 

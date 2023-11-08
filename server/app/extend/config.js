@@ -3,6 +3,8 @@
 // const key = new nodeRSA({b: 1024})
 // const publicKey = key.exportKey('pkcs8-public') // 公钥
 // const privateKey = key.exportKey('pkcs8-private') // 私钥
+const path = require('path');
+const runPath = path.dirname(path.dirname(__filename));
 
 const rsa = {
 	publicKey: '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGZ9nIiSJT+N66Y44G4R1exi9Zg7C141cCzHL9avlYdpxGHtXUWvUX2wcOXe2AtCTH54cBVbWdudlFpN0M2PBUDfFE+rx5KzRWqDm3vAolAb8Tr7+LHVLdcPGc3j8h/XUnsM6rVCxDGM/PcdMp1sM5Nec5BJ3oGwCgt92HgT8BtwIDAQAB-----END PUBLIC KEY-----',
@@ -53,13 +55,13 @@ const rsa = {
 
 	sqlConstants: {
 		// 数据库字符串类型
-		ColumnTypeStr: ["char", "varchar", "nvarchar", "varchar2"],
+		columnTypeStr: ["char", "varchar", "nvarchar", "varchar2"],
 		// 数据库文本类型
-		ColumnTypeText: ["tinytext", "text", "mediumtext", "longtext"],
+		columnTypeText: ["tinytext", "text", "mediumtext", "longtext"],
 		// 数据库时间类型
-		ColumnTypeTime: ["datetime", "time", "date", "timestamp"],
+		columnTypeTime: ["datetime", "time", "date", "timestamp"],
 		// 数据库数字类型
-		ColumnTypeNumber: [
+		columnTypeNumber: [
 			"tinyint",
 			"smallint",
 			"mediumint",
@@ -72,7 +74,7 @@ const rsa = {
 			"decimal",
 		],
 		// 时间日期字段名
-		ColumnTimeName: [
+		columnTimeName: [
 			"create_time",
 			"update_time",
 			"delete_time",
@@ -80,7 +82,7 @@ const rsa = {
 			"end_time",
 		],
 		// 页面不需要插入字段
-		ColumnNameNotAdd: [
+		columnNameNotAdd: [
 			"id",
 			"is_delete",
 			"create_time",
@@ -88,9 +90,9 @@ const rsa = {
 			"delete_time",
 		],
 		// 页面不需要编辑字段
-		ColumnNameNotEdit: ["is_delete", "create_time", "update_time", "delete_time"],
+		columnNameNotEdit: ["is_delete", "create_time", "update_time", "delete_time"],
 		// 页面不需要列表字段
-		ColumnNameNotList: [
+		columnNameNotList: [
 			"id",
 			"intro",
 			"content",
@@ -98,7 +100,7 @@ const rsa = {
 			"delete_time",
 		],
 		// 页面不需要查询字段
-		ColumnNameNotQuery: [
+		columnNameNotQuery: [
 			"is_delete",
 			"create_time",
 			"update_time",
@@ -108,14 +110,14 @@ const rsa = {
 
 	//HtmlConstants HTML相关常量
 	htmlConstants: {
-		HtmlInput: "input",       //文本框
-		HtmlTextarea: "textarea",    //文本域
-		HtmlSelect: "select",      //下拉框
-		HtmlRadio: "radio",       //单选框
-		HtmlDatetime: "datetime",    //日期控件
-		HtmlImageUpload: "imageUpload", //图片上传控件
-		HtmlFileUpload: "fileUpload",  //文件上传控件
-		HtmlEditor: "editor",      //富文本控件
+		htmlInput: "input",       //文本框
+		htmlTextarea: "textarea",    //文本域
+		htmlSelect: "select",      //下拉框
+		htmlRadio: "radio",       //单选框
+		htmlDatetime: "datetime",    //日期控件
+		htmlImageUpload: "imageUpload", //图片上传控件
+		htmlFileUpload: "fileUpload",  //文件上传控件
+		htmlEditor: "editor",      //富文本控件
 	},
 
 	// 免登录验证
@@ -144,6 +146,8 @@ const rsa = {
 	publicPrefix: "/api/uploads",
 	// 版本
 	version: "v1.1.0",
+
+	rootPath: runPath,
 }
 
 module.exports = rsa;

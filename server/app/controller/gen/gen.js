@@ -91,6 +91,22 @@ class GenController extends baseController {
             ctx.status = 500;
         }
     }
+
+    async previewCode() {
+        const { ctx } = this;
+        const { id } = ctx.request.query;
+
+        try {
+            const res = await ctx.service.gen.previewCode(id);
+            this.result({
+                data: res
+            })
+        } catch (err) {
+            ctx.logger.error(`previewCode error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
 }
 
 module.exports = GenController

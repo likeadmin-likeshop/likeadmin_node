@@ -109,8 +109,16 @@ module.exports = appInfo => {
         allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     };
 
+    const view = exports = {
+        defaultViewEngine: 'nunjucks',
+        mapping: {
+            '.tpl': 'nunjucks',
+        },
+    }
+
     return {
         ...config,
         ...userConfig,
+        ...view
     }
 }
