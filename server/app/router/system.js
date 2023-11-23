@@ -99,5 +99,5 @@ module.exports = app => {
     router.all('/api/gen/delTable', controller.gen.gen.delTable);
     router.all('/api/gen/syncTable', controller.gen.gen.syncTable);
     router.all('/api/gen/previewCode', controller.gen.gen.previewCode);
-
+    router.all('/api/gen/downloadCode', controller.gen.gen.downloadCode);
 };

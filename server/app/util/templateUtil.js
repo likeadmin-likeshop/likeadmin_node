@@ -98,8 +98,8 @@ function getTemplatePaths(genTpl) {
         'gocode/service.go.tpl',
         'gocode/controller.go.tpl',
         'gocode/route.go.tpl',
-        // 'vue/api.ts.tpl',
-        // 'vue/edit.vue.tpl',
+        'vue/api.ts.tpl',
+        'vue/edit.vue.tpl',
     ];
 
     if (genTpl === genConstants.TplCrud) {
@@ -115,9 +115,6 @@ async function render(tplPath, tplVars) {
     const env = nunjucks.configure({ autoescape: true });
     env.addGlobal('toCamelCase', util.toCamelCase);
     env.addGlobal('toPascalCase', util.toPascalCase);
-
-    console.log(path.join(rootPath, basePath, tplPath), 'path.join(rootPath, basePath, tplPath)....')
-    console.log(tplVars, 'tplVars.......')
     const tpl = await nunjucks.render(path.join(rootPath, basePath, tplPath), tplVars);
     return tpl;
 }

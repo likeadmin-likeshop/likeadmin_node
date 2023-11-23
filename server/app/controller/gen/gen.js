@@ -13,6 +13,8 @@ const {
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const await = require('await-stream-ready/lib/await')
+const fs = require('fs');
+const { Readable } = require('stream');
 
 class GenController extends baseController {
     async list() {
@@ -103,6 +105,30 @@ class GenController extends baseController {
             })
         } catch (err) {
             ctx.logger.error(`previewCode error: ${err}`);
+            ctx.body = 'Internal Server Error';
+            ctx.status = 500;
+        }
+    }
+
+    //downloadCode 下载代码
+    async downloadCode() {
+        const { ctx } = this;
+        const { tables } = ctx.request.query;
+
+        try {
+            const tablesList = tables.split(',');
+            const zipPath = 'app/public/downloads/file.zip';
+            await ctx.service.gen.downloadCode(zipPath, tablesList);
+
+            // 将文件转成数据流的方式返回给前端
+            const fileStream = fs.createReadStream(zipPath);
+            const fileContents = new Readable().wrap(fileStream);
+            const contentType = 'application/zip';
+            ctx.set('Content-Type', contentType);
+            ctx.set('Content-Disposition', 'attachment; filename=likeadmin-gen.zip');
+            ctx.body = fileContents;
+        } catch (err) {
+            ctx.logger.error(`downloadCode error: ${err}`);
             ctx.body = 'Internal Server Error';
             ctx.status = 500;
         }

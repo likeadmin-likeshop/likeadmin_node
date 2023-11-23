@@ -134,6 +134,20 @@ function stringToLines(s) {
     return lines;
 }
 
+const promisify = (func) => {
+    return (...args) => {
+        return new Promise((resolve, reject) => {
+            func(...args, (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+        });
+    };
+};
+
 // 导出公共方法
 module.exports = {
     structsToMaps,
@@ -145,5 +159,6 @@ module.exports = {
     stringToLines,
     toCamelCase,
     contains,
-    toPascalCase
+    toPascalCase,
+    promisify
 };

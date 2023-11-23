@@ -5,7 +5,8 @@ const util = require('../util')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const templateUtil = require('../util/templateUtil');
-const nunjucks = require('nunjucks');
+const fs = require('fs');
+const archiver = require('archiver');
 
 class GenService extends Service {
     async list(listReq) {
@@ -244,6 +245,18 @@ class GenService extends Service {
         }
 
         return res;
+    }
+
+    //DownloadCode 下载代码
+    async downloadCode(zipPath, tableNames) {
+        try {
+            for (const tableName of tableNames) {
+                await this.genZipCode(zipPath, tableName);
+            }
+            return zipPath;
+        } catch (err) {
+            throw new Error(`DownloadCode error: ${err.message}`);
+        }
     }
 
 
@@ -496,7 +509,6 @@ class GenService extends Service {
     async getSubTableInfo(genTable) {
         const { ctx, app } = this;
         const { GenTable, GenTableColumn } = app.model;
-        console.log(genTable,'genTable....')
         if (!genTable.tableName || !genTable.subTableFk) {
             return;
         }
@@ -508,15 +520,11 @@ class GenService extends Service {
                 },
             });
 
-            console.log(table, 'table........')
-
             if (!table) {
                 throw new Error('子表记录丢失！');
             }
 
             const cols = await this.getDbTableColumnsQueryByName(genTable.tableName);
-
-            console.log(table,'cols......')
 
             const pkCol = await this.initColumn(table.id, await this.getTablePriCol(cols));
 
@@ -537,7 +545,6 @@ class GenService extends Service {
 
         const pkCol = data?.pkCol || {};
         const cols = data?.cols || [];
-        // console.log(data,'data......')
 
         const vars = templateUtil.prepareVars(genTable, columns, pkCol, cols);
 
@@ -549,6 +556,89 @@ class GenService extends Service {
         return res;
     }
 
+    //GetFilePaths 获取生成文件相对路径
+    async getFilePaths(tplCodeMap, moduleName) {
+        try {
+            const fmtMap = {
+                'gocode/model.go.tpl': 'gocode/%s/model.go',
+                'gocode/controller.go.tpl': 'gocode/%s/controller.go',
+                'gocode/service.go.tpl': 'gocode/%s/service.go',
+                'gocode/route.go.tpl': 'gocode/%s/route.go',
+                'vue/api.ts.tpl': 'vue/%s/api.ts',
+                'vue/edit.vue.tpl': 'vue/%s/edit.vue',
+                'vue/index.vue.tpl': 'vue/%s/index.vue',
+                'vue/index-tree.vue.tpl': 'vue/%s/index-tree.vue',
+            };
+
+            const filePath = {};
+            for (const tplPath in tplCodeMap) {
+                console.log(tplPath, 'tplPath....')
+                const file = fmtMap[tplPath].replace('%s', moduleName);
+                filePath[file] = tplCodeMap[tplPath];
+            }
+            return filePath;
+        } catch (err) {
+            throw new Error(`getFilePaths error: ${err.message}`);
+        }
+    };
+
+    async addFileToZip(zipPath, file) {
+        const output = fs.createWriteStream(zipPath);
+        const archive = archiver('zip', { zlib: { level: 9 } });
+        archive.pipe(output);
+
+        const header = { name: file.Name, method: 'DEFLATE' };
+        archive.append(file.Body, header);
+
+        await util.promisify(archive.finalize)();
+
+        return zipPath;
+    };
+
+    // 生成代码压缩包
+    async genZip(zipPath, tplCodeMap, moduleName) {
+        try {
+            const filePaths = await this.getFilePaths(tplCodeMap, moduleName);
+            const output = fs.createWriteStream(zipPath);
+            const archive = archiver('zip', { zlib: { level: 9 } });
+            archive.pipe(output);
+
+            for (const file in filePaths) {
+                const tplCode = filePaths[file];
+                archive.append(tplCode, { name: file });
+            }
+
+            await archive.finalize();
+        } catch (err) {
+            throw new Error(`genZip error: ${err.message}`);
+        }
+    }
+
+    //genZipCode 生成代码 (压缩包下载)
+    async genZipCode(zipPath, tableName) {
+        const { ctx, app } = this;
+        const { GenTable } = app.model;
+
+        try {
+            const genTable = await GenTable.findOne({
+                where: { tableName },
+                order: [['id', 'DESC']],
+                limit: 1,
+            });
+
+            if (!genTable) {
+                throw new Error('记录丢失！');
+            }
+
+            //获取模板内容
+            const tplCodeMap = await this.renderCodeByTable(genTable);
+
+            //压缩文件
+            await this.genZip(zipPath, tplCodeMap, genTable.moduleName);
+        } catch (err) {
+            throw new Error(`genZipCode error: ${err.message}`);
+        }
+    }
 
 }
 
