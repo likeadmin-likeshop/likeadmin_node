@@ -47,8 +47,8 @@ class LogService extends Service {
                 lists: rows,
             };
             return data;
-        } catch (error) {
-            ctx.logger.error(`SystemLogController.operate error: ${error}`);
+        } catch (err) {
+            throw new Error(`SystemLogController.operate error: ${err}`);
         }
 
     }

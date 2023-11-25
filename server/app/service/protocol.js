@@ -15,8 +15,7 @@ class ProtocolService extends Service {
             }
             return data;
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+            throw new Error(`service error: ${err}`);
         }
     }
 
@@ -29,9 +28,8 @@ class ProtocolService extends Service {
             const privacyJson = JSON.stringify(privacy);
             await ctx.service.common.set("protocol", "service", serviceJson);
             await ctx.service.common.set("protocol", "privacy", privacyJson);
-        } catch (error) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+        } catch (err) {
+            throw new Error(`service error: ${err}`);
         }
     }
 }

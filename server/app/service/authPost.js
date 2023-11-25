@@ -45,8 +45,7 @@ class AuthPostService extends Service {
                 lists: postResps,
             };
         } catch (err) {
-            ctx.logger.error(`AuthPostService.list error: ${err}`);
-            throw err;
+            throw new Error(`AuthPostService.list error: ${err}`);
         }
     }
 
@@ -70,7 +69,6 @@ class AuthPostService extends Service {
 
             return res;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Get Post Detail error');
         }
     }
@@ -108,7 +106,6 @@ class AuthPostService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Add Post error');
         }
     }
@@ -152,7 +149,6 @@ class AuthPostService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Edit Post error');
         }
     }
@@ -190,7 +186,6 @@ class AuthPostService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Delete Post error');
         }
     }
@@ -214,7 +209,6 @@ class AuthPostService extends Service {
     
           return res;
         } catch (err) {
-          ctx.logger.error(err);
           throw new Error('Get All Posts error');
         }
       }

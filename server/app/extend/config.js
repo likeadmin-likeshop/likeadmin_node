@@ -37,7 +37,7 @@ const rsa = {
 		genRootPath: "/tmp/target",
 	},
 
-	goConstants: {
+	nodeConstants: {
 		typeString: "string",      //字符串类型
 		typeFloat: "float64",     //浮点型
 		typeInt: "int",         //整型
@@ -46,11 +46,11 @@ const rsa = {
 
 	genConstants: {
 		UTF8: "utf-8", //编码
-		TplCrud: "crud",  //单表 (增删改查)
-		TplTree: "tree",  //树表 (增删改查)
-		QueryLike: "LIKE",  //模糊查询
-		QueryEq: "=",     //相等查询
-		Require: 1,       //需要的
+		tplCrud: "crud",  //单表 (增删改查)
+		tplTree: "tree",  //树表 (增删改查)
+		queryLike: "LIKE",  //模糊查询
+		queryEq: "=",     //相等查询
+		qequire: 1,       //需要的
 	},
 
 	sqlConstants: {
@@ -147,7 +147,7 @@ const rsa = {
 	// 版本
 	version: "v1.1.0",
 
-	rootPath: runPath,
+  rootPath: runPath,
 }
 
 module.exports = rsa;

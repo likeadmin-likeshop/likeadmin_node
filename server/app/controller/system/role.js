@@ -55,7 +55,7 @@ class SystemRoleController extends baseController {
                 data
             })
         } catch (err) {
-            ctx.logger.error(`SystemController.roleList error: ${err}`);
+            ctx.logger.error(`SystemController.detail error: ${err}`);
             ctx.body = 'Internal Server Error';
             ctx.status = 500;
         }

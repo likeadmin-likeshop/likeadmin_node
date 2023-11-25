@@ -12,8 +12,7 @@ function structsToMaps(objs) {
         });
         return data;
     } catch (err) {
-        this.ctx.logger.error(`convertUtil.structsToMaps err: err=[${err}]`);
-        return null;
+        throw new Error(`convertUtil.structsToMaps err: err=[${err}]`);
     }
 }
 
@@ -116,7 +115,6 @@ const readline = require('readline');
 function stringToLines(s) {
     const lines = [];
     const stream = new Readable();
-    console.log(s, 's.....')
     stream.push(s);
     stream.push(null);
 
@@ -128,8 +126,6 @@ function stringToLines(s) {
     for (const line of rl) {
         lines.push(line);
     }
-
-    console.log(lines, 'lines.....')
 
     return lines;
 }

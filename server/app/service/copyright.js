@@ -13,8 +13,7 @@ class CopyrightService extends Service {
             }
             return copyright;
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+            throw new Error(`IndexService.config error: ${err}`);
         }
     }
 
@@ -23,9 +22,8 @@ class CopyrightService extends Service {
 
         try {
             await ctx.service.common.set("website", "copyright", req);
-        } catch (error) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+        } catch (err) {
+            throw new Error(`IndexService.config error: ${err}`);
         }
     }
 }

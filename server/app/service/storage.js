@@ -23,8 +23,7 @@ class WebsiteService extends Service {
             });
             return mapList;
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+            throw new Error(`storageService.config error: ${err}`);
         }
     }
 
@@ -40,7 +39,7 @@ class WebsiteService extends Service {
                 status: status,
             };
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
+            throw new Error(`storageService.config error: ${err}`);
         }
     }
 
@@ -49,7 +48,7 @@ class WebsiteService extends Service {
         try {
             const engine = 'local';
             if (engine !== editReq.alias) {
-                ctx.logger.error(`engine:${editReq.alias} 暂时不支持`);
+                throw new Error(`engine:${editReq.alias} 暂时不支持`);
             }
             const json = JSON.stringify({ name: '本地存储' });
             await ctx.service.common.set('storage', editReq.alias, json);
@@ -60,7 +59,7 @@ class WebsiteService extends Service {
                 await ctx.service.common.set('storage', 'default', '');
             }
         } catch (err) {
-            ctx.logger.error(err, 'Edit Set default err');
+            throw new Error('Edit Set default err');
         }
     }
 
@@ -69,7 +68,7 @@ class WebsiteService extends Service {
         try {
             const engine = 'local';
             if (engine !== alias) {
-                ctx.logger.error(`engine:${alias} 暂时不支持`);
+                throw new Error(`engine:${alias} 暂时不支持`);
             }
             if (engine === alias && status === 0) {
                 await ctx.service.common.set('storage', 'default', '');
@@ -77,7 +76,7 @@ class WebsiteService extends Service {
                 await ctx.service.common.set('storage', 'default', alias);
             }
         } catch (err) {
-            ctx.logger.error(err, 'Change Set err');
+            throw new Error('Change Set err');
         }
     }
 }

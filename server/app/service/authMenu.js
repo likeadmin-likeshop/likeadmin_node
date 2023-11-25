@@ -20,7 +20,6 @@ class AuthMenuService extends Service {
 
             return tree;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('list Menu error');
         }
     }
@@ -59,8 +58,7 @@ class AuthMenuService extends Service {
 
             ctx.service.redis.del(backstageRolesKey);
         } catch (err) {
-            await transaction.rollback();
-            throw new Error(err, 'Add Create err');
+            throw new Error('Add Create err');
         }
     }
 
@@ -88,8 +86,7 @@ class AuthMenuService extends Service {
 
             ctx.service.redis.del(backstageRolesKey);
         } catch (err) {
-            await transaction.rollback();
-            throw new Error(err, 'Edit Updates err');
+            throw new Error('Edit Updates err');
         }
     }
 
@@ -123,8 +120,7 @@ class AuthMenuService extends Service {
 
             await transaction.commit();
         } catch (err) {
-            await transaction.rollback();
-            throw new Error(err, 'Delete Delete err');
+            throw new Error('Delete Delete err');
         }
     }
 }

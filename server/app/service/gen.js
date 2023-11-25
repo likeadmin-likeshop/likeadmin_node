@@ -1,6 +1,6 @@
 const Service = require('egg').Service
 const await = require('await-stream-ready/lib/await')
-const { version, publicUrl, dbTablePrefix, genConfig, goConstants, genConstants, sqlConstants, htmlConstants } = require('../extend/config')
+const { version, publicUrl, dbTablePrefix, genConfig, nodeConstants, genConstants, sqlConstants, htmlConstants } = require('../extend/config')
 const util = require('../util')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
@@ -46,8 +46,8 @@ class GenService extends Service {
                 lists: genResp,
             };
             return data;
-        } catch (error) {
-            throw new Error(`GenService.list error: ${error}`);
+        } catch (err) {
+            throw new Error(`GenService.list error: ${err}`);
         }
     }
 
@@ -108,7 +108,7 @@ class GenService extends Service {
                 }
             });
         } catch (err) {
-            throw new Error('ImportTable Transaction err', err);
+            throw new Error('ImportTable Transaction err');
         }
     }
 
@@ -133,7 +133,6 @@ class GenService extends Service {
                 });
             });
         } catch (err) {
-            ctx.logger.error('DelTable Transaction err', err);
             throw new Error('DelTable Transaction failed');
         }
     }
@@ -221,8 +220,7 @@ class GenService extends Service {
 
             });
         } catch (err) {
-            ctx.logger.error('SyncTable Transaction err', err);
-            throw new Error('SyncTable Transaction failed');
+            throw new Error('SyncTable Transaction err');
         }
     }
 
@@ -306,7 +304,6 @@ class GenService extends Service {
                 data: queryResult,
             };
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Failed to get database tables query.');
         }
     }
@@ -330,7 +327,6 @@ class GenService extends Service {
 
             return query;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Failed to get database tables query by names.');
         }
     }
@@ -368,8 +364,8 @@ class GenService extends Service {
             columnType: columnType,
             columnLength: columnLen,
             javaField: column.columnName,
-            javaType: goConstants.typeString,
-            queryType: genConstants.QueryEq,
+            javaType: nodeConstants.typeString,
+            queryType: genConstants.queryEq,
             sort: column.sort,
             isPk: column.isPk,
             isIncrement: column.isIncrement,
@@ -385,17 +381,17 @@ class GenService extends Service {
                 col.htmlType = htmlConstants.htmlInput;
             }
         } else if (util.contains(sqlConstants.columnTypeTime, columnType)) {
-            col.javaType = goConstants.typeDate;
+            col.javaType = nodeConstants.typeDate;
             col.htmlType = htmlConstants.htmlDatetime;
         } else if (util.contains(sqlConstants.columnTimeName, col.columnName)) {
-            col.javaType = goConstants.typeDate;
+            col.javaType = nodeConstants.typeDate;
             col.htmlType = htmlConstants.htmlDatetime;
         } else if (util.contains(sqlConstants.columnTypeNumber, columnType)) {
             col.htmlType = htmlConstants.htmlInput;
             if (columnType.includes(',')) {
-                col.javaType = goConstants.typeFloat;
+                col.javaType = nodeConstants.typeFloat;
             } else {
-                col.javaType = goConstants.typeInt;
+                col.javaType = nodeConstants.typeInt;
             }
         }
 
@@ -560,10 +556,10 @@ class GenService extends Service {
     async getFilePaths(tplCodeMap, moduleName) {
         try {
             const fmtMap = {
-                'gocode/model.go.tpl': 'gocode/%s/model.go',
-                'gocode/controller.go.tpl': 'gocode/%s/controller.go',
-                'gocode/service.go.tpl': 'gocode/%s/service.go',
-                'gocode/route.go.tpl': 'gocode/%s/route.go',
+                'nodecode/model.js.tpl': 'nodecode/%s/model.js',
+                'nodecode/controller.js.tpl': 'nodecode/%s/controller.js',
+                'nodecode/service.js.tpl': 'nodecode/%s/service.js',
+                'nodecode/route.js.tpl': 'nodecode/%s/route.js',
                 'vue/api.ts.tpl': 'vue/%s/api.ts',
                 'vue/edit.vue.tpl': 'vue/%s/edit.vue',
                 'vue/index.vue.tpl': 'vue/%s/index.vue',

@@ -16,8 +16,7 @@ class WebsiteService extends Service {
                 shopLogo: util.toAbsoluteUrl(website.shopLogo),
             };
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+            throw new Error(`websiteService.config error: ${err}`);
         }
     }
 
@@ -33,9 +32,8 @@ class WebsiteService extends Service {
                 ctx.service.common.set('website','shopName',req.shopName),
                 ctx.service.common.set('website','shopLogo',util.toRelativeUrl(req.shopLogo)),
             ]);
-        } catch (error) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+        } catch (err) {
+            throw new Error(`websiteService.config error: ${err}`);
         }
     }
 }

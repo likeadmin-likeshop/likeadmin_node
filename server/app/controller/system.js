@@ -91,8 +91,8 @@ class SystemController extends baseController {
                     token
                 }
             })
-        } catch (error) {
-            const { errors = [] } = error
+        } catch (err) {
+            const { errors = [] } = err
             this.result({ data: '', message: errors[0].message, code: 1001 })
         }
     }

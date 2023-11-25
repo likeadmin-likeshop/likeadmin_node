@@ -64,8 +64,7 @@ class AuthAdminService extends Service {
 
             return menuArray;
         } catch (err) {
-            ctx.logger.error('CacheRoleMenusByRoleId error:', err);
-            throw err;
+            throw new Error('CacheRoleMenusByRoleId error:' + err);
         }
     }
 
@@ -94,8 +93,7 @@ class AuthAdminService extends Service {
             const menuIds = perms.map((perm) => perm.menuId);
             return menuIds;
         } catch (err) {
-            console.error('SelectMenuIdsByRoleId error:', err);
-            return [];
+            throw new Error('SelectMenuIdsByRoleId error:' + err);
         }
     }
 
@@ -150,7 +148,7 @@ class AuthAdminService extends Service {
         try {
             await ctx.model.SystemAuthPerm.bulkCreate(perms, { transaction });
         } catch (err) {
-            throw new Error(err, 'BatchSaveByMenuIds Create in tx err');
+            throw new Error('BatchSaveByMenuIds Create in tx err');
         }
     }
 
@@ -171,7 +169,7 @@ class AuthAdminService extends Service {
         try {
             await ctx.model.SystemAuthPerm.destroy(options);
         } catch (err) {
-            throw new Error(err, 'BatchDeleteByRoleId Delete err');
+            throw new Error('BatchDeleteByRoleId Delete err');
         }
     }
 
@@ -195,8 +193,8 @@ class AuthAdminService extends Service {
                 ...params
             })
             return result;
-        } catch (error) {
-            return false;
+        } catch (err) {
+            throw new Error(err)
         }
     }
 
@@ -263,7 +261,6 @@ class AuthAdminService extends Service {
                 lists: adminResp,
             };
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('List Find err');
         }
     }
@@ -295,7 +292,6 @@ class AuthAdminService extends Service {
 
             return res;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Get Admin Detail error');
         }
     }
@@ -374,7 +370,6 @@ class AuthAdminService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Add Admin error');
         }
     }
@@ -493,7 +488,6 @@ class AuthAdminService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Edit Admin error');
         }
     }
@@ -548,7 +542,7 @@ class AuthAdminService extends Service {
                 }
             });
         } catch (err) {
-            ctx.throw(500, '更新管理员信息失败');
+            throw new Error('更新管理员信息失败');
         }
 
         adminSrv.cacheAdminUserByUid(adminId);

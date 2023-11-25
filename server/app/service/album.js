@@ -65,7 +65,7 @@ class AlbumService extends Service {
 
             await cate.save();
         } catch (err) {
-            throw new Error(err, 'CateAdd Create err');
+            throw new Error('CateAdd Create err');
         }
     }
 
@@ -87,7 +87,7 @@ class AlbumService extends Service {
 
             await cate.save();
         } catch (err) {
-            throw new Error(err, 'CateRename Save err');
+            throw new Error('CateRename Save err');
         }
     }
 
@@ -121,7 +121,7 @@ class AlbumService extends Service {
 
             await cate.save();
         } catch (err) {
-            throw new Error(err, 'CateDel Save err');
+            throw new Error('CateDel Save err');
         } 
     }
 
@@ -201,7 +201,7 @@ class AlbumService extends Service {
 
             await album.save();
         } catch (err) {
-            throw new Error(err, 'AlbumRename Save err');
+            throw new Error('AlbumRename Save err');
         }
     }
 
@@ -241,7 +241,7 @@ class AlbumService extends Service {
                 }
             );
         } catch (err) {
-            throw new Error(err, 'AlbumMove UpdateColumn err');
+            throw new Error('AlbumMove UpdateColumn err');
         }
 
     }
@@ -253,7 +253,7 @@ class AlbumService extends Service {
 
             return alb.id;
         } catch (err) {
-            throw new Error(err, 'AlbumAdd Create err');
+            throw new Error('AlbumAdd Create err');
         }
     }
 
@@ -283,7 +283,7 @@ class AlbumService extends Service {
                 }
             );
         } catch (err) {
-            throw new Error(err, 'AlbumDel UpdateColumn err');
+            throw new Error('AlbumDel UpdateColumn err');
         }
     }
 
@@ -318,7 +318,7 @@ class AlbumService extends Service {
             return res;
 
         } catch (err) {
-            throw new Error(err, 'uploadImage UpdateColumn err');
+            throw new Error('uploadImage UpdateColumn err');
         }
     }
 

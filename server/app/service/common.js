@@ -51,8 +51,7 @@ class CommonService extends Service {
                 visitor,
             };
         } catch (err) {
-            ctx.logger.error(`IndexService.console error: ${err}`);
-            throw err;
+            throw new Error(`IndexService.console error: ${err}`);
         }
     }
 
@@ -74,8 +73,7 @@ class CommonService extends Service {
                 copyright: copyright,
             };
         } catch (err) {
-            ctx.logger.error(`IndexService.config error: ${err}`);
-            throw err;
+            throw new Error(`IndexService.config error: ${err}`);
         }
     }
 
@@ -89,8 +87,7 @@ class CommonService extends Service {
             }
             return data;
         } catch (err) {
-            ctx.logger.error(`ConfigUtilService.getVal error: ${err}`);
-            throw err;
+            throw new Error(`ConfigUtilService.getVal error: ${err}`);
         }
     }
 
@@ -104,8 +101,7 @@ class CommonService extends Service {
             const data = JSON.parse(val);
             return data;
         } catch (err) {
-            ctx.logger.error(`ConfigUtilService.getMap error: ${err}`);
-            throw err;
+            throw new Error(`ConfigUtilService.getMap error: ${err}`);
         }
     }
 
@@ -125,8 +121,7 @@ class CommonService extends Service {
             }
             return data;
         } catch (err) {
-            ctx.logger.error(`ConfigUtilService.get error: ${err}`);
-            throw err;
+            throw new Error(`ConfigUtilService.get error: ${err}`);
         }
     }
 
@@ -146,9 +141,8 @@ class CommonService extends Service {
             await config.update({ value: val });
 
             ctx.status = 200;
-        } catch (error) {
-            ctx.body = 'Internal server error';
-            ctx.status = 500;
+        } catch (err) {
+            throw new Error('Internal server error');
         }
     }
 }

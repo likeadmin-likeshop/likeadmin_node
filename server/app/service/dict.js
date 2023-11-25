@@ -37,8 +37,8 @@ class DictService extends Service {
                 lists: rows,
             };
             return data;
-        } catch (error) {
-            throw new Error(`DictService.list error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.list error: ${err}`);
         }
 
     }
@@ -55,8 +55,8 @@ class DictService extends Service {
             });
 
             return dictTypes;
-        } catch (error) {
-            throw new Error(`DictService.all error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.all error: ${err}`);
         }
     }
 
@@ -93,8 +93,8 @@ class DictService extends Service {
             const dt = await DictType.create({ ...addReq, ...timeObject });
 
             return dt;
-        } catch (error) {
-            throw new Error(`DictService.add error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.add error: ${err}`);
         }
     }
 
@@ -148,8 +148,8 @@ class DictService extends Service {
             }
 
             await existingDictType.update(editReq);
-        } catch (error) {
-            throw new Error(`DictService.edit error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.edit error: ${err}`);
         }
     }
 
@@ -164,8 +164,8 @@ class DictService extends Service {
                 { isDelete: 1, deleteTime: dateTime },
                 { where: { id: delReq.ids } }
             );
-        } catch (error) {
-            throw new Error(`DictService.del error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.del error: ${err}`);
         }
     }
 
@@ -214,8 +214,8 @@ class DictService extends Service {
                 lists: rows,
             };
             return data;
-        } catch (error) {
-            throw new Error(`DictService.dataList error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.dataList error: ${err}`);
         }
     }
 
@@ -253,8 +253,8 @@ class DictService extends Service {
             const res = dictDatas.map(dictData => dictData.toJSON());
 
             return res;
-        } catch (error) {
-            throw new Error(`DictService.dataAll error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.dataAll error: ${err}`);
         }
     }
 
@@ -273,8 +273,8 @@ class DictService extends Service {
             }
 
             return dictData;
-        } catch (error) {
-            throw new Error(`DictService.dataDetail error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.dataDetail error: ${err}`);
         }
     }
 
@@ -294,8 +294,8 @@ class DictService extends Service {
 
             const newDictData = await DictData.create(addReq);
             return newDictData;
-        } catch (error) {
-            throw new Error(`DictService.dataAdd error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.dataAdd error: ${err}`);
         }
     }
 
@@ -320,8 +320,8 @@ class DictService extends Service {
             }
 
             await existingDictData.update(editReq);
-        } catch (error) {
-            throw new Error(`DictService.dataEdit error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.dataEdit error: ${err}`);
         }
     }
 
@@ -336,8 +336,8 @@ class DictService extends Service {
                 { isDelete: 1, deleteTime: dateTime },
                 { where: { id: delReq.ids } }
             );
-        } catch (error) {
-            throw new Error(`DictService.del error: ${error}`);
+        } catch (err) {
+            throw new Error(`DictService.del error: ${err}`);
         }
     }
 }

@@ -16,8 +16,7 @@ class AuthRoleService extends Service {
             const res = roles.map(role => role.toJSON());
             return res;
         } catch (err) {
-            ctx.logger.error(`AuthRoleService.all error: ${err}`);
-            throw err;
+            throw new Error(`AuthRoleService.all error: ${err}`);
         }
     }
 
@@ -66,7 +65,6 @@ class AuthRoleService extends Service {
                 lists: roleResp,
             };
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('List Find err');
         }
     }
@@ -89,7 +87,6 @@ class AuthRoleService extends Service {
 
             return count;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Get Member Count error');
         }
     }
@@ -153,8 +150,7 @@ class AuthRoleService extends Service {
 
             await transaction.commit();
         } catch (err) {
-            await transaction.rollback();
-            throw err;
+            throw new Error(err)
         }
     }
 
@@ -198,8 +194,7 @@ class AuthRoleService extends Service {
 
             await transaction.commit();
         } catch (err) {
-            await transaction.rollback();
-            throw err;
+            throw new Error(err)
         }
     }
 
@@ -241,8 +236,7 @@ class AuthRoleService extends Service {
 
             await transaction.commit();
         } catch (err) {
-            await transaction.rollback();
-            throw err;
+            throw new Error(err)
         }
     }
 }

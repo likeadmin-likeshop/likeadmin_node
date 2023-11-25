@@ -35,8 +35,7 @@ class AuthDeptService extends Service {
 
             return mapList;
         } catch (err) {
-            ctx.logger.error(`AuthDeptService.list error: ${err}`);
-            throw err;
+            throw new Error(`AuthDeptService.list error: ${err}`);
         }
     }
 
@@ -68,7 +67,6 @@ class AuthDeptService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Add Department error');
         }
     }
@@ -92,7 +90,6 @@ class AuthDeptService extends Service {
 
             return dept.toJSON();
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Get Department Detail error');
         }
     }
@@ -127,7 +124,6 @@ class AuthDeptService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Edit Department error');
         }
     }
@@ -179,7 +175,6 @@ class AuthDeptService extends Service {
 
             return;
         } catch (err) {
-            ctx.logger.error(err);
             throw new Error('Delete Department error');
         }
     }
@@ -204,7 +199,6 @@ class AuthDeptService extends Service {
     
           return res;
         } catch (err) {
-          ctx.logger.error(err);
           throw new Error('Get All Departments error');
         }
       }

@@ -22,7 +22,7 @@ class MonitorController extends baseController {
         const mem = await serverUtil.getMemInfo();
         const sys = await serverUtil.getSysInfo();
         const disk = await serverUtil.getDiskInfo();
-        const go = await serverUtil.getNodeInfo();
+        const node = await serverUtil.getNodeInfo();
 
         this.result({
             data: {
@@ -30,7 +30,7 @@ class MonitorController extends baseController {
                 mem,
                 sys,
                 disk,
-                go
+                node
             }
         })
     }

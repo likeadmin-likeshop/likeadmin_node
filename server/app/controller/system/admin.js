@@ -24,7 +24,7 @@ class SystemAdminController extends baseController {
                 data
             })
         } catch (err) {
-            ctx.logger.error(`SystemController.roleAll error: ${err}`);
+            ctx.logger.error(`SystemController error: ${err}`);
             ctx.body = 'Internal Server Error';
             ctx.status = 500;
         }
@@ -88,7 +88,7 @@ class SystemAdminController extends baseController {
                 data: admin
             })
         } catch (err) {
-            console.error('GetAdminInfo error:', err);
+            ctx.logger.error(err);
             return null;
         }
     }

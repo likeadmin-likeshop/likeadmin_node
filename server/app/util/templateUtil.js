@@ -94,17 +94,17 @@ function prepareVars(table, columns, oriSubPriCol, oriSubCols) {
 //GetTemplatePaths 获取模板路径
 function getTemplatePaths(genTpl) {
     let tplPaths = [
-        'gocode/model.go.tpl',
-        'gocode/service.go.tpl',
-        'gocode/controller.go.tpl',
-        'gocode/route.go.tpl',
+        'nodecode/model.js.tpl',
+        'nodecode/service.js.tpl',
+        'nodecode/controller.js.tpl',
+        'nodecode/route.js.tpl',
         'vue/api.ts.tpl',
         'vue/edit.vue.tpl',
     ];
 
-    if (genTpl === genConstants.TplCrud) {
+    if (genTpl === genConstants.tplCrud) {
         tplPaths.push('vue/index.vue.tpl');
-    } else if (genTpl === genConstants.TplTree) {
+    } else if (genTpl === genConstants.tplTree) {
         tplPaths.push('vue/index-tree.vue.tpl');
     }
 

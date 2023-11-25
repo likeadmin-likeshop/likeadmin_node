@@ -30,8 +30,8 @@ class {{ toPascalCase(entityName) }}Service extends Service {
                 lists: rows,
             };
             return data;
-        } catch (error) {
-            throw new Error(`{{ toPascalCase(entityName) }}Service.list error: ${error}`);
+        } catch (err) {
+            throw new Error(`{{ toPascalCase(entityName) }}Service.list error: ${err}`);
         }
     }
 
@@ -48,8 +48,8 @@ class {{ toPascalCase(entityName) }}Service extends Service {
 			});
 
 			return res.toJSON();
-		} catch (error) {
-            throw new Error(`{{ toPascalCase(entityName) }}Service.detail error: ${error}`);
+		} catch (err) {
+            throw new Error(`{{ toPascalCase(entityName) }}Service.detail error: ${err}`);
         }
     }
 
@@ -69,7 +69,7 @@ class {{ toPascalCase(entityName) }}Service extends Service {
 
             return;
         } catch (err) {
-            throw new Error(`{{ toPascalCase(entityName) }}Service.add error: ${error}`);
+            throw new Error(`{{ toPascalCase(entityName) }}Service.add error: ${err}`);
         }
     }
 
@@ -96,7 +96,7 @@ class {{ toPascalCase(entityName) }}Service extends Service {
 
             return;
         } catch (err) {
-            throw new Error(`{{ toPascalCase(entityName) }}Service.edit error: ${error}`);
+            throw new Error(`{{ toPascalCase(entityName) }}Service.edit error: ${err}`);
         }
     }
 
@@ -121,7 +121,7 @@ class {{ toPascalCase(entityName) }}Service extends Service {
 
             return;
         } catch (err) {
-            throw new Error(`{{ toPascalCase(entityName) }}Service.del error: ${error}`);
+            throw new Error(`{{ toPascalCase(entityName) }}Service.del error: ${err}`);
         }
     }
 
