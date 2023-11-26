@@ -1,5 +1,6 @@
-const emailTmp = ({userEmail,downloads}) => {
-    return `<div>
+'use strict';
+const emailTmp = ({ userEmail, downloads }) => {
+  return `<div>
         <includetail>
             <div align="center">
                 <div class="open_email" style="margin-left: 8px; margin-top: 8px; margin-bottom: 8px; margin-right: 8px;">
@@ -123,6 +124,6 @@ const emailTmp = ({userEmail,downloads}) => {
     </div>
     </includetail>
     </div>`;
-}
+};
 
 module.exports = emailTmp;

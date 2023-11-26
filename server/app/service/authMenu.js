@@ -1,129 +1,129 @@
-const Service = require('egg').Service
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
-const util = require('../util')
-const { backstageRolesKey } = require('../extend/config')
+'use strict';
+
+const Service = require('egg').Service;
+const util = require('../util');
+const { backstageRolesKey } = require('../extend/config');
 
 class AuthMenuService extends Service {
-    async list() {
-        const { ctx } = this;
-        const { SystemAuthMenu } = ctx.model;
+  async list() {
+    const { ctx } = this;
+    const { SystemAuthMenu } = ctx.model;
 
-        try {
-            const menus = await SystemAuthMenu.findAll({
-                order: [['menuSort', 'DESC'], ['id']],
-            });
+    try {
+      const menus = await SystemAuthMenu.findAll({
+        order: [[ 'menuSort', 'DESC' ], [ 'id' ]],
+      });
 
-            const menuResps = menus.map(menu => menu.toJSON());
+      const menuResps = menus.map(menu => menu.toJSON());
 
-            const tree = util.listToTree(menuResps, 'id', 'pid', 'children');
+      const tree = util.listToTree(menuResps, 'id', 'pid', 'children');
 
-            return tree;
-        } catch (err) {
-            throw new Error('list Menu error');
-        }
+      return tree;
+    } catch (err) {
+      throw new Error('list Menu error');
+    }
+  }
+
+  async detail(id) {
+    const { ctx } = this;
+
+    const menu = await ctx.model.SystemAuthMenu.findOne({
+      where: {
+        id,
+      },
+    });
+
+    if (!menu) {
+      throw new Error('菜单已不存在!');
     }
 
-    async detail(id) {
-        const { ctx } = this;
+    const res = menu.toJSON();
 
-        const menu = await ctx.model.SystemAuthMenu.findOne({
-            where: {
-                id,
-            },
-        });
+    return res;
+  }
 
-        if (!menu) {
-            throw new Error('菜单已不存在!');
-        }
+  async add(addReq) {
+    const { ctx } = this;
 
-        const res = menu.toJSON();
+    delete addReq.id;
 
-        return res;
+    const menu = ctx.model.SystemAuthMenu.build(addReq);
+
+    const transaction = await ctx.model.transaction();
+
+    try {
+      await menu.save({ transaction });
+
+      await transaction.commit();
+
+      ctx.service.redis.del(backstageRolesKey);
+    } catch (err) {
+      throw new Error('Add Create err');
+    }
+  }
+
+  async edit(editReq) {
+    const { ctx } = this;
+
+    const menu = await ctx.model.SystemAuthMenu.findOne({
+      where: {
+        id: editReq.id,
+      },
+    });
+
+    if (!menu) {
+      throw new Error('菜单已不存在!');
     }
 
-    async add(addReq) {
-        const { ctx } = this;
+    const transaction = await ctx.model.transaction();
 
-        delete addReq.id;
+    try {
+      Object.assign(menu, editReq);
 
-        const menu = ctx.model.SystemAuthMenu.build(addReq);
+      await menu.save({ transaction });
 
-        const transaction = await ctx.model.transaction();
+      await transaction.commit();
 
-        try {
-            await menu.save({ transaction });
+      ctx.service.redis.del(backstageRolesKey);
+    } catch (err) {
+      throw new Error('Edit Updates err');
+    }
+  }
 
-            await transaction.commit();
+  async del(id) {
+    const { ctx } = this;
 
-            ctx.service.redis.del(backstageRolesKey);
-        } catch (err) {
-            throw new Error('Add Create err');
-        }
+    const menu = await ctx.model.SystemAuthMenu.findOne({
+      where: {
+        id,
+      },
+    });
+
+    if (!menu) {
+      throw new Error('菜单已不存在!');
     }
 
-    async edit(editReq) {
-        const { ctx } = this;
+    const transaction = await ctx.model.transaction();
 
-        const menu = await ctx.model.SystemAuthMenu.findOne({
-            where: {
-                id: editReq.id,
-            },
-        });
+    try {
+      const childMenu = await ctx.model.SystemAuthMenu.findOne({
+        where: {
+          pid: id,
+        },
+      });
 
-        if (!menu) {
-            throw new Error('菜单已不存在!');
-        }
+      if (childMenu) {
+        throw new Error('请先删除子菜单再操作！');
+      }
 
-        const transaction = await ctx.model.transaction();
+      await menu.destroy({ transaction });
 
-        try {
-            Object.assign(menu, editReq);
-
-            await menu.save({ transaction });
-
-            await transaction.commit();
-
-            ctx.service.redis.del(backstageRolesKey);
-        } catch (err) {
-            throw new Error('Edit Updates err');
-        }
+      await transaction.commit();
+    } catch (err) {
+      throw new Error('Delete Delete err');
     }
-
-    async del(id) {
-        const { ctx } = this;
-
-        const menu = await ctx.model.SystemAuthMenu.findOne({
-            where: {
-                id,
-            },
-        });
-
-        if (!menu) {
-            throw new Error('菜单已不存在!');
-        }
-
-        const transaction = await ctx.model.transaction();
-
-        try {
-            const childMenu = await ctx.model.SystemAuthMenu.findOne({
-                where: {
-                    pid: id,
-                },
-            });
-
-            if (childMenu) {
-                throw new Error('请先删除子菜单再操作！');
-            }
-
-            await menu.destroy({ transaction });
-
-            await transaction.commit();
-        } catch (err) {
-            throw new Error('Delete Delete err');
-        }
-    }
+  }
 }
 
 
-module.exports = AuthMenuService
+module.exports = AuthMenuService;
