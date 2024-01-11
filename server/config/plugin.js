@@ -3,9 +3,9 @@
 /** @type Egg.EggPlugin */
 
 exports.sequelize = {
-    enable: true,
-    package: 'egg-sequelize'
-}
+  enable: true,
+  package: 'egg-sequelize',
+};
 
 // exports.io = {
 //     enable: true,
@@ -13,16 +13,16 @@ exports.sequelize = {
 // };
 
 exports.validate = {
-    enable: true,
-    package: 'egg-validate',
-}
+  enable: true,
+  package: 'egg-validate',
+};
 
 exports.cors = {
-    enable: true,
-    package: 'egg-cors',
+  enable: true,
+  package: 'egg-cors',
 };
 
 exports.redis = {
-    enable: true,
-    package: 'egg-redis',
+  enable: true,
+  package: 'egg-redis',
 };

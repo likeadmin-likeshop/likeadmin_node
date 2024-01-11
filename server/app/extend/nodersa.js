@@ -1,24 +1,25 @@
-const nodeRSA = require('node-rsa')
-const rsa = require('./config')
+'use strict';
+const nodeRSA = require('node-rsa');
+const rsa = require('./config');
 
-const publicKey = rsa.publicKey // 公钥
-const privateKey = rsa.privateKey // 私钥
-const txt = JSON.stringify({ name: 'bag' })
+const publicKey = rsa.publicKey; // 公钥
+const privateKey = rsa.privateKey; // 私钥
+// const txt = JSON.stringify({ name: 'bag' });
 //
 // console.log(publicKey)
 // console.log(privateKey)
 
 // 使用公钥加密
 async function rsaEncrypt(data) {
-    const pubKey = new nodeRSA(publicKey, 'pkcs8-public')
-    return pubKey.encrypt(Buffer.from(data), 'base64')
+  const pubKey = new nodeRSA(publicKey, 'pkcs8-public');
+  return pubKey.encrypt(Buffer.from(data), 'base64');
 }
 
 // 使用私钥解密
 async function rsaDecrypt(data) {
-    const priKey = new nodeRSA(privateKey)
-    priKey.setOptions({ encryptionScheme: 'pkcs1' }) // 因为jsencrypt自身使用的是pkcs1加密方案, nodejs需要修改成pkcs1。
-    return priKey.decrypt(data, 'utf8')
+  const priKey = new nodeRSA(privateKey);
+  priKey.setOptions({ encryptionScheme: 'pkcs1' }); // 因为jsencrypt自身使用的是pkcs1加密方案, nodejs需要修改成pkcs1。
+  return priKey.decrypt(data, 'utf8');
 }
 
 // const sign = rsaEncrypt(txt)
@@ -33,14 +34,14 @@ async function rsaDecrypt(data) {
 
 // 使用私钥对消息签名
 function signRSA(data) {
-    const priKey = new nodeRSA(privateKey, 'pkcs8-private')
-    return priKey.sign(Buffer.from(data), 'hex')
+  const priKey = new nodeRSA(privateKey, 'pkcs8-private');
+  return priKey.sign(Buffer.from(data), 'hex');
 }
 
 // 使用公钥验证签名
 function verifyRSA(decrypt, signs) {
-    const pubKey = new nodeRSA(publicKey, 'pkcs8-public')
-    return pubKey.verify(Buffer.from(decrypt), signs, 'utf8', 'hex')
+  const pubKey = new nodeRSA(publicKey, 'pkcs8-public');
+  return pubKey.verify(Buffer.from(decrypt), signs, 'utf8', 'hex');
 }
 
 // const signature = signRSA(sign)
@@ -53,8 +54,8 @@ function verifyRSA(decrypt, signs) {
 */
 
 module.exports = {
-    rsaEncrypt,
-    rsaDecrypt,
-    signRSA,
-    verifyRSA,
-}
+  rsaEncrypt,
+  rsaDecrypt,
+  signRSA,
+  verifyRSA,
+};

@@ -1,7 +1,6 @@
-// app/util/urlUtil.js
+'use strict';
 
 const path = require('path');
-const url = require('url');
 const { publicPrefix, publicUrl } = require('../extend/config');
 
 // 定义转换绝对路径的方法
@@ -12,12 +11,12 @@ function toAbsoluteUrl(u) {
   }
   const parsedUrl = new URL(publicUrl);
 
-  if (u.indexOf('/public/static/') === 0) {    
+  if (u.indexOf('/public/static/') === 0) {
     parsedUrl.pathname = path.join(parsedUrl.pathname, u);
     return parsedUrl.toString();
   }
 
-  if (u.includes('public/uploads/')) {    
+  if (u.includes('public/uploads/')) {
     parsedUrl.pathname = path.join(parsedUrl.pathname, u);
     return parsedUrl.toString();
   }
@@ -52,5 +51,5 @@ function toRelativeUrl(u) {
 
 module.exports = {
   toAbsoluteUrl,
-  toRelativeUrl
+  toRelativeUrl,
 };

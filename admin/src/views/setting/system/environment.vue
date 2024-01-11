@@ -81,14 +81,14 @@
     </el-card>
 
     <el-card shadow="never" class="!border-none mt-4">
-      <div>go环境信息</div>
+      <div>node环境信息</div>
       <div class="mt-4">
-        <el-table :data="[info.go]" size="large">
-          <el-table-column prop="name" label="go名称" min-width="120" />
+        <el-table :data="[info.node]" size="large">
+          <el-table-column prop="name" label="node名称" min-width="120" />
           <el-table-column prop="startTime" label="启动时间" min-width="120" />
           <el-table-column prop="home" label="安装路径" min-width="120" />
           <el-table-column prop="inputArgs" label="运行参数" min-width="120" />
-          <el-table-column prop="version" label="go版本" min-width="120" />
+          <el-table-column prop="version" label="node版本" min-width="120" />
           <el-table-column prop="runTime" label="运行时长" min-width="120" />
         </el-table>
       </div>
@@ -119,7 +119,7 @@ const loading = ref(false)
 const info = ref({
   cpu: {} as any,
   disk: [],
-  go: {},
+  node: {},
   mem: {} as any,
   sys: {}
 })

@@ -1,42 +1,42 @@
-const path = require('path')
+const path = require('path');
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
 module.exports = appInfo => {
     /**
-     * built-in config
-     * @type {{security: {csrf: {headerName: string}}}}
-     **/
+       * built-in config
+       * @type {{security: {csrf: {headerName: string}}}}
+       **/
     const config = exports = {
         security: {
             csrf: {
                 enable: false,
             },
         },
-    }
+    };
 
 
     // 验证规则
     config.validate = {
         convert: true,
         widelyUndefined: true,
-    }
+    };
 
     // use for cookie sign key, should change to your own and keep security
-    config.keys = appInfo.name + '_1634002379446_8360'
+    config.keys = appInfo.name + '_1634002379446_8360';
 
     // add your middleware config here
-    config.middleware = ['authority', 'auth']
+    config.middleware = ['authority', 'auth'];
 
     // add your user config here
     const userConfig = {
         // myAppName: 'egg',
-    }
+    };
 
     config.cors = {
         origin: '*',
         allowMethods: 'GET, PUT, POST,DELETE, PATCH',
-    }
+    };
 
     // config.io = {
     //     init: {}, // passed to engine.io
@@ -54,14 +54,14 @@ module.exports = appInfo => {
             port: 8001,
             hostname: '0.0.0.0',
         },
-    }
+    };
 
     config.session = {
         key: 'EGG_SESS_TOKEN',
         maxAge: 1000 * 3600, // 1 天
         httpOnly: true,
         encrypt: true,
-    }
+    };
 
     // 设置静态目录
     config.static = {
@@ -86,18 +86,18 @@ module.exports = appInfo => {
         // 允许上传的最大文件数
         files: 10,
         whitelist: ['.txt', '.png', '.jpeg', '.jpg', '.zip', '.xls', '.ppt', '.doc', '.docx', '.pdf', '.xls', '.xlsx', '.mp4', '.wmv', '.avi', '.mov', '.flv', '.rmvb'],
-    }
+    };
 
     config.security = {
         csrf: {
             enable: false,
-            ignoreJSON: true
+            ignoreJSON: true,
         },
-        domainWhiteList: []
+        domainWhiteList: [],
     };
     config.cors = {
         origin: '*',
-        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
     };
 
     const view = exports = {
@@ -105,11 +105,11 @@ module.exports = appInfo => {
         mapping: {
             '.tpl': 'nunjucks',
         },
-    }
+    };
 
     return {
         ...config,
         ...userConfig,
-        ...view
-    }
-}
+        ...view,
+    };
+};
