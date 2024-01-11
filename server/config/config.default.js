@@ -63,15 +63,6 @@ module.exports = appInfo => {
         encrypt: true,
     }
 
-    config.redis = {
-        client: {
-            port: 6379,
-            host: '127.0.0.1',
-            password: '',
-            db: 0
-        }
-    }
-
     // 设置静态目录
     config.static = {
         prefix: '/public',
