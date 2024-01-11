@@ -125,12 +125,14 @@ class SystemController extends baseController {
   }
 
   async logout() {
-    this.ctx.cookies.set('token', null, { maxAge: 0 });
-    this.result({ data: '' });
-  }
-
-  register() {
-
+    const { ctx } = this;
+    const { req } = ctx;
+    try {
+      ctx.service.redis.del(backstageTokenKey + req.token);
+      this.result({ data: '' });
+    } catch (err) {
+      ctx.logger.error(`systemController.logout error: ${err}`);
+    }
   }
 
   async siteIpInfo() {
