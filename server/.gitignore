@@ -15,3 +15,4 @@ typings/
 .github/*
 config/config.local.js
 config/config.prod.js
+app/public/uploads

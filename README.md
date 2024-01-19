@@ -1,8 +1,8 @@
  <h1 align="center">likeadmin（Node）通用管理后台</h1>
 <h4 align="center">🚀快速开发、🛠️ 一键生成代码、✅后台多端自适应</h4>
 <p align="center">
-<a href="https://www.php.net/"><img src="https://img.shields.io/badge/node-16-75b406"></a>
-<a href="#"><img src="https://img.shields.io/badge/eggjs-3.0-08ae5c"></a>
+<a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-16-75b406"></a>
+<a href="https://www.eggjs.org/"><img src="https://img.shields.io/badge/eggjs-3.0-08ae5c"></a>
 <a href="https://www.tslang.cn/"><img src="https://img.shields.io/badge/TypeScript-3-294e80"></a>
 <a href="#"><img src="https://img.shields.io/badge/Vue.js-3-4eb883"></a>
 <a href="#"><img src="https://img.shields.io/badge/vite-2-ffc018"></a>
